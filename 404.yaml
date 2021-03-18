@@ -1,0 +1,6 @@
+title: Táborská setkání
+desc: stranka pro TS
+layout: default
+children:
+- component: warning
+  content: Stránka neexistuje
