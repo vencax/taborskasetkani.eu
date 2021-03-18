@@ -11,7 +11,7 @@ export default {
   },
   props: ['data', 'path'],
   template: `
-  <section :class="data.component" @click="$store.dispatch('edit', {data, path})">
+  <section :class="data.component">
 
     <div class="accordion">
       <div class="card" v-for="(i, idx) in data.sections" :key="idx">

@@ -22,6 +22,7 @@ children:
   children:
   - component: newsPreview
     count: 3
+    url: http://test.vxk.cz/api/posts/?currentPage=1&perPage=3&sort=published:asc
 - component: composition
   class: container py-5
   children:
@@ -32,6 +33,7 @@ children:
       class: col-12
       content: "## To nejlepší z Programu"
   - component: toNejZProgramu
+    url: http://test.vxk.cz/api/events/?currentPage=1&perPage=3&sort=cas:asc
 - component: composition
   class: tint>container py-5>row
   children:
