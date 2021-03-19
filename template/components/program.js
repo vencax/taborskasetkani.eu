@@ -10,26 +10,49 @@ Vue.filter('eventDate', function (value) {
 export default {
   data: function () {
     return {
-      events: null
+      types: null,
+      events: null,
+      selected: null,
+      loading: false
     }
   },
   created: async function () {
-    const url = `${this.$props.data.url}?sort=id:asc&filter={"status":"y"}`
-    const dataReq = await axios.get(url)
-    this.$data.events = dataReq.data
+    const cfgUrl = 'http://test.vxk.cz/api/_events/config.json'
+    const req = await axios.get(cfgUrl)
+    this.$data.typeOpts = _.findWhere(req.data.attrs, { name: 'typ' }).options
+    this.select(this.$data.typeOpts[0])
+  },
+  methods: {
+    select: async function (opt) {
+      this.$data.selected = opt.value
+      this.$data.loading = true
+      const url = `${this.$props.data.url}?sort=id:asc&filter={"status":"y","typ":"${opt.value}"}`
+      const req = await axios.get(url)
+      this.$data.loading = false
+      this.$data.events = req.data
+    }
   },
   props: ['data', 'path'],
   template: `
-  <div class="row">
-    <div v-for="(i, idx) in events" :key="idx" class="col">
-      <div class="card">
-        <img :src="i.obrazek" class="card-img-top" :alt="i.title">
-        <div class="card-body">
-          <h5 class="card-title">{{ i.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            {{ i.cas | eventDate }}
-          </h6>
-          <p class="card-text">{{ i.content }}</p>
+  <div>
+    <nav>
+      <div class="nav nav-tabs" role="tablist">
+        <button v-for="(opt, idx) in $data.typeOpts" :key="idx"
+          :class="{'active': selected===opt.value, 'nav-link': true}"
+          type="button" role="tab"
+          aria-controls="nav-home"
+          :aria-selected="selected===opt.value"
+          @click="select(opt)">{{opt.text}}</button>
+      </div>
+    </nav>
+    <div class="tab-content">
+      <i v-if="$data.loading" class="fas fa-spinner"></i>
+      <div v-else class="row" role="tabpanel">
+        <div v-for="(i, idx) in $data.events" :key="idx" class="col-12">
+          <h5>
+            {{ i.title }} <i class="far fa-clock"></i> {{ i.cas | eventDate }}
+          </h5>
+          <p>{{ i.content }}</p>
         </div>
       </div>
     </div>
