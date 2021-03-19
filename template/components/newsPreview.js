@@ -14,7 +14,7 @@ export default {
       <div v-for="(i, idx) in posts" :key="idx" class="col">
         <h3>{{ i.title }}</h3>
         <h4>{{ i.published | longDate }}</h4>
-        <p>{{ i.content }}</p>
+        <markdown :text="i.content" />
       </div>
     </div>
   `

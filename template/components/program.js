@@ -5,20 +5,23 @@ Vue.filter('eventDate', function (value) {
   }
 })
 
+// ?currentPage=1&perPage=3&sort=cas:asc
+
 export default {
   data: function () {
     return {
-      posts: null
+      events: null
     }
   },
   created: async function () {
-    const dataReq = await axios.get(this.$props.data.url)
-    this.$data.posts = dataReq.data.data
+    const url = `${this.$props.data.url}?sort=id:asc&filter={"status":"y"}`
+    const dataReq = await axios.get(url)
+    this.$data.events = dataReq.data
   },
   props: ['data', 'path'],
   template: `
   <div class="row">
-    <div v-for="(i, idx) in posts" :key="idx" class="col">
+    <div v-for="(i, idx) in events" :key="idx" class="col">
       <div class="card">
         <img :src="i.obrazek" class="card-img-top" :alt="i.title">
         <div class="card-body">
