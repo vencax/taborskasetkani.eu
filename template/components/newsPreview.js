@@ -1,3 +1,5 @@
+const URL = 'http://test.vxk.cz/api/posts/'
+
 export default {
   data: function () {
     return {
@@ -5,8 +7,13 @@ export default {
     }
   },
   created: async function () {
-    const dataReq = await axios.get(this.$props.data.url)
-    this.$data.posts = dataReq.data.data
+    try {
+      const url = `${URL}?currentPage=1&perPage=${this.$props.data.count}&sort=published:asc`
+      const dataReq = await axios.get(url)
+      this.$data.posts = dataReq.data.data
+    } catch (_) {
+      this.$data.posts = [{ title: 'newsPreview: asi spatne url v datech' }]
+    }
   },
   props: ['data', 'path'],
   template: `
