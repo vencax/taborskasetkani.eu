@@ -1,4 +1,4 @@
-var BBB_SITE = {
+{
    "title": "Táborská setkání",
    "nextEvent": "2021-09-10T12:47:37.254Z",
    "lang": "cs",
@@ -27,13 +27,5 @@ var BBB_SITE = {
          "label": "Galerie",
          "link": "galerie"
       }
-   ],
-   "routes": [
-	{path: "/", data: "index.yaml"},
-	{path: "/galerie", data: "galerie.yaml"},
-	{path: "/vstupne", data: "vstupne.yaml"},
-	{path: "/organizace", data: "organizace.yaml"},
-	{path: "/program", data: "program.yaml"},
-	{path: "/navstevnici", data: "navstevnici.yaml"}
    ]
 }
