@@ -6,5 +6,6 @@ export default {
         <img :src="i.url" :alt="i.name" />
       </div>
     </div>
+
   `
 }

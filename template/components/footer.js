@@ -16,7 +16,7 @@ export default {
       </div>
 
       <div class="col-lg-4 col-md-6 footer-links">
-        <h4>Užitečné odkazy</h4>
+        <h3>Užitečné odkazy</h3>
         <ul>
           <li v-for="i in $store.state.site.menu">
             <router-link :to="i.link">{{ i.label }}</router-link>
@@ -25,13 +25,27 @@ export default {
       </div>
 
       <div class="col-lg-4 col-md-6 footer-newsletter">
-        <h4>Join Our Newsletter</h4>
-        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-        <form action="" method="post">
-          <input type="email" name="email"><input type="submit" value="Subscribe">
-        </form>
-
-        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i>nohoru</a>
+    
+      <p>
+        Oficiální stránky festivalu Táborská Setkání © 2021
+      </p>
+      <p>
+        Poslední aktualizace: 29. 3. 2021
+        </p>
+        <p>
+        Prohlášení o přístupnosti
+        </p>
+        <p>
+        Prohlášení o ochraně soukromí
+        </p>
+        <p>
+        Prohlášení o přístupnosti
+        </p>
+        <p>
+        Struktura stránek
+        </p>
+        
+     
       </div>
 
     </div>

@@ -4,8 +4,6 @@
 @import "variables";
 @import "mixins";
 
-// Include custom variable default overrides here
-
 // Optional
 @import "root";
 @import "reboot";
@@ -45,6 +43,115 @@
 @import "components/header";
 @import "components/hero";
 @import "components/masonry";
+@import "components/triangleWrapper";
+
+
+// Include custom variable default overrides here
+
+/*--------------------------------------------------------------
+# Header nav
+--------------------------------------------------------------*/
+.header-social-links a {
+  color: #FCB409;
+
+ }
+ 
+ .header-social-links a:hover {
+  color: #FCF8EC;
+ }
+
+ .logo h1 a{
+  color:#FCB409;
+}
+/*--------------------------------------------------------------
+# Colours
+--------------------------------------------------------------*/
+.cream {color: #FCF8EC;}
+.orange {color: #FCB409;}
+.red {color: #E30A15}
+.black {color: #1C0808}
+.brown {color: #510000}
+
+.bg-cream {background-color: #FCF8EC;}
+.bg-black {color: #1C0808}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+
+
+h1 {
+  font-family: 'Alegreya', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+ 
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  }
+h2 {
+  font-family:  'Alegreya Sans', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+ 
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+  }
+h3{
+  font-family: 'Alegreya', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 1em;
+} 
+h4{
+  font-family: Alegreya Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+
+}
+p{
+  font-family:  'Alegreya Sans', sans-serif;
+
+}
+
+  /*--------------------------------------------------------------
+# Decorations
+--------------------------------------------------------------*/
+
+
+a.nav-link {
+  color:#FCF8EC;
+}
+a.nav-link:hover {
+  color:#FCB409;
+}
+
+
+
+ /*--------------------------------------------------------------
+# Spacing
+--------------------------------------------------------------*/
+.py-5 {
+  padding: 7rem, 0;
+}
+
+ /*--------------------------------------------------------------
+# Spacing
+--------------------------------------------------------------*/
+.py-7 {
+  padding: 5em 0;
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -52,7 +159,41 @@
 section {
   padding: 1em 0;
 }
+.tonejzprogramu img {
+  max-height: 250px;
+}
 
+.section-deco-red {
+  padding-top: 1.8em;
+  background-image: url('http://jindrich.design/kalich-red.svg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: 1em;
+}
+.section-deco-black {
+  padding-top: 1.8em;
+  background-image: url('http://jindrich.design/kalich-black.svg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: 1em;
+}
+.section-deco-white {
+  padding-top: 1.8em;
+  background-image: url('http://jindrich.design/kalich-white.svg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: 1em;
+}
+
+
+a.section-link {
+  display: inline-block;
+  background-image: url('http://jindrich.design/arrow-link.svg');
+  background-position: 75% 4%;
+  background-repeat: no-repeat;
+  background-size: 2em;
+  padding-right: 5em;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -62,13 +203,29 @@ section {
 }
 
 .imageGrid img {
-  max-width: 200px;
+  max-width: 180px;
 }
 
 #header {
-  background-color: #761800;
+  background-color: #1C0808;
+  padding: 1em;
 }
+.logo h1 a{
+    color:#FCB409;
+  }
+  
 
+
+#hero{
+  height: 90Vh;
+}
 .tint {
   background-color: #d5d5d5;
+}
+/*--------------------------------------------------------------
+# to nej z programu
+--------------------------------------------------------------*/
+.card {
+  background-color: transparent; 
+  border: none; 
 }

@@ -5,12 +5,10 @@ Vue.filter('eventDate', function (value) {
   }
 })
 
-// ?currentPage=1&perPage=3&sort=cas:asc
-
 export default {
   data: function () {
     return {
-      types: null,
+      typeOpts: null,
       events: null,
       selected: null,
       loading: false
@@ -19,17 +17,22 @@ export default {
   created: async function () {
     const cfgUrl = 'http://test.vxk.cz/api/_events/config.json'
     const req = await axios.get(cfgUrl)
-    this.$data.typeOpts = _.findWhere(req.data.attrs, { name: 'typ' }).options
+    const opts = _.findWhere(req.data.attrs, { name: 'tags' }).options
+    this.$data.typeOpts = _.filter(opts, i => i.value !== 'index')
     this.select(this.$data.typeOpts[0])
   },
   methods: {
     select: async function (opt) {
       this.$data.selected = opt.value
       this.$data.loading = true
-      const url = `${this.$props.data.url}?sort=id:asc&filter={"status":"y","typ":"${opt.value}"}`
-      const req = await axios.get(url)
+      const filter = {
+        status: "y",
+        tags: { like: "%" + opt.value + "%" }
+      }
+      const filterStr = JSON.stringify(filter)
+      const dataReq = await axios.get(this.$props.data.url, {params: {filter: filterStr}})
       this.$data.loading = false
-      this.$data.events = req.data
+      this.$data.events = dataReq.data
     }
   },
   props: ['data', 'path'],

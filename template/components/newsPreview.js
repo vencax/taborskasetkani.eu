@@ -1,3 +1,4 @@
+
 const URL = 'http://test.vxk.cz/api/posts/'
 
 export default {
@@ -17,10 +18,10 @@ export default {
   },
   props: ['data', 'path'],
   template: `
-    <div class="row">
-      <div v-for="(i, idx) in posts" :key="idx" class="col">
-        <h3>{{ i.title }}</h3>
-        <h4>{{ i.published | longDate }}</h4>
+    <div class="row ">
+      <div v-for="(i, idx) in posts" :key="idx" class="col">      
+        <h4 class="brown">{{ i.published | date }}</h4>
+        <h3 class="red">{{ i.title }}</h3>        
         <markdown :text="i.content" />
       </div>
     </div>

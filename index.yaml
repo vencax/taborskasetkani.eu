@@ -10,70 +10,47 @@ children:
   content: Máte rádi atmosféru středověku? Láká vás tradiční hudba, zpěv a veselení
     pod širým nebem? Pak si nenechte ujít další 28. ročník festivalu Táborská setkání,
     který se bude konat ve dnech 13.-15. 9. 2020
+- component: triangleWrapper
+  obracene: true
 - component: composition
-  class: disclaimer text-light text-center>container>row
+  class:  py-7>container newsPreview
   children:
   - component: MDText
-    class: col-12
-    content: Pořadatelé a účastníci festivalu jsou povinni __dodržovat hygienická
-      opatření__ platná dle aktuální epidemiologické situace.
-- component: composition
-  class: bg-light py-5>container
-  children:
+    class: col-12 orange section-deco-red
+    content: "## Aktuality" 
   - component: newsPreview
     count: 3
     url: http://test.vxk.cz/api/posts/?currentPage=1&perPage=3&sort=published:asc
+  - component: MDText
+    class: section-link text-center
+    content: "[Všechny aktuality](/news)"
+- component: triangleWrapper
 - component: composition
-  class: container py-5
+  class: bg-cream py-7>container
   children:
   - component: composition
     class: row
     children:
     - component: MDText
-      class: col-12
+      class: col-12 section-deco-red
       content: "## To nejlepší z Programu"
   - component: toNejZProgramu
-    url: http://test.vxk.cz/api/events/?currentPage=1&perPage=3&sort=cas:asc
+    url: "http://test.vxk.cz/api/events/"
+  - component: MDText
+    class: section-link text-center
+    content: "[Celý program](/program)"
+- component: triangleWrapper
 - component: composition
-  class: tint>container py-5>row
+  class: bg-black py-7>container 
   children:
   - component: MDText
-    class: col-sm-12 py-2
-    content: "## Co se vám může hodit"
-  - component: composition
-    class: col-sm-12>row
-    children:
-    - component: MDText
-      class: col-md-4
-      content: |-
-        ### ŽIŽKOVO NÁM
-
-        Na tomto nej namesti bude probihat nej program.
-    - component: MDText
-      class: col-md-4
-      content: |-
-        ### ŽIŽKOVO NÁM
-
-        Na tomto nej namesti bude probihat nej program.
-    - component: MDText
-      class: col-md-4
-      content: |-
-        ### ŽIŽKOVO NÁM
-
-        Na tomto nej namesti bude probihat nej program.
-  - component: MDText
-    class: col-12
-    content: Chcete vědět více? prohlídněte si inforamce pro návštěvníky!
-- component: composition
-  class: bg-light py-5>container
-  children:
+    class: col-12 section-deco-black
+    content: "## O Táborských setkání"
   - component: youtube
     url: https://www.youtube.com/embed/UWLE1R6M3ZA
   - component: MDText
-    class: py-5
-    content: >
-      ## O Táborských setkání
-      
+    class: py-4
+    content: >    
       Historické centrum Tábora s několika náměstími, 
       křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny
       dávnou historií první poloviny 15. století.
@@ -100,9 +77,9 @@ children:
     list:
     - url: http://www.daich.cz/images/daich_logo_big.jpg
       name: Daich
-    - url: http://www.daich.cz/images/daich_logo_big.jpg
-      name: Daich
-    - url: http://www.daich.cz/images/daich_logo_big.jpg
-      name: Daich
-    - url: http://www.daich.cz/images/daich_logo_big.jpg
-      name: CRO2
+    - url: http://jindrich.design/loga-sponzoru/Rumpold.svg
+      name: logo Rumpold
+    - url: http://jindrich.design/loga-sponzoru/Schreder.svg
+      name: logo Cevak
+    - url: http://jindrich.design/loga-sponzoru/Slavia.svg
+      name: logo Slavia
