@@ -1,12 +1,15 @@
 export default {
   data() {
     return {
-      visible: 0
+      visible: null
     }
   },
   methods: {
     isCollapsed(idx) {
       return this.$data.visible === idx
+    },
+    select: function (idx) {
+      this.$data.visible = this.$data.visible === idx ? null : idx
     }
   },
   props: ['data', 'path'],
@@ -16,12 +19,14 @@ export default {
     <div class="accordion">
       <div class="card" v-for="(i, idx) in data.sections" :key="idx">
         <div class="card-header">
-          <h2 class="mb-0">
+          <h3 class="mb-0">
             <button class="btn btn-link btn-block text-left" type="button" 
-                  @click="visible = idx">
+                  @click="select(idx)">
               {{ i.title }}
+              <i class="float-right fas" 
+                :class="isCollapsed(idx) ? 'fas fa-angle-down' : 'fas fa-angle-up'"></i>
             </button>
-          </h2>
+          </h3>
         </div>
         <div class="collapse" :class="{show: isCollapsed(idx)}">
           <div class="card-body">

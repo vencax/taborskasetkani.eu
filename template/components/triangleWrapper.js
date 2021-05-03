@@ -1,9 +1,9 @@
 export default {
-  props: ['data', 'path'],
+  props: ['data'],
   template: `
-  <div class="triangle-wrapper">
-    <div :class="data.obracene ? 'triangle-right-R' : 'triangle-right-Y'"></div>
-    <div :class="data.obracene ? 'triangle-left-Y' : 'triangle-left-R'"></div>
+  <div class="triangle-wrapper">    
+    <div class="right" :class="(data ? data.left : null) || 'yellow'"></div>
+    <div class="left" :class="(data ? data.right : null) || 'red'"></div>
   </div>
   `
 }

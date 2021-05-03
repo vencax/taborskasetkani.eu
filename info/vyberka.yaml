@@ -1,0 +1,94 @@
+title: Výběrová řízení
+desc: stranka pro TS
+updated_at: '2021-01-18T12:47:37.254Z'
+layout: page
+children:
+- component: composition
+  class: container>row>col-12 py-5
+  children:
+  - component: accordion
+    sections:
+    - title: INFORMACE PRO ZÁJEMCE O STÁNKOVÝ PRODEJ
+      content: |
+        ## Prodejní místa
+        Sazba účastnického poplatku za prodejní místo o maximálním rozměru 
+        3 m šířky a 2 m hloubky na každý započatý den je stanoven Radou města Tábora 
+        dne 4. 4. 2016, číslo usnesení 1611/29/16  takto:
+        - Občerstvení, cukrovinky 1200,- Kč
+        - Textil, ostatní 1200,- Kč
+        - Řemeslné a rukodělné výrobky s ukázkou výroby 800,- Kč
+        
+        K cenám bude připočteno DPH v platné výši.
+        
+        Město Tábor v rámci TS poskytuje pouze prodejní místa nikoli prodejní stánky. 
+        Prodejní stánky si zajišťují sami prodejci.
+
+        V případě přesahu daného rozměru do šířky je nutno pronajmout si více prodejních míst. Max. počet míst na 1 prodejce jsou 4 místa.
+
+        Neziskové organizace  jejichž výtěžek z prodeje je určen na charitativní nebo veřejně prospěšné účely účastnický poplatek neplatí.
+
+        Účastnický poplatek bude hrazen na základě faktury, která bude zaslaná každému vybranému prodejci.
+        
+        ## PODMÍNKY PRODEJE
+        
+        Přečtěte si, prosím, důkladně závazné  podmínky-prodeje-historická-tržištěTS19. pdf
+        Jejich dodržování bude kontrolováno po celou dobu trvání akce a nedodržení podmínek bude sankcionováno.
+
+        Souhlas s podmínkami prodeje prodejce stvrdí svým podpisem v den konání akce, a to při předání prodejního místa pořadatelem.
+
+        PŘIHLAŠENÍ K PRODEJI
+        PŘIHLAŠOVACÍ FORMULÁŘ →
+
+        Z důvodu nabytí účinnosti obecného nařízení Evropského parlamentu a Rady (EU) 
+        č. 2016/679 ze dne 27. 4. 2016, o ochraně fyzických osob v souvislosti se 
+        zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 
+        95/46/ES (obecné nařízení o ochraně osobních údajů) 
+        přikládáme [Informace o zpracování osobních údajů](/blabla)
+
+        ## KRITÉRIA VÝBĚRU PRODEJCŮ
+        - řádně a čitelně vyplněná přihláška, doplněná fotodokumentací stánku a sortimentu. Neúplně vyplněná přihláška a nedodání fotodokumentace stánku a sortimentu bude prvním kritériem pro vyloučení zájemce z výběrového řízení.
+        - druh, pestrost a historický ráz nabízeného sortimentu
+        - prvovýroba prodávaného zboží je výhodou
+        - dodržení historického vizuálu prodejního místa a oděvu
+        - předvádění a ukázka výroby prodávaných řemeslných výrobků je výhodou a je nutností tuto skutečnost dodržet a zajistit po celou stanovenou prodejní dobu
+        - splnění všech podmínek prodeje
+
+        Do konce měsíce června budou všichni vybraní účastníci písemně vyrozuměni o účasti 
+        a vyzvání k zaplacení na základě zaslané faktury pod přiděleným variabilním 
+        symbolem do 16. srpna 2019.
+
+        Nezaplatí-li vybraný uchazeč účastnický poplatek do stanovené lhůty, 
+        má provozovatel akce právo domnívat se, že vybraný uchazeč pozbyl zájmu akce 
+        se zúčastnit a nabídne místo k užívání jinému uchazeči. 
+        Jestliže vybraný uchazeč poplatek zaplatí a na akci se nedostaví, 
+        zůstane poplatek v celé výši pořadateli akce bez nároku na jeho vrácení.
+
+        ## DŮLEŽITÉ INFORMACE
+        Město Tábor zajišťuje prodejcům napojení na odběr elektrické energie 
+        v obou lokalitách - Náměstí Mikuláše z Husi  a Tržním náměstí.
+        Každý prodejce musí mít vlastní kabeláž (prodlužovací kabely) 
+        a potřebné komponenty (rozdvojky, atd.) pro napojení el. energie 
+        a to v dostatečné délce (20 – 50 m). Prodejci jsou povinni zajistit, 
+        aby veškeré přípojky elektrického proudu vedené přes přístupové komunikace 
+        byly zabezpečeny dostatečným způsobem (např. vhodnými kryty).
+
+        Prodejci jsou povinni respektovat velikost prodejní plochy. 
+        Stánek a všechny jeho součásti nesmí přesáhnout hranice prodejní plochy. 
+        V případě přesahu daného rozměru do šířky je nutno pronajmout si více prodejních míst. 
+        Max. počet míst na 1 prodejce jsou 4 místa.
+
+        Prodejci, obdrží při podpisu podmínek prodeje 2 volné vstupenky na 1 prodejní místo. 
+        Ostatní prodejci jsou povinni zakoupit si pro sebe a pro obsluhující personál 
+        od pořadatele vstupenku. 
+        Bez této vstupenky jim nebude do uzavřené části města vstup povolen.
+
+        ### PARKOVIŠTĚ
+        pro prodejce budou vyhrazena a to v místě trhu.
+        Vzhledem k tomu, že jsou během trvání TS v historické části města Tábora 
+        různá dopravní omezení, bude zaslána vybranému uchazeči karta – POVOLENÍ K VJEZDU.
+        __Kartu je nutno viditelně umístit za přední sklo vozu.__
+
+        Pro více informací se obraťte na město Tábor – odbor kultury a cestovního ruchu,
+        Milena Soukupová tel: 381 486 301, email: [kultura@mutabor.cz](mailto:kultura@mutabor.cz)
+- component: triangleWrapper
+    obracene: true  

@@ -1,13 +1,18 @@
-
-    <div class="container">
+  <div>
+    <triangleWrapper />
+    
+    <div class="container py-4">
       <section>
-        <h1>{{data.title}}</h1>
-      </section>
-      <div class="row">
-        <div class="col-12">
-          <component v-for="(i, idx) in data.children" :key="idx" 
-            :is="i.component" :data="i" :path="path + '.' + idx">
-          </component>
+        <div class="h1-wrapper">
+          <div class="line"></div>
+          <h1>{{data.title}}</h1>
+          <div class="line"></div>
         </div>
-      </div>
+      </section>
     </div>
+
+    <component v-for="(i, idx) in data.children" :key="idx" 
+      :is="i.component" :data="i">
+    </component>
+    
+  </div>

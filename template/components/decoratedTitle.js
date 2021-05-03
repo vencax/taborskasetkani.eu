@@ -1,5 +1,5 @@
 export default {
-  props: ['data', 'path'],
+  props: ['data'],
   template: `
   <div class="triangle-wrapper">
     <div class="triangle-right-Y"></div>

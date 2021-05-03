@@ -3,24 +3,60 @@ desc: stranka pro TS
 updated_at: '2021-01-18T12:47:37.254Z'
 layout: page
 children:
-- component: MDText
-  content: "## osoby 13 až 64 let\n200,- Kč v předprodeji / 300,- Kč na místě\n‍\n##
-    osoby nad 65 let, ZTP\n100,- Kč v předprodeji / 150,- Kč na místě\n‍\n## děti
-    do 12 let včetně, držitelé ZTP/P\nzdarma\n‍### VSTUPENKA JE NUTNÁ POUZE NA ŽIŽKOVO
-    NÁMĚSTÍ\n- v neděli je vstupné zdarma\n- vstupné je osvobozeno od DPH\n- Vstupenka
-    platí pro 1 osobu a je nepřenosná.\n- Vstupenku je nutné nosit připevněnou na
-    zápěstí po celou dobu festivalu."
-  class: bg-light
-- component: expandable
-  title: prodej VSTUPENEK ON-LINE
-  content: Na tuto akci lze na stránkách [www.taborskasetkani.eu](http://www.taborskasetkani.eu)
-    zakoupit e-ticket, který po provedení platby obdržíte na svůj e–mail.Vstupenky
-    zakoupené on-line je nutné vyměnit za vstupenky na festival (náramek), a to v
-    pátek 13. 9. od 18 hod. a v sobotu 14. 9. po celý den konání festivalu.Předprodej
-    on-line bude ukončen 12. 9. v 19 hod. KOUPIT VSTUPENKU
-- component: expandable
-  title: prodej VSTUPENEK na místě
-  content: Po ukončení předprodeje je možné zakoupit vstupenky v pátek 13. 9. během
-    dne na nám. T.G.M. (pódium) v čase 10-18 hod. V pátek 13. 9.  od 18 hod. a v sobotu
-    14. 9. po celý den konání festivalu na prodejních místech.
-
+- component: composition
+  class:  pb-7 container>row justify-content-md-center
+  children:
+  - component: vstupne
+    class: col-12
+  - component: cards
+    class: cards 
+    children:
+    - title: osoby 13 až 64 let
+      content: 200,- Kč v předprodeji / 300,- Kč na místě
+    - title: osoby nad 65 let, ZTP
+      content: 100,- Kč v předprodeji / 150,- Kč na místě
+    - title: děti do 12 let, ZTP/P
+      content: zdarma
+- component: triangleWrapper
+  left: red
+- component: accordion
+  sections:
+  - title: prodej VSTUPENEK ON-LINE
+    content: Na tuto akci lze na stránkách [www.taborskasetkani.eu](http://www.taborskasetkani.eu)
+      zakoupit e-ticket, který po provedení platby obdržíte na svůj e–mail.Vstupenky
+      zakoupené on-line je nutné vyměnit za vstupenky na festival (náramek), a to v
+      pátek 13. 9. od 18 hod. a v sobotu 14. 9. po celý den konání festivalu.Předprodej
+      on-line bude ukončen 12. 9. v 19 hod. KOUPIT VSTUPENKU
+  - title: prodej VSTUPENEK na místě
+    content: Po ukončení předprodeje je možné zakoupit vstupenky v pátek 13. 9. během
+      dne na nám. T.G.M. (pódium) v čase 10-18 hod. V pátek 13. 9.  od 18 hod. a v sobotu
+      14. 9. po celý den konání festivalu na prodejních místech.
+- component: composition
+  class: bg-cream text-center>container py-7
+  children:
+  - component: MDText
+    class: col-12 section-deco-red 
+    content: "## O Táborských setkání"
+  - component: MDText
+    class: col-8 
+    content: |    
+      Historické centrum Tábora s několika náměstími, 
+      křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny
+      dávnou historií první poloviny 15. století.
+      Časem, kdy se vlády nad městem ujal husitský vojevůdce Jan Žižka z Trocnova.
+      Také nyní, po téměř šesti stovkách let každoročně symbolicky přebírá slavný hejtman 
+      vládu nad Táborem.
+      Za rachotu bubnů a světel pochodní ho přitom doprovází zástup jeho husitských bojovníků.
+      
+      Po slavnostním zahájení si už stačí vybrat, zda zavítáte ke stánku s medovinou
+      a chlebem se škvarky, nebo dáte přednost vybraným středověkým lahůdkám v některé
+      z útulných taveren. 
+      Programový "jídelníček" je také nepřeberný – ohňostroj;
+      průvody v historických kostýmech; středověký jarmark; žebrácká ulička; koncerty
+      duchovní, středověké, ale i současné hudby; vystoupení skupin historického šermu;
+      rytířský turnaj na koních; divadla pod širým nebem; výstavy; hry a soutěže pro
+      děti. 
+      
+      To a mnohem víc vám nabízí Táborská setkání…
+- component: triangleWrapper
+  left: red

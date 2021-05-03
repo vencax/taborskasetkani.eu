@@ -1,0 +1,41 @@
+title: Informace pro media
+desc: stranka pro TS
+updated_at: '2021-01-18T12:47:37.254Z'
+layout: page
+children:
+- component: composition
+  class: container>row>col-12 pb-7
+  children:
+  - component: MDText
+    class: container>row>col-12 text-center
+    content: |
+      Zde naleznete všechny důležité informace týkající se organizace festivalu.
+      
+      ### Termín konání festivalu Táborská setkání: 
+      13.–15. 9. 2020
+      
+
+      ### Tisková konference:
+      v úterý 29. června v 12:30 hod v budově Matriky, na Žižkově nám., Tábor‍
+ 
+
+      ### Novinářská akreditace
+      je možná v den konání tiskové konference podle principu: 1 redakce max. 2 press karty.
+      Případně lze akreditaci domluvit na milena.kolarova@mutabor.cz
+
+      
+      ## Materiály pro média ke stažění
+  - component: cards
+    class: cards
+    children:
+    - title: Tisková zpráva
+      content: |
+        stáhnout PDF
+    - title: Fotografie pro tisk 
+      content: |
+        stáhnout ZIP balíček 10 mb
+    - title: Logo a plakát
+      content: |
+        táhnout logo a plakát 10 mb
+- component: triangleWrapper
+  obracene: true      

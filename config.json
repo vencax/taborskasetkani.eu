@@ -9,23 +9,41 @@
    "menu": [
       {
          "label": "Program",
-         "link": "program"
+         "link": "/program"
       },
       {
          "label": "Vstupné",
-         "link": "vstupne"
+         "link": "/vstupne"
       },
       {
-         "label": "Pro Návštěvníky",
-         "link": "navstevnici"
-      },
-      {
-         "label": "Organizace",
-         "link": "organizace"
+         "label": "Info",
+         "link": "/info",
+         "children": [
+            {
+               "label": "Návštěvníci",
+               "link": "/info/navstevnici"
+            },
+            {
+               "label": "Obyvatelé",
+               "link": "/info/obyvatele"
+            },
+            {
+               "label": "Média",
+               "link": "/info/media"
+            },
+            {
+               "label": "Výběrová řízení",
+               "link": "/info/vyberka"
+            }
+         ]
       },
       {
          "label": "Galerie",
-         "link": "galerie"
+         "link": "/galerie"
+      },
+      {
+         "label": "Kontakt",
+         "link": "/kontakt"
       }
    ]
 }

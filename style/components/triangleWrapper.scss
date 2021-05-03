@@ -4,31 +4,33 @@
   margin: -5vw 0 -5vW 0;
   display: flex;
 }
-.triangle-left-R{
+.triangle-wrapper .left {
   width: 0;
   height: 0;
   border-top: 5vw solid transparent;
-  border-right: 50vw solid #E30A15;
+  border-right: 50vw solid;
   border-bottom: 5vw solid transparent;
 }
-.triangle-right-Y{
+.triangle-wrapper .right {
   width: 0;
   height: 0;
   border-top: 5vw solid transparent;
-  border-left: 50vw solid #FCB409;
+  border-left: 50vw solid;
   border-bottom: 5vw solid transparent;
 }
-.triangle-right-R{
-  width: 0;
-  height: 0;
-  border-top: 5vw solid transparent;
-  border-left: 50vw solid #E30A15;
-  border-bottom: 5vw solid transparent;
+
+/*
+classes pro barvy, ktere se daji nastavit v yaml, napr.
+- component: triangleWrapper
+  left: black
+  right: red
+*/
+.triangle-wrapper .yellow {
+  border-left-color: #FCB409
 }
-.triangle-left-Y{
-  width: 0;
-  height: 0;
-  border-top: 5vw solid transparent;
-  border-right: 50vw solid #FCB409;
-  border-bottom: 5vw solid transparent;
+.triangle-wrapper .red {
+  border-left-color: rgb(227, 10, 21)
+}
+.triangle-wrapper .black {
+  border-left-color: black
 }

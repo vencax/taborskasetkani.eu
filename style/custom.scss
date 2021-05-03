@@ -4,7 +4,20 @@
 @import "variables";
 @import "mixins";
 
-// Optional
+
+
+/*--------------------------------------------------------------
+# Typography utilities
+--------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+$font-family-sans-serif:      'Alegreya Sans', sans-serif;
+$font-family-monospace:       'Alegreya', serif, monospace;
+$font-family-base:            $font-family-sans-serif;
+
+// Optional bootstrap sass modules
 @import "root";
 @import "reboot";
 @import "type";
@@ -44,25 +57,10 @@
 @import "components/hero";
 @import "components/masonry";
 @import "components/triangleWrapper";
-
+@import "components/accordion";
 
 // Include custom variable default overrides here
 
-/*--------------------------------------------------------------
-# Header nav
---------------------------------------------------------------*/
-.header-social-links a {
-  color: #FCB409;
-
- }
- 
- .header-social-links a:hover {
-  color: #FCF8EC;
- }
-
- .logo h1 a{
-  color:#FCB409;
-}
 /*--------------------------------------------------------------
 # Colours
 --------------------------------------------------------------*/
@@ -73,16 +71,12 @@
 .brown {color: #510000}
 
 .bg-cream {background-color: #FCF8EC;}
-.bg-black {color: #1C0808}
-
+.bg-black {background-color: #1C0808}
+.bg-red {background-color: #E30A15}
+.bg-yellow {background-color: #FCB409;}
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
-
-
 
 h1 {
   font-family: 'Alegreya', serif;
@@ -113,55 +107,124 @@ h3{
   line-height: 1em;
 } 
 h4{
-  font-family: Alegreya Sans;
+  font-family: 'Alegreya Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
 
 }
-p{
-  font-family:  'Alegreya Sans', sans-serif;
 
+p{
+  font-size: 18px;
+}
+/*--------------------------------------------------------------
+# nav links
+
+--------------------------------------------------------------*/
+a {
+    color: #E30A15;}
+a:hover {
+    color: #510000;}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link
+{
+  color: #510000;
+  background-color: #FCB409;
 }
 
-  /*--------------------------------------------------------------
-# Decorations
+.nav-pills a.nav-link {
+  color: #510000
+}
+.nav-pills a.nav-link:hover {
+    color: #E30A15;
+  }
+
+.btn-primary {
+    color: #1C0808;
+    background-color: #FCB409;
+    border-color: #FCB409;
+  }
+/*--------------------------------------------------------------
+# Forms
 --------------------------------------------------------------*/
+.form-check .form-check-input
+{
+  background-color: #E30A15 !important;
+}
+/*--------------------------------------------------------------
+# Spacing
+--------------------------------------------------------------*/
+.py-5 {
+  padding: 5rem, 0;
+}
 
+.py-7 {
+  padding: 7em 0;
+}
 
+.py-9 {
+  padding: 9em 0;
+}
+
+.pb-7 {
+  padding-bottom: 7em;
+}
+/*--------------------------------------------------------------
+# Header nav
+--------------------------------------------------------------*/
+#header {
+  background-color: #1C0808;
+  padding: 1em;
+}
+#header .logo h1 a, .logo a{
+  color:#FCB409;
+}
+#header .logo h1 a:hover, .logo a:hover{
+  color:#E30A15;
+}
 a.nav-link {
   color:#FCF8EC;
 }
 a.nav-link:hover {
   color:#FCB409;
 }
-
-
-
- /*--------------------------------------------------------------
-# Spacing
+.header-social-links a {
+  color: #FCB409;
+ }
+.header-social-links a:hover {
+  color: #FCF8EC;
+ }
+/*--------------------------------------------------------------
+# HERO
 --------------------------------------------------------------*/
-.py-5 {
-  padding: 7rem, 0;
+#hero{
+  height: 90Vh;
+  background-image: url(http://jindrich.design/TS-HERO.jpg);
+}
+#hero h2, #hero h1{
+    text-align: left;
+   
 }
 
- /*--------------------------------------------------------------
-# Spacing
---------------------------------------------------------------*/
-.py-7 {
-  padding: 5em 0;
+#hero h2, #hero h1{
+    text-align: left;
+    color: #1C0808;
 }
-
-
+#hero h1{
+    text-align: left;
+    color: #510000;
+}
+#hero p.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
   padding: 1em 0;
 }
-.tonejzprogramu img {
-  max-height: 250px;
-}
+
 
 .section-deco-red {
   padding-top: 1.8em;
@@ -194,6 +257,134 @@ a.section-link {
   background-size: 2em;
   padding-right: 5em;
 }
+
+a {
+    
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.h1-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 0 0;}
+  
+.h1-wrapper h1{
+  padding: 0 0.5em;
+ 
+}
+.line {
+  border-top: 2px solid #1C0808;
+  width: 3em;
+}
+/*--------------------------------------------------------------
+# COMPONENTS
+
+  C A R D S
+--------------------------------------------------------------*/
+
+
+
+
+.card {
+  background-color: #FCF8EC; 
+  border: none; 
+}
+
+h3.card-title {
+  color: #E30A15;
+  padding: 0;
+  margin: 0;
+}
+
+p.funkce {
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 25px;
+text-align: center;
+letter-spacing: 0.8px;
+padding: 1em 0 0 0;
+}
+
+p.card-text{
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight:600;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+
+--------------------------------------------------------------*/
+
+.tonejzprogramu img {
+  max-height: 250px;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+    color: #FCF8EC;
+    background-color: #510000;
+    border-color: #510000;}
+.btn-outline-primary {
+    color: #510000;
+    border-color: #510000;
+}
+
+.btn-outline-primary:hover {
+  background-color: #FCB409; 
+  border-color: #FCB409; 
+  color: #FCF8EC;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #510000;
+    text-decoration: none;
+}
+.btn-link:hover {
+    font-weight: 400;
+    color: #E30A15;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 31px;
+}
+
+
+/*--------------------------------------------------------------
+# page Program
+--------------------------------------------------------------*/
+.card-link + .card-link {
+    margin-left: 0rem; 
+}
+.card-program .card {
+background-color: #FCF8EC;
+}
+.fa, .fas, .far {
+    padding-right: 0.5em;
+}
+.fa-heart {
+ padding-right: 0;
+ font-size: 0.9em;
+}
+
+.program {
+  display: inline-block;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -206,26 +397,11 @@ a.section-link {
   max-width: 180px;
 }
 
-#header {
-  background-color: #1C0808;
-  padding: 1em;
-}
-.logo h1 a{
-    color:#FCB409;
-  }
+
   
 
 
-#hero{
-  height: 90Vh;
-}
+
 .tint {
   background-color: #d5d5d5;
-}
-/*--------------------------------------------------------------
-# to nej z programu
---------------------------------------------------------------*/
-.card {
-  background-color: transparent; 
-  border: none; 
 }

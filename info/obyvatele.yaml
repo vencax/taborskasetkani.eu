@@ -1,0 +1,11 @@
+title: Informace pro bydlící a podnikatelé na Starém městě
+desc: stranka pro TS
+updated_at: '2021-01-18T12:47:37.254Z'
+layout: page
+children:
+- component: composition
+  class: container>row>col-12
+  children:
+  - component: MDText
+    content: |
+      Texty budou doplněny
