@@ -1,0 +1,25 @@
+[
+  {
+    "name": "children",
+    "label": "Seznam karet",
+    "component": "dyn-listeditor",
+    "form": [
+      {
+        "name": "title",
+        "component": "dyn-input",
+        "label": "Titulek",
+        "rules": "required"
+      },
+      {
+        "name": "funkce",
+        "component": "dyn-input",
+        "label": "Funkce"
+      },
+      {
+        "name": "content",
+        "component": "dyn-textarea",
+        "label": "Obsah"
+      }
+    ]
+  }
+]

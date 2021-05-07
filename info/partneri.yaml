@@ -1,0 +1,19 @@
+title: Partneři
+desc: stranka pro TS
+updated_at: '2021-01-18T12:47:37.254Z'
+layout: page
+children:
+  - component: composition
+    class: bg-yellow py-7>container
+    children:
+      - component: imageGrid
+        class: row imageGrid
+        list:
+        - url: http://jindrich.design/loga-sponzoru/Vevak.svg
+          name: logo Cevak
+        - url: http://jindrich.design/loga-sponzoru/Rumpold.svg
+          name: logo Rumpold
+        - url: http://jindrich.design/loga-sponzoru/Schreder.svg
+          name: logo Cevak
+        - url: http://jindrich.design/loga-sponzoru/Slavia.svg
+          name: logo Slavia
