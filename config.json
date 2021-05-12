@@ -8,10 +8,6 @@
    "cdn": "http://data.vxk.cz/ts/wp-content/uploads",
    "menu": [
       {
-         "label": "Program",
-         "link": "/program"
-      },
-      {
          "label": "Vstupné",
          "link": "/vstupne"
       },
@@ -34,6 +30,10 @@
             {
                "label": "Výběrová řízení",
                "link": "/info/vyberka"
+            },
+            {
+               "label": "Partneři",
+               "link": "/info/partneri"
             }
          ]
       },

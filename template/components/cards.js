@@ -2,7 +2,7 @@ export default {
   props: ['data'],
   template: `
   <div class="row" :class="data.class">
-    <div v-for="i in data.children" class="col-4">
+    <div v-for="i in data.children" class="col-sm-12 col-md-4">
       <div class="card">
         <img v-if="i.obrazek" :src="i.obrazek" class="card-img-top" :alt="i.title">
         <div class="card-body text-center">

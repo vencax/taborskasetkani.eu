@@ -1,44 +1,44 @@
 title: Kontaktní informace
 desc: stranka pro TS
-updated_at: '2021-01-18T12:47:37.254Z'
+updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
-- component: composition
-  class: container py-5
-  children:
-  - component: cards
-    class: cards
+  - component: composition
+    class: container py-5
     children:
-    - title: Odbor kultury a cestovního ruchu
-      funkce: Pořadatel
-      content: |
-        Žižkovo náměstí 11, 390 15 Tábor
-        Tel.: +420 381 486 300
-
-    - title: Infocentrum
-      funkce: Prodej vstupenek
-      content: |
-        Žižkovo náměstí 2, 390 15 Tábor
-        Tel.: +420 381 486 230-4
-
-    - title: Ing. Radka Šimková
-      funkce: Vedoucí oddělení kultury a cestovního ruchu
-      content: |
-        tel.: +420 381 486 305, 
-        e-mail: radka.simkova@mutabor.cz        
-    - title: Mgr. Luboš Dvořák
-      funkce: Koordinátor pro komunikaci s veřejností a médii
-      content: |
-        tel.: +420 381 486 157, 
-        e-mail: lubos.dvorak@mutabor.cz
-    - title: Roman Kraus 
-      funkce: Koordinátor pro stánkový prodej občerstvení na Žižkově náměstí 
-      content: |
-        tel.: 381 486 271
-        e-mail: roman.kraus@mutabor.cz      
-    - title: Milena Soukupová
-      funkce: Koordinátor pro Staročeský jarmark a Středověký řemeslný trh
-      content: |
-        tel.:  +420 381 486 301, 
-        e-mail: milena.soukupova@mutabor.cz
-
+      - component: cards
+        class: cards py-2
+        children:
+          - title: Odbor kultury a cestovního ruchu
+            funkce: Pořadatel
+            content: |
+              Žižkovo náměstí 11, 390 01 Tábor
+              tel.: +420 381 486 300
+          - title: Infocentrum Město Tábor
+            funkce: Prodej vstupenek
+            content: |
+              Žižkovo náměstí 2, 390 01 Tábor
+              tel.: +420 381 486 230-4
+          - title: Ing. Radka Šimková
+            funkce: Vedoucí oddělení kultury a cestovního ruchu
+            content: |
+              tel.: +420 381 486 300, 
+              e-mail: radka.simkova@mutabor.cz 
+      - component: cards
+        class: cards py-2
+        children:
+          - title: Mgr. Luboš Dvořák
+            funkce: Koordinátor pro komunikaci s veřejností a médii
+            content: |
+              tel.: +420 381 486 157, 
+              e-mail: lubos.dvorak@mutabor.cz
+          - title: Roman Kraus
+            funkce: Koordinátor pro stánkový prodej občerstvení na Žižkově náměstí
+            content: |
+              tel.: 381 486 271,
+              e-mail: roman.kraus@mutabor.cz      
+          - title: Milena Soukupová
+            funkce: Koordinátor pro Staročeský jarmark a Středověký řemeslný trh
+            content: |
+              tel.:  +420 381 486 301, 
+              e-mail: milena.soukupova@mutabor.cz

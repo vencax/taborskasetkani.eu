@@ -54,33 +54,41 @@ const menusubmenu = {
   `
 }
 export default {
+  data: function () {
+    return { open: false }
+  },
   components: { bbbmenuitem },
   template: `
 <header id="header" class="navbar navbar-expand-lg">
-  <div class="container d-flex align-items-center">
+  <div class="container">
+  
+    <router-link class="navbar-brand" to="/">
+      {{ $store.state.site.title }}
+    </router-link>
+    
+    <button class="navbar-toggler" type="button" 
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" 
+        aria-label="Toggle navigation"
+        @click="open = !open">
+      <i class="fas fa-bars"></i>
+    </button>
 
-    <div class="logo mr-auto">
-      <h1><router-link to="/">{{ $store.state.site.title }}</router-link></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-    </div>
 
-    <nav class="nav-menu d-none d-lg-block">
+    <nav class="collapse navbar-collapse" :class="open ? 'show' : ''">
       <ul class="navbar-nav">
         <bbbmenuitem v-for="i in $store.state.site.menu" :data="i" />
+
+        <li class="nav-item social-links"><a class="nav-link" href="#">english</a></li>
+        <li class="nav-item social-links"><a class="nav-link" href="#">deutsh</a></li>
+
+        <li class="nav-item social-links">
+
+          <a class="nav-link" v-if="$store.state.site.twitter" :href="$store.state.site.twitter"><i class="fab fa-twitter"></i></a>
+          <a class="nav-link" v-if="$store.state.site.facebook" :href="$store.state.site.facebook"><i class="fab fa-facebook"></i></a>
+          <a class="nav-link" v-if="$store.state.site.instagram" :href="$store.state.site.instagram"><i class="fab fa-instagram"></i></a>
+        </li>
       </ul>
     </nav>
-
-    <div class="header-social-links">
-      <a href="#">english</a>
-      <a href="#">deutsh</a>
-    </div>
-
-    <div class="header-social-links">
-      <a v-if="$store.state.site.twitter" :href="$store.state.site.twitter"><i class="fab fa-twitter"></i></a>
-      <a v-if="$store.state.site.facebook" :href="$store.state.site.facebook"><i class="fab fa-facebook"></i></a>
-      <a v-if="$store.state.site.instagram" :href="$store.state.site.instagram"><i class="fab fa-instagram"></i></a>
-    </div>
 
   </div>
 </header>

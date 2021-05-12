@@ -2,8 +2,8 @@ export default {
   props: ['data'],
   template: `
   <div class="triangle-wrapper">    
-    <div class="right" :class="(data ? data.left : null) || 'yellow'"></div>
-    <div class="left" :class="(data ? data.right : null) || 'red'"></div>
+    <div class="left" :class="(data ? data.left : null) || 'red'"></div>
+    <div class="right" :class="(data ? data.right : null) || 'yellow'"></div>
   </div>
   `
 }

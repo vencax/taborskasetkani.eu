@@ -33,3 +33,7 @@ children:
   - component: youtube
     class: py-2
     url: https://www.youtube.com/embed/Zrc8GBXJDvo
+- component: composition
+  class:  container>row
+  children:
+    - component: eventgallery

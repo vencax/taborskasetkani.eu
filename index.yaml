@@ -10,22 +10,28 @@ children:
   content: Máte rádi atmosféru středověku? Láká vás tradiční hudba, zpěv a veselení
     pod širým nebem? Pak si nenechte ujít další 28. ročník festivalu Táborská setkání,
     který se bude konat ve dnech 13.-15. 9. 2020
+  button: VSTUPNÉ
+  link: /vstupne
 - component: triangleWrapper
-  left: black
+  left: red
+  rigth: yellow
 - component: composition
   class:  py-7>container newsPreview
   children:
-  - component: MDText
-    class: col-12 orange section-deco-red
-    content: "## Aktuality" 
+  - component: decoratedTitle
+    tag: h2
+    color: red
+    class: col-12 orange
+    content: Aktuality
   - component: newsPreview
     count: 3
-    url: http://test.vxk.cz/api/posts/?currentPage=1&perPage=3&sort=published:asc
+    url: /uniapi/posts/?currentPage=1&perPage=3&sort=published:asc
   - component: MDText
     class: section-link text-center
-    content: "[Všechny aktuality](/news)"
+    content: "[Všechny aktuality](/posts)"
 - component: triangleWrapper
 - component: composition
+  disabled: true
   class: bg-cream py-7>container
   children:
   - component: composition
@@ -35,22 +41,20 @@ children:
       class: col-12 section-deco-red
       content: "## To nejlepší z Programu"
   - component: toNejZProgramu
-    url: "http://test.vxk.cz/api/events/"
+    url: /uniapi/events/
   - component: MDText
     class: section-link text-center
     content: "[Celý program](/program)"
 - component: triangleWrapper
+  disabled: true
 - component: composition
-  class: bg-black text-center text-white py-7>container 
+  class: bg-black text-white py-7>container>row>text-center col-sm-12 col-md-8 offset-md-2
   children:
+  - component: decoratedTitle
+    tag: h2
+    color: red
+    content: Táborská setkání
   - component: MDText
-    class: col-12 section-deco-red 
-    content: "## O Táborských setkání"
-  - component: youtube
-    class: mb-3
-    url: https://www.youtube.com/embed/UWLE1R6M3ZA
-  - component: MDText
-    class: col-8 
     content: |    
       Historické centrum Tábora s několika náměstími, 
       křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny
@@ -69,13 +73,17 @@ children:
       rytířský turnaj na koních; divadla pod širým nebem; výstavy; hry a soutěže pro
       děti. 
       
-      To a mnohem víc vám nabízí Táborská setkání…
+      #### To a mnohem víc vám nabízí Táborská setkání …
+  - component: youtube
+    url: https://www.youtube.com/embed/UWLE1R6M3ZA
 - component: composition
   class: bg-yellow py-7>container
+  disabled: true
   children:
-  - component: MDText
-    class: row>col-12 py-4>container text-center
-    content: "## Sponzoři"
+  - component: decoratedTitle
+    tag: h2
+    color: red
+    content: Partneři
   - component: imageGrid
     class: row imageGrid
     list:
@@ -88,4 +96,5 @@ children:
     - url: http://jindrich.design/loga-sponzoru/Slavia.svg
       name: logo Slavia
 - component: triangleWrapper
-  left: black
+  left: red
+  right: yellow

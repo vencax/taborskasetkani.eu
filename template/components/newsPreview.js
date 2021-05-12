@@ -1,5 +1,5 @@
 
-const URL = 'http://test.vxk.cz/api/posts/'
+const URL = '/uniapi/posts/'
 
 export default {
   data: function () {
@@ -19,7 +19,7 @@ export default {
   props: ['data', 'path'],
   template: `
     <div class="row ">
-      <div v-for="(i, idx) in posts" :key="idx" class="col">      
+      <div v-for="(i, idx) in posts" :key="idx" class="col-sm-12 col-md-4">      
         <h4 class="brown">{{ i.published | date }}</h4>
         <h3 class="red">{{ i.title }}</h3>        
         <markdown :text="i.content" />

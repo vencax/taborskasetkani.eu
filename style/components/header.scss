@@ -6,7 +6,7 @@
  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#header .logo h1 {
+#header .navbar-brand {
  font-size: 28px;
  margin: 0;
  font-weight: 600;
@@ -15,7 +15,7 @@
  color: #384046;
 }
 
-#header .logo h1 a, #header .logo h1 a:hover {
+#header .navbar-brand a, #header .logo h1 a:hover {
  color: #384046;
  text-decoration: none;
 }

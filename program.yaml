@@ -7,4 +7,4 @@ children:
   - component: program
     url: http://test.vxk.cz/api/events/
   - component: triangleWrapper
-    right: black
+    right: red

@@ -1,9 +1,10 @@
 component: composition
   class: tint>container py-5>row
   children:
-  - component: MDText
-    class: col-sm-12 py-2
-    content: "## Co se vám může hodit"
+  - component: decoratedTitle
+    tag: h2
+    color: red
+    content: Co se vám může hodit
   - component: composition
     class: col-sm-12>row
     children:
