@@ -1,56 +1,46 @@
-// Option B: Include parts of Bootstrap
-// Required
-@import "functions";
-@import "variables";
-@import "mixins";
+// 1. Import the initial variables
+@import "node_modules/bulma/sass/utilities/initial-variables";
 
-
-
-/*--------------------------------------------------------------
-# Typography utilities
---------------------------------------------------------------*/
+// 2. Set your own initial variables
+$cream: #FCF8EC;
+$orange: #FCB409;
+$red: #E30A15;
+$black: #1C0808;
+$brown: #510000;
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
-$font-family-sans-serif:      'Alegreya Sans', sans-serif;
-$font-family-monospace:       'Alegreya', serif, monospace;
-$font-family-base:            $font-family-sans-serif;
+// 3. Set the derived variables
+$primary: $turquoise;
+$link: $red;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$dark: $grey-darker;
+$text: $grey-dark;
 
-// Optional bootstrap sass modules
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
-@import "utilities";
+// $font-family-sans-serif:      'Alegreya Sans', sans-serif;
+// $font-family-monospace:       'Alegreya', serif, monospace;
+// $font-family-base:            $font-family-sans-serif;
+
+$footer-background-color: $brown;
+$navbar-height: 4.5rem;
+
+// Update the sans-serif font family
+$defaultFont: 'Alegreya Sans';
+$family-primary: $defaultFont, $family-sans-serif;
+
+// // 4. Import the rest of Bulma
+@import "node_modules/bulma/sass/utilities/_all";
+@import "node_modules/bulma/sass/base/_all";
+@import "node_modules/bulma/sass/elements/_all";
+@import "node_modules/bulma/sass/form/_all";
+@import "node_modules/bulma/sass/components/_all";
+@import "node_modules/bulma/sass/grid/_all";
+@import "node_modules/bulma/sass/helpers/_all";
+@import "node_modules/bulma/sass/layout/_all";
 
 @import "components/back2top";
 @import "components/header";
@@ -58,8 +48,6 @@ $font-family-base:            $font-family-sans-serif;
 @import "components/masonry";
 @import "components/triangleWrapper";
 @import "components/accordion";
-
-// Include custom variable default overrides here
 
 /*--------------------------------------------------------------
 # Colours
@@ -176,28 +164,28 @@ a:hover {
 /*--------------------------------------------------------------
 # Header nav
 --------------------------------------------------------------*/
-#header {
-  background-color: #1C0808;
-  padding: 1em;
-}
-#header .logo h1 a, .logo a{
-  color:#FCB409;
-}
-#header .logo h1 a:hover, .logo a:hover{
-  color:#E30A15;
-}
-a.nav-link {
-  color:#FCF8EC;
-}
-a.nav-link:hover {
-  color:#FCB409;
-}
-.header-social-links a {
-  color: #FCB409;
- }
-.header-social-links a:hover {
-  color: #FCF8EC;
- }
+// #header {
+//   background-color: #1C0808;
+//   padding: 1em;
+// }
+// #header .logo h1 a, .logo a{
+//   color:#FCB409;
+// }
+// #header .logo h1 a:hover, .logo a:hover{
+//   color:#E30A15;
+// }
+// a.nav-link {
+//   color:#FCF8EC;
+// }
+// a.nav-link:hover {
+//   color:#FCB409;
+// }
+// .header-social-links a {
+//   color: #FCB409;
+//  }
+// .header-social-links a:hover {
+//   color: #FCF8EC;
+//  }
 /*--------------------------------------------------------------
 # HERO
 --------------------------------------------------------------*/
@@ -225,10 +213,6 @@ a.nav-link:hover {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
-  padding: 1em 0;
-}
-
 
 .deco-kalich-red {
   padding-top: 1.8em;
@@ -287,9 +271,6 @@ a {
 
   C A R D S
 --------------------------------------------------------------*/
-
-
-
 
 .card {
   background-color: #FCF8EC; 
@@ -410,10 +391,6 @@ background-color: #FCF8EC;
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-
-#footer {
-  padding: 3em;
-}
 
 .imageGrid img {
   max-width: 180px;

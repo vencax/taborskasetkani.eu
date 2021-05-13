@@ -4,21 +4,24 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
-    class: pb-7 container>row>col-12 justify-content-md-center
+    class: pb-7 container
     children:
-      - component: mybutton
-        class: btn-warning my-4
-        link: https://www.seznam.cz
-        text: ONLINE PŘEDPRODEJ
-      - component: MDText
-        content: |
-          __VSTUPENKA JE NUTNÁ POUZE NA ŽIŽKOVO NÁMĚSTÍ__
+      - component: composition
+        class: columns>column is-8 is-offset-2 is-justify-content-center
+        children:
+          - component: mybutton
+            class: btn-warning my-4
+            link: https://www.seznam.cz
+            text: ONLINE PŘEDPRODEJ
+          - component: MDText
+            class: content
+            content: |
+              __VSTUPENKA JE NUTNÁ POUZE NA ŽIŽKOVO NÁMĚSTÍ__
 
-          V neděli je vstupné zdarma
+              V neděli je vstupné zdarma
 
-          Předprodej on-line bude ukončen v den konání akce v 18 hod.
+              Předprodej on-line bude ukončen v den konání akce v 18 hod.
       - component: cards
-        class: cards
         children:
           - title: osoby 13 až 64 let
             content: 200,- Kč v předprodeji / 300,- Kč na místě
@@ -30,7 +33,7 @@ children:
     left: red
     right: black
   - component: composition
-    class: container>row>col-12 py-7
+    class: container>columns>column py-7
     children:
       - component: accordion
         sections:

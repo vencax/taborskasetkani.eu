@@ -4,10 +4,9 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
-    class: container py-5
+    class: container
     children:
       - component: cards
-        class: cards py-2
         children:
           - title: Odbor kultury a cestovního ruchu
             funkce: Pořadatel
@@ -24,9 +23,6 @@ children:
             content: |
               tel.: +420 381 486 300, 
               e-mail: radka.simkova@mutabor.cz 
-      - component: cards
-        class: cards py-2
-        children:
           - title: Mgr. Luboš Dvořák
             funkce: Koordinátor pro komunikaci s veřejností a médii
             content: |

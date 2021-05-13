@@ -16,13 +16,13 @@ export default {
       this.$data.posts = [{ title: 'newsPreview: asi spatne url v datech' }]
     }
   },
-  props: ['data', 'path'],
+  props: ['data',
   template: `
-    <div class="row ">
-      <div v-for="(i, idx) in posts" :key="idx" class="col-sm-12 col-md-4">      
-        <h4 class="brown">{{ i.published | date }}</h4>
-        <h3 class="red">{{ i.title }}</h3>        
-        <markdown :text="i.content" />
+    <div class="columns is-desktop is-flex-wrap-wrap">
+      <div v-for="(i, idx) in posts" :key="idx" class="column is-4">      
+        <h4 class="subtitle brown">{{ i.published | date }}</h4>
+        <h3 class="title red">{{ i.title }}</h3>        
+        <markdown class="content" :text="i.content" />
       </div>
     </div>
   `

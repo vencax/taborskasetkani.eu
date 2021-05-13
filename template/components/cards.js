@@ -1,15 +1,20 @@
 export default {
   props: ['data'],
   template: `
-  <div class="row" :class="data.class">
-    <div v-for="i in data.children" class="col-sm-12 col-md-4">
+  <div :class="data.class" class="columns is-desktop is-flex-wrap-wrap">
+    <div v-for="i, idx in data.children" :key="idx" class="column is-one-third">
       <div class="card">
         <img v-if="i.obrazek" :src="i.obrazek" class="card-img-top" :alt="i.title">
-        <div class="card-body text-center">
-          <p class="funkce text-uppercase">{{ i.funkce }}</p>
-          <h3 class="card-title">{{ i.title }}</h3>
-          <p class="card-text"><markdown :text="i.content" /></p>
+
+        <div class="card-content">
+          <p class="funkce text-uppercase subtitle">{{ i.funkce }}</p>
+          <h3 class="title">{{ i.title }}</h3>
+
+          <div class="content">
+            <markdown :text="i.content" />
+          </div>
         </div>
+
       </div>
     </div>
   </div>

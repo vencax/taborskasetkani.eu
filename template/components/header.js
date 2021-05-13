@@ -1,94 +1,66 @@
 
 const bbbmenuitem = {
-  data: function () {
-    return { open: false }
-  },
   props: ['data'],
-  methods: {
-    onC: function() {
-      this.$data.open = ! this.$data.open
-    },
-    onSelect: function (link) {
-      this.$data.open = false
-      if (this.$router.currentRoute.path !== link) this.$router.push(link)
-    }
-  },
   template: `
-    <li class="nav-item" :class="data.children ? 'dropdown' : ''">
-      <a v-if="$props.data.children" class="nav-link dropdown-toggle"
-          :class="open ? 'show' : ''"
-          role="button"
-          data-bs-toggle="dropdown" :aria-expanded="open"
-          @click="onC">
-        {{ data.label }}
-      </a>
-      <router-link v-else class="nav-link" :to="$props.data.link">
-        {{ data.label }}
+  <div v-if="$props.data.children" class="navbar-item has-dropdown is-hoverable">
+    <router-link class="navbar-link" :to="data.link">
+      {{ data.label }}
+    </router-link>
+
+    <div class="navbar-dropdown">
+      <router-link v-for="i, idx in $props.data.children" :key="idx"
+          class="navbar-item" :to="i.link">
+        {{ i.label }}
       </router-link>
-      <ul v-if="$props.data.children && $data.open" 
-            class="dropdown-menu" :class="open ? 'show' : ''">
-        <li v-for="i in $props.data.children">
-          <a href="javascript:void(0);" class="dropdown-item" @click="onSelect(i.link)">
-            {{ i.label }}
-          </a>
-        </li>
-      </ul>
-    </li>
-`
-}
-const menusubmenu = {
-  props: ['to'],
-  template: `
-  <li v-if="i.children" class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      {{ i.label }}
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li v-for="c in i.children">
-        <router-link v-else class="dropdown-item" :to="c.link">
-          {{ c.label }}
-        </router-link>
-      </li>
-    </ul>
-  </li>
+    </div>
+  </div>
+  <router-link v-else class="navbar-item" :to="data.link">
+    {{ data.label }}
+  </router-link>
   `
 }
 export default {
   data: function () {
-    return { open: false }
+    return { expanded: false }
   },
   components: { bbbmenuitem },
   template: `
-<header id="header" class="navbar navbar-expand-lg">
+<nav class="navbar bg-black pb-6" role="navigation" aria-label="main navigation">
   <div class="container">
-  
-    <router-link class="navbar-brand" to="/">
-      {{ $store.state.site.title }}
-    </router-link>
-    
-    <button class="navbar-toggler" type="button" 
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" 
-        aria-label="Toggle navigation"
-        @click="open = !open">
-      <i class="fas fa-bars"></i>
-    </button>
 
+    <div class="navbar-brand">
 
-    <nav class="collapse navbar-collapse" :class="open ? 'show' : ''">
-      <ul class="navbar-nav">
-        <bbbmenuitem v-for="i in $store.state.site.menu" :data="i" />
+      <router-link class="navbar-item" to="/">
+        {{ $store.state.site.title }}
+      </router-link>
 
-        <li class="nav-item social-links"><a class="nav-link" href="#">english</a></li>
-        <li class="nav-item social-links"><a class="nav-link" href="#">deutsh</a></li>
+      <a role="button" class="navbar-burger" aria-label="menu"
+            :class="expanded ? 'is-active' : ''"
+            @click="expanded = !expanded">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
 
-        <li class="nav-item social-links">
+    </div>
 
-          <a class="nav-link" v-if="$store.state.site.twitter" :href="$store.state.site.twitter"><i class="fab fa-twitter"></i></a>
-          <a class="nav-link" v-if="$store.state.site.facebook" :href="$store.state.site.facebook"><i class="fab fa-facebook"></i></a>
-          <a class="nav-link" v-if="$store.state.site.instagram" :href="$store.state.site.instagram"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
-    </nav>
+    <div class="navbar-menu" :class="expanded ? 'is-active' : ''">
+
+      <div class="navbar-end">
+        <bbbmenuitem v-for="i, idx in $store.state.site.menu" :key="idx" :data="i" />
+        <div class="navbar-item">
+          <a href="#">english</a>
+          |
+          <a href="#">deutsch</a>
+        </div>
+        <div class="navbar-item social-links">
+          <a v-if="$store.state.site.twitter" :href="$store.state.site.twitter"><i class="fab fa-twitter"></i></a>
+          <a v-if="$store.state.site.facebook" :href="$store.state.site.facebook"><i class="fab fa-facebook"></i></a>
+          <a v-if="$store.state.site.instagram" :href="$store.state.site.instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </header>

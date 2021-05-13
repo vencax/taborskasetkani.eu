@@ -8,7 +8,7 @@ export default {
     }
   },
   template: `
-  <span :is="data.tag || 'h1'" :class="decoClass">
+  <span :is="data.tag || 'h1'" :class="decoClass" class="title">
     {{ data.content }}
   </span>
   `

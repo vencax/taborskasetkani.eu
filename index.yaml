@@ -4,6 +4,7 @@ desc: stranka pro TS
 updated_at: '2021-01-18T12:47:37.254Z'
 layout: default
 children:
+- component: triangleWrapper
 - component: hero
   title: Táborská setkání
   subtitle: s podtitulem 600 let na hoře Tábore
@@ -16,19 +17,19 @@ children:
   left: red
   rigth: yellow
 - component: composition
-  class:  py-7>container newsPreview
+  class:  py-7>container
   children:
-  - component: decoratedTitle
-    tag: h2
-    color: red
-    class: col-12 orange
-    content: Aktuality
-  - component: newsPreview
-    count: 3
-    url: /uniapi/posts/?currentPage=1&perPage=3&sort=published:asc
-  - component: MDText
-    class: section-link text-center
-    content: "[Všechny aktuality](/posts)"
+    - component: decoratedTitle
+      tag: h2
+      color: red
+      class: col-12 orange
+      content: Aktuality
+    - component: newsPreview
+      count: 3
+      url: /uniapi/posts/?currentPage=1&perPage=3&sort=published:asc
+    - component: MDText
+      class: section-link text-center
+      content: "[Všechny aktuality](/posts)"
 - component: triangleWrapper
 - component: composition
   disabled: true
@@ -48,13 +49,15 @@ children:
 - component: triangleWrapper
   disabled: true
 - component: composition
-  class: bg-black text-white py-7>container>row>text-center col-sm-12 col-md-8 offset-md-2
+  class: bg-black text-white py-7>container>columns>text-center column is-8 is-offset-2
   children:
   - component: decoratedTitle
+    class: section
     tag: h2
     color: red
     content: Táborská setkání
   - component: MDText
+    class: content
     content: |    
       Historické centrum Tábora s několika náměstími, 
       křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny
@@ -75,6 +78,7 @@ children:
       
       #### To a mnohem víc vám nabízí Táborská setkání …
   - component: youtube
+    class: section
     url: https://www.youtube.com/embed/UWLE1R6M3ZA
 - component: composition
   class: bg-yellow py-7>container
@@ -85,7 +89,6 @@ children:
     color: red
     content: Partneři
   - component: imageGrid
-    class: row imageGrid
     list:
     - url: http://jindrich.design/loga-sponzoru/Vevak.svg
       name: logo Cevak

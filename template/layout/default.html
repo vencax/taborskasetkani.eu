@@ -1,7 +1,6 @@
 <div>
-    <triangleWrapper />
+  
+  <component :is="i.component" :data="i"
+      v-for="(i, idx) in data.children" :key="idx" />
 
-    <component v-for="(i, idx) in components" :key="idx" 
-        :is="i.component" :data="i">
-    </component>
 </div>

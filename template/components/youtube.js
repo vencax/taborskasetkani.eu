@@ -2,9 +2,9 @@ export default {
   props: ['data', 'path'],
   template: `
   <div :class="data.class">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" :src="data.url" allowfullscreen></iframe>
-    </div>
+    <figure class="image is-16by9">
+      <iframe class="has-ratio" :src="data.url" allowfullscreen></iframe>
+    </figure>
   </div>
   `
 }

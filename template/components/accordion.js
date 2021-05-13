@@ -12,30 +12,26 @@ export default {
       this.$data.visible = this.$data.visible === idx ? null : idx
     }
   },
-  props: ['data', 'path'],
+  props: ['data'],
   template: `
-  <section :class="data.component">
+  <div class="accordion">
+    <div class="card" v-for="(i, idx) in data.sections" :key="idx">
 
-    <div class="accordion">
-      <div class="card" v-for="(i, idx) in data.sections" :key="idx">
-        <div class="card-header">
-          <h3 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" 
-                  @click="select(idx)">
-              {{ i.title }}
-              <i class="float-right fas" 
-                :class="isCollapsed(idx) ? 'fas fa-angle-down' : 'fas fa-angle-up'"></i>
-            </button>
-          </h3>
-        </div>
-        <div class="collapse" :class="{show: isCollapsed(idx)}">
-          <div class="card-body">
-            <MDText :data="i.content" />
-          </div>
-        </div>
+      <header class="card-header" @click="select(idx)">
+        <p class="card-header-title">{{ i.title }}</p>
+        <button class="card-header-icon" aria-label="více možností">
+          <span class="icon">
+            <i class="float-right fas" 
+              :class="isCollapsed(idx) ? 'fas fa-angle-down' : 'fas fa-angle-up'"></i>
+          </span>
+        </button>
+      </header>
+ 
+      <div v-if="isCollapsed(idx)" class="card-content">
+        <MDText class="content" :data="i.content" />
       </div>
-    </div>
 
-  </section>
+    </div>
+  </div>
   `
 }
