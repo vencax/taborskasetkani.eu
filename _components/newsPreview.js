@@ -9,14 +9,16 @@ export default {
   },
   created: async function () {
     try {
-      const url = `${URL}?currentPage=1&perPage=${this.$props.data.count}&sort=published:asc`
+      const count = this.$props.data.count
+      let url = `${URL}?sort=published:asc`
+      if (count) url = `${url}&currentPage=1&perPage=${count}`
       const dataReq = await axios.get(url)
-      this.$data.posts = dataReq.data.data
+      this.$data.posts = count ? dataReq.data.data : dataReq.data
     } catch (_) {
       this.$data.posts = [{ title: 'newsPreview: asi spatne url v datech' }]
     }
   },
-  props: ['data',
+  props: ['data'],
   template: `
     <div class="columns is-desktop is-flex-wrap-wrap">
       <div v-for="(i, idx) in posts" :key="idx" class="column is-4">      

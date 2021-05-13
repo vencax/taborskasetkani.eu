@@ -1,7 +1,9 @@
 export default {
   template: `
-<footer id="footer" class="footer bg-black text-white">
+<footer class="footer">
   <div class="container">
+
+    <img class="py-4" src="http://data.vxk.cz/ts/LOGO.svg" alt="logo" />
   
     <div class="columns">
 

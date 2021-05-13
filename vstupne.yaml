@@ -10,7 +10,7 @@ children:
         class: columns>column is-8 is-offset-2 is-justify-content-center
         children:
           - component: mybutton
-            class: btn-warning my-4
+            class: is-link is-large
             link: https://www.seznam.cz
             text: ONLINE PŘEDPRODEJ
           - component: MDText
@@ -52,4 +52,3 @@ children:
               během dne na nám. T.G.M. (pódium) v čase 10-18 hod. V pátek 13.
               9.  od 18 hod. a v sobotu 14. 9. po celý den konání festivalu na
               prodejních místech.
-  - component: triangleWrapper

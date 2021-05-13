@@ -4,7 +4,6 @@ desc: stranka pro TS
 updated_at: '2021-01-18T12:47:37.254Z'
 layout: default
 children:
-- component: triangleWrapper
 - component: hero
   title: Táborská setkání
   subtitle: s podtitulem 600 let na hoře Tábore
@@ -26,7 +25,7 @@ children:
       content: Aktuality
     - component: newsPreview
       count: 3
-      url: /uniapi/posts/?currentPage=1&perPage=3&sort=published:asc
+      url: /uniapi/posts/
     - component: MDText
       class: section-link text-center
       content: "[Všechny aktuality](/posts)"
@@ -35,17 +34,17 @@ children:
   disabled: true
   class: bg-cream py-7>container
   children:
-  - component: composition
-    class: row
-    children:
+    - component: decoratedTitle
+      class: section
+      tag: h2
+      color: red
+      content: To nejlepší z Programu
+    - component: toNejZProgramu
+      url: /uniapi/events/
+      cfgUrl: /uniapi/_events/config.json
     - component: MDText
-      class: col-12 section-deco-red
-      content: "## To nejlepší z Programu"
-  - component: toNejZProgramu
-    url: /uniapi/events/
-  - component: MDText
-    class: section-link text-center
-    content: "[Celý program](/program)"
+      class: section-link text-center
+      content: "[Celý program](/program)"
 - component: triangleWrapper
   disabled: true
 - component: composition
@@ -98,6 +97,3 @@ children:
       name: logo Cevak
     - url: http://jindrich.design/loga-sponzoru/Slavia.svg
       name: logo Slavia
-- component: triangleWrapper
-  left: red
-  right: yellow

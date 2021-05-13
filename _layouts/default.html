@@ -1,0 +1,10 @@
+<div>
+  <pageHeader />
+  <triangleWrapper />
+  
+  <component :is="i.component" :data="i"
+      v-for="(i, idx) in data.children" :key="idx" />
+
+  <triangleWrapper :data="{left:'red',right: 'yellow'}" />
+  <pageFooter />
+</div>

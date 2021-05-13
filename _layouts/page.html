@@ -1,5 +1,6 @@
 <div>
-  <triangleWrapper style="z-index: 100;" />
+  <pageHeader />
+  <triangleWrapper />
   
   <section class="section">
     <div class="container">
@@ -8,10 +9,15 @@
         <h1>{{data.title}}</h1>
         <div class="line"></div>
       </div>
+
+      <h2 v-if="data.subtitle" class="subtitle">{{data.subtitle}}</h2>
     </div>
   </section>
 
   <component :is="i.component" :data="i"
       v-for="(i, idx) in data.children" :key="idx" />
+
+  <triangleWrapper />
+  <pageFooter />
 
 </div>

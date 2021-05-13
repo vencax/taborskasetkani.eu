@@ -18,8 +18,7 @@ export default {
   },
   created: async function () {
     try {
-      const cfgUrl = 'http://test.vxk.cz/api/_events/config.json'
-      const req = await axios.get(cfgUrl)
+      const req = await axios.get(this.$props.data.cfgUrl)
       const opts = _.findWhere(req.data.attrs, { name: 'tags' }).options
       this.$data.typeOpts = _.filter(opts, i => i.value !== 'index')
       this.select(this.$data.typeOpts[0])
@@ -44,34 +43,46 @@ export default {
       this.$data.events = dataReq.data
     }
   },
-  props: ['data', 'path'],
+  props: ['data'],
   template: `
   <div class="tonejzprogramu">
-    <div class="row">
-      <div class="col-12 text-center">
-        <div class="btn-group btn-group-lg mb-4" role="group">
-          <button v-for="(opt, idx) in $data.typeOpts" :key="idx"
-            type="button" role="tab"
-            :class="{'active': selected===opt.value, 'nav-link': true}"
-            class="btn btn-outline-primary"
-            :aria-selected="selected===opt.value"
-            @click="select(opt)">{{opt.text}}</button>
-        </ul>
+
+    <div class="columns is-desktop">
+      <div class="column text-center">      
+
+        <div class="tabs is-toggle is-toggle-rounded">
+          <ul>
+            <li v-for="(opt, idx) in $data.typeOpts" :key="idx"
+                :class="selected===opt.value ? 'is-active' : ''">
+              <a @click="select(opt)">{{opt.text}}</a>
+            </li>
+          </ul>
+        </div>
+        
       </div>
     </div>
 
-    <div class="row">
-      <div v-for="(i, idx) in events" :key="idx" class="col">
+    <div class="columns is-desktop is-flex-wrap-wrap">
+
+      <div v-for="(i, idx) in events" :key="idx" class="column">
       
         <div class="card">
-          <img :src="i.obrazek" class="card-img-top" :alt="i.title">
-          <div class="card-body">
-            <h3 class="card-title">{{ i.title }}</h3>
-            <h4 class="card-subtitle mb-2 red">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img :src="i.obrazek" :alt="i.title">
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3 class="title">{{ i.title }}</h3>
+            <h4 class="card-subtitle red">
               {{ i.cas | eventDate }}
             </h4>
-            <p class="card-text">{{ i.content }}</p>
+            <div class="content">
+              <markdown :text="i.content" />
+            </div>
           </div>
+
         </div>
         
       </div>

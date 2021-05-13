@@ -25,13 +25,13 @@ export default {
   },
   components: { bbbmenuitem },
   template: `
-<nav class="navbar bg-black pb-6" role="navigation" aria-label="main navigation">
+<nav class="navbar pb-6" role="navigation" aria-label="main navigation">
   <div class="container">
 
     <div class="navbar-brand">
 
       <router-link class="navbar-item" to="/">
-        {{ $store.state.site.title }}
+        <img src="http://data.vxk.cz/ts/LOGO.svg" :alt="$store.state.site.title" />
       </router-link>
 
       <a role="button" class="navbar-burger" aria-label="menu"

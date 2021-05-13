@@ -12,7 +12,7 @@ $brown: #510000;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
 // 3. Set the derived variables
-$primary: $turquoise;
+$primary: $orange;
 $link: $red;
 $info: $cyan;
 $success: $green;
@@ -25,7 +25,17 @@ $text: $grey-dark;
 // $font-family-monospace:       'Alegreya', serif, monospace;
 // $font-family-base:            $font-family-sans-serif;
 
-$footer-background-color: $brown;
+$footer-color: $white;
+$footer-background-color: $black;
+$footer-padding: 6em;
+
+$navbar-background-color: $black;
+// $navbar-item-hover-color: $orange;
+$navbar-item-hover-background-color: $orange;
+$navbar-item-active-color: $red;
+$navbar-burger-color: $orange;
+$navbar-z: 0;
+$navbar-dropdown-z: 3000;
 $navbar-height: 4.5rem;
 
 // Update the sans-serif font family
@@ -326,9 +336,9 @@ text-align: left;
 
 --------------------------------------------------------------*/
 
-.tonejzprogramu img {
-  max-height: 250px;
-}
+// .tonejzprogramu img {
+//   max-height: 250px;
+// }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
     color: #FCF8EC;
@@ -363,9 +373,9 @@ text-align: left;
     text-decoration: none;
 }
 
-.btn {
-    font-size: 31px;
-}
+// .btn {
+//     font-size: 31px;
+// }
 
 
 /*--------------------------------------------------------------
@@ -388,9 +398,6 @@ background-color: #FCF8EC;
 .program {
   display: inline-block;
 }
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
 
 .imageGrid img {
   max-width: 180px;
