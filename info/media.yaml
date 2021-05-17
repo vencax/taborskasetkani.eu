@@ -41,5 +41,3 @@ children:
           - title: Logo a plakát
             content: |
               táhnout logo a plakát 10 mb
-  - component: triangleWrapper
-    obracene: true

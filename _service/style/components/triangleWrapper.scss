@@ -1,0 +1,46 @@
+.triangle-wrapper {
+  position: relative;
+  width: 100%;
+  margin: -5vw 0 -5vW 0;
+  display: flex;
+}
+.triangle-wrapper .right {
+  width: 0;
+  height: 0;
+  border-top: 5vw solid transparent;
+  border-right: 50vw solid;
+  border-bottom: 5vw solid transparent;
+}
+.triangle-wrapper .left {
+  width: 0;
+  height: 0;
+  border-top: 5vw solid transparent;
+  border-left: 50vw solid;
+  border-bottom: 5vw solid transparent;
+}
+
+/*
+classes pro barvy, ktere se daji nastavit v yaml, napr.
+- component: triangleWrapper
+  left: black
+  right: red
+*/
+.triangle-wrapper .left.yellow {
+  border-left-color: #FCB409
+}
+.triangle-wrapper .left.red {
+  border-left-color: rgb(227, 10, 21)
+}
+.triangle-wrapper .left.black {
+  border-left-color: black
+}
+
+.triangle-wrapper .right.yellow {
+  border-right-color: #FCB409
+}
+.triangle-wrapper .right.red {
+  border-right-color: rgb(227, 10, 21)
+}
+.triangle-wrapper .right.black {
+  border-right-color: black
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "name": "link",
+    "label": "odkaz",
+    "component": "dyn-input"
+  },
+  {
+    "name": "text",
+    "component": "dyn-input",
+    "label": "text tlačítka",
+    "rules": "required"
+  }
+]
