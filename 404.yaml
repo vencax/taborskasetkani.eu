@@ -2,5 +2,5 @@ title: Táborská setkání
 desc: stranka pro TS
 layout: default
 children:
-- component: warning
+- component: MDText
   content: Stránka neexistuje

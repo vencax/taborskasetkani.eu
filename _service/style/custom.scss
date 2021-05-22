@@ -2,6 +2,8 @@
 @import "node_modules/bulma/sass/utilities/initial-variables";
 
 // 2. Set your own initial variables
+// $tablet: 640px;
+
 $cream: #FCF8EC;
 $orange: #FCB409;
 $red: #E30A15;
@@ -27,20 +29,28 @@ $text: $grey-dark;
 
 $footer-color: $white;
 $footer-background-color: $black;
-$footer-padding: 6em;
+// $footer-padding: 6em;
 
 $navbar-background-color: $black;
+$navbar-item-color: white;
 // $navbar-item-hover-color: $orange;
 $navbar-item-hover-background-color: $orange;
 $navbar-item-active-color: $red;
-$navbar-burger-color: $orange;
-// $navbar-z: 0;
+$navbar-burger-color: white;
+// $navbar-z: default;
 // $navbar-dropdown-z: 3000;
-$navbar-height: 4.5rem;
+// $navbar-height: 4.5rem;
+$navbar-dropdown-background-color: $black;
 
 // Update the sans-serif font family
 $defaultFont: 'Alegreya Sans';
 $family-primary: $defaultFont, $family-sans-serif;
+
+$content-heading-color: inherit;
+
+#navPadder {
+  padding-top: 4em;
+}
 
 // // 4. Import the rest of Bulma
 @import "node_modules/bulma/sass/utilities/_all";
@@ -58,16 +68,18 @@ $family-primary: $defaultFont, $family-sans-serif;
 @import "components/masonry";
 @import "components/triangleWrapper";
 @import "components/accordion";
+@import "components/program";
 
 /*--------------------------------------------------------------
-# Colours
+# text Color classes
 --------------------------------------------------------------*/
-.cream {color: #FCF8EC;}
-.orange {color: #FCB409;}
-.red {color: #E30A15}
-.black {color: #1C0808}
-.brown {color: #510000}
+.text-cream {color: #FCF8EC;}
+.text-orange {color: #FCB409;}
+.text-red {color: #E30A15}
+.text-black {color: #1C0808}
+.text-brown {color: #510000}
 
+// and backgrounds
 .bg-cream {background-color: #FCF8EC;}
 .bg-black {background-color: #1C0808}
 .bg-red {background-color: #E30A15}
@@ -197,30 +209,6 @@ a:hover {
 //   color: #FCF8EC;
 //  }
 /*--------------------------------------------------------------
-# HERO
---------------------------------------------------------------*/
-#hero{
-  height: 90Vh;
-  background-image: url(http://jindrich.design/TS-HERO.jpg);
-}
-#hero h2, #hero h1{
-    text-align: left;
-   
-}
-
-#hero h2, #hero h1{
-    text-align: left;
-    color: #1C0808;
-}
-#hero h1{
-    text-align: left;
-    color: #510000;
-}
-#hero p.lead {
-    font-size: 1.25rem;
-    font-weight: 400;
-}
-/*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 
@@ -250,9 +238,9 @@ a:hover {
 a.section-link {
   display: inline-block;
   background-image: url('http://jindrich.design/arrow-link.svg');
-  background-position: 75% 4%;
+  background-position: right top;
   background-repeat: no-repeat;
-  background-size: 2em;
+  background-size: 4em;
   padding-right: 5em;
 }
 
@@ -336,10 +324,6 @@ text-align: left;
 
 --------------------------------------------------------------*/
 
-// .tonejzprogramu img {
-//   max-height: 250px;
-// }
-
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
     color: #FCF8EC;
     background-color: #510000;
@@ -373,32 +357,6 @@ text-align: left;
     text-decoration: none;
 }
 
-// .btn {
-//     font-size: 31px;
-// }
-
-
-/*--------------------------------------------------------------
-# page Program
---------------------------------------------------------------*/
-.nav-pills-link + .card-link {
-    margin-left: 0rem !important; 
-}
-.card-program .card {
-background-color: #FCF8EC;
-}
-.fa, .fas, .far {
-    padding-right: 0.5em;
-}
-.fa-heart {
- padding-right: 0;
- font-size: 0.8em;
-}
-
-.program {
-  display: inline-block;
-}
-
 .imageGrid img {
   max-width: 180px;
 }
@@ -408,6 +366,14 @@ background-color: #FCF8EC;
   background-color: #d5d5d5;
 }
 
-#pagesection div:last-child {
-  padding-bottom: 4em;
+.lastsection {
+  margin-top: 4em;
+}
+
+.sitemaplist {
+  margin-left: 2em;
+}
+
+.sitemaplist li {
+ list-style: square;
 }

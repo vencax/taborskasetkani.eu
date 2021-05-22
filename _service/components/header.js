@@ -25,7 +25,7 @@ export default {
   },
   components: { bbbmenuitem },
   template: `
-<nav class="navbar pb-6" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="container">
 
     <div class="navbar-brand">
@@ -49,9 +49,7 @@ export default {
       <div class="navbar-end">
         <bbbmenuitem v-for="i, idx in $store.state.site.menu" :key="idx" :data="i" />
         <div class="navbar-item">
-          <a href="#">english</a>
-          |
-          <a href="#">deutsch</a>
+          <a href="#">english</a>/<a href="#">deutsch</a>
         </div>
         <div class="navbar-item social-links">
           <a v-if="$store.state.site.twitter" :href="$store.state.site.twitter"><i class="fab fa-twitter"></i></a>

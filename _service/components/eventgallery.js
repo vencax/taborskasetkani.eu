@@ -46,27 +46,26 @@ const myCarousel = {
     <div class="modal-content">
       <i v-if="loading" class="fas fa-spinner fa-spin"></i>
       <div v-else>
-        <img :src="$store.getters.mediaUrl(curr)" />
-
         <div class="field has-addons">
           <p class="control">
             <button class="button" @click="toRight">
               <span class="icon is-small">
-                <i class="fas fa-align-left"></i>
+                <i class="fas fa-arrow-left"></i>
               </span>
-              <span>Right</span>
+              <span> doleva </span>
             </button>
           </p>
           <p class="control">
-            <button class="button" @click="toLeft">
+            <button class="button" @click="toLeft">              
+              <span> doprava </span>
               <span class="icon is-small">
-                <i class="fas fa-align-left"></i>
+                <i class="fas fa-arrow-right"></i>
               </span>
-              <span>toLeft</span>
             </button>
           </p>
         </div>
-        
+
+        <img :src="$store.getters.mediaUrl(curr)" />
       </div>
     </div>
     <button @click="onClose" class="modal-close is-large" aria-label="close"></button>

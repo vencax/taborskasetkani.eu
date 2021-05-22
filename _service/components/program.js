@@ -8,9 +8,8 @@ Vue.filter('eventDate', function (value) {
 const tagpicker = {
   props: ['typeOpts', 'selected', 'onSelect'],
   template: `
-  <div class="col-6">
-    <div v-for="(opt, idx) in typeOpts" :key="idx"
-        class="form-check form-check-inline pl-0 mb-3">
+  <div class="is-flex is-justify-content-space-evenly">
+    <div v-for="(opt, idx) in typeOpts" :key="idx">
 
       <input type="checkbox" :checked="_.contains(selected, opt.value)"
         class="form-check-input" :id="idx" @click="onSelect(opt)">
@@ -39,24 +38,27 @@ const misto = {
   </a>
   `
 }
+        
 
 const daypicker = {
   props: ['data'],
   template: `
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Všechny dny</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Pátek</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Sobota</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Neděle</a>
-    </li>
-  </ul>
+  <div class="tabs is-toggle is-toggle-rounded">
+    <ul>
+      <li class="is-active">
+        <a href="#">Všechny dny</a>
+      </li>
+      <li>
+        <a href="#">Pátek</a>
+      </li>
+      <li>
+        <a href="#">Sobota</a>
+      </li>
+      <li>
+        <a href="#">Neděle</a>
+      </li>
+    </ul>
+  </div>
   `
 }
 
@@ -71,7 +73,7 @@ export default {
     }
   },
   created: async function () {
-    const cfgUrl = 'http://test.vxk.cz/api/_events/config.json'
+    const cfgUrl = 'http://tsprod.vxk.cz/uniapi/_events/config.json'
     const req = await axios.get(cfgUrl)
     const opts = _.findWhere(req.data.attrs, { name: 'tags' }).options
     this.$data.typeOpts = _.filter(opts, i => i.value !== 'index')
@@ -105,7 +107,7 @@ export default {
         acc[i.misto] = null
         return acc
       }, {}))
-      const mistaReq = await axios.get('http://test.vxk.cz/api/ts_places/', {
+      const mistaReq = await axios.get('http://tsprod.vxk.cz/uniapi/ts_places/', {
         params: {
           filter: JSON.stringify({ id: { in: mistaIDs } })
         }
@@ -118,51 +120,53 @@ export default {
   props: ['data', 'path'],
   components: { daypicker: daypicker, tagpicker: tagpicker, misto },
   template: `
-  <div>
-    <div class="container">
-      
-      <div class="row justify-content-md-center">
-        <daypicker data="ff" />
-      
-        <p class="lead">Vyberte si vaše oblibené podle programu</p>
-
-        <tagpicker :typeOpts="typeOpts" :selected="selected" :onSelect="select" />
-      </div>
+<div class="container">
+  <div class="columns">
+    
+    <div class="column is-half">
+      <daypicker data="ff" />
     </div>
 
-    <div class="">
-      <div class="container py-5">
+    <div class="column is-half">
+        <tagpicker :typeOpts="typeOpts" :selected="selected" :onSelect="select" />
+    </div>
 
-        <i v-if="$data.loading" class="fas fa-spinner"></i>
+  </div>
 
-        <div v-else class="row">
-          <div v-for="(i, idx) in $data.events" :key="idx" class="col card-program">
+  <div class="columns is-flex-wrap-wrap">
+    <i v-if="$data.loading" class="fas fa-spinner"></i>
 
-            <div class="card m-3" style="width: 19rem;">
-              <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">{{ i.tags }}</h6>
-              
-                <h3 class="card-title">
-                  {{ i.title }} <i class="fa-heart float-right" :class="false ? 'fas' : 'far'"></i>
-                </h3>
-                
+    <div v-else v-for="(i, idx) in $data.events" :key="idx" 
+    class="column is-one-third card-program">
 
-                <p class="card-text">{{ i.content }}</p>
-                <div class="d-flex flex-column">
-                  <a href="#" class="card-link">
-                    <i class="far fa-clock"></i> {{ i.cas | eventDate }}
-                  </a>
-                  <misto :id="i.misto" :mista="mista" />
-                </div>
-              </div>
-            </div>
-
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">{{ i.title }}</p>
+          <div class="card-header-icon">
+            <i class="fa-heart float-right" :class="false ? 'fas' : 'far'"></i>
           </div>
-        </div>
+        </header>
 
+        <div class="card-content">        
+
+          <div class="content">
+            <markdown :text="i.content" />
+          
+            <h6 class="card-subtitle mb-2 text-muted">{{ i.tags }}</h6>
+
+            <a href="#" class="card-link">
+              <i class="far fa-clock"></i> {{ i.cas | eventDate }}
+            </a>
+            <p><misto :id="i.misto" :mista="mista" /></p>
+          </div>
+
+        </div>
       </div>
+
+      
     </div>
   
   </div>
+</div>
   `
 }

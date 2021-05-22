@@ -9,6 +9,10 @@
    "globalComponents": ["triangleWrapper"],
    "menu": [
       {
+         "label": "Program",
+         "link": "/program"
+      },
+      {
          "label": "Vstupné",
          "link": "/vstupne"
       },

@@ -4,33 +4,36 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
-    class: container>row>col-sm-12 col-md-6 text-center
+    class: container
     children:
-      - component: decoratedTitle
-        tag: h2
-        color: red
-        class: orange
-        content: Termín konání festivalu
-      - component: MDText
-        content: 10.–12. 9. 2021
-      - component: decoratedTitle
-        tag: h2
-        color: red
-        class: orange
-        content: Tisková konference
-      - component: MDText
-        content: v úterý 29. června v 12:30 hod v budově Matriky, na Žižkově nám., Tábor‍
-      - component: decoratedTitle
-        tag: h2
-        color: red
-        class: orange
-        content: Novinářská akreditace
-      - component: MDText
-        content: |
-          je možná v den konání tiskové konference podle principu: 1 redakce max. 2 press karty.
-          Případně lze akreditaci domluvit na [milena.kolarova@mutabor.cz](mailto:milena.kolarova@mutabor.cz)
+      - component: composition
+        class: is-flex is-flex-direction-column is-align-items-center
+        children:
+          - component: decoratedTitle
+            tag: h2
+            color: red
+            class: text-orange my-2
+            content: Termín konání festivalu
+          - component: MDText
+            content: 10.–12. 9. 2021
+          - component: decoratedTitle
+            tag: h2
+            color: black
+            class: text-red my-2
+            content: Tisková konference
+          - component: MDText
+            content: v úterý 29. června v 12:30 hod v budově Matriky, na Žižkově nám., Tábor‍
+          - component: decoratedTitle
+            tag: h2
+            color: red
+            class: text-orange my-2
+            content: Novinářská akreditace
+          - component: MDText
+            content: |
+              je možná v den konání tiskové konference podle principu: 1 redakce max. 2 press karty.
+              Případně lze akreditaci domluvit na [milena.kolarova@mutabor.cz](mailto:milena.kolarova@mutabor.cz)
       - component: cards
-        class: cards
+        class: cards my-5
         children:
           - title: Tisková zpráva
             content: |

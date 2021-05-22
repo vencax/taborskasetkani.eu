@@ -21,14 +21,14 @@ children:
     - component: decoratedTitle
       tag: h2
       color: red
-      class: col-12 orange
+      class: col-12 text-orange
       content: Aktuality
     - component: newsPreview
       count: 3
       url: /uniapi/posts/
-    - component: MDText
-      class: section-link text-center
-      content: "[Všechny aktuality](/posts)"
+    - component: odkazSeSipkou
+      content: Všechny Aktuality
+      to: /posts
 - component: triangleWrapper
 - component: composition
   disabled: true
@@ -51,12 +51,12 @@ children:
   class: bg-black text-white py-7>container>columns>text-center column is-8 is-offset-2
   children:
   - component: decoratedTitle
-    class: section
+    class: section text-orange
     tag: h2
     color: red
     content: Táborská setkání
   - component: MDText
-    class: content
+    class: content text-cream
     content: |    
       Historické centrum Tábora s několika náměstími, 
       křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny

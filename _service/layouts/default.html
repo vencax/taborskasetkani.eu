@@ -1,10 +1,12 @@
 <div>
   <pageHeader />
+  <div id="navPadder" class="bg-black"></div>
+
   <triangleWrapper />
   
   <component :is="i.component" :data="i"
-      v-for="(i, idx) in data.children" :key="idx" />
+      v-for="(i, idx) in components" :key="idx" />
 
-  <triangleWrapper :data="{left:'red',right: 'yellow'}" />
+  <triangleWrapper :data="{left:'yellow',right: 'red'}" />
   <pageFooter />
 </div>

@@ -3,16 +3,18 @@ export default {
 <footer class="footer">
   <div class="container">
 
-    <img class="py-4" src="http://data.vxk.cz/ts/LOGO.svg" alt="logo" />
-  
-    <div class="columns">
+    <div class="is-flex is-justify-content-center">
+      <img class="py-5" src="http://data.vxk.cz/ts/LOGO.svg" alt="logo" />
+    </div>
 
-      <div class="column text-center">
+    <div class="columns m-4">
+
+      <div class="column">
         Táborská Setkání © 2021
       </div>
     
       <div class="column">
-        <router-link to="/prohlaseni">Prohlášení o přístupnosti</router-link>
+        <router-link to="/pristupnost">Prohlášení o přístupnosti</router-link>
       </div>
       <div class="column">
         <router-link to="/soukromi">Prohlášení o ochraně soukromí</router-link>

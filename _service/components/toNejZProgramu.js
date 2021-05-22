@@ -47,7 +47,7 @@ export default {
   template: `
   <div class="tonejzprogramu">
 
-    <div class="columns is-desktop">
+    <div class="columns">
       <div class="column text-center">      
 
         <div class="tabs is-toggle is-toggle-rounded">
@@ -62,7 +62,7 @@ export default {
       </div>
     </div>
 
-    <div class="columns is-desktop is-flex-wrap-wrap">
+    <div class="columns is-flex-wrap-wrap">
 
       <div v-for="(i, idx) in events" :key="idx" class="column">
       

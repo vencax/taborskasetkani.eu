@@ -20,7 +20,7 @@ export default {
   },
   props: ['data'],
   template: `
-    <div class="columns is-desktop is-flex-wrap-wrap">
+    <div class="columns is-flex-wrap-wrap">
       <div v-for="(i, idx) in posts" :key="idx" class="column is-4">      
         <h4 class="subtitle brown">{{ i.published | date }}</h4>
         <h3 class="title red">{{ i.title }}</h3>        
