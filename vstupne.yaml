@@ -22,7 +22,7 @@ children:
 
               Předprodej on-line bude ukončen v den konání akce v 18 hod.
       - component: cards
-        children:
+        cards:
           - title: osoby 13 až 64 let
             content: 200,- Kč v předprodeji / 300,- Kč na místě
           - title: osoby nad 65 let, ZTP

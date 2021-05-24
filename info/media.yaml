@@ -34,7 +34,7 @@ children:
               Případně lze akreditaci domluvit na [milena.kolarova@mutabor.cz](mailto:milena.kolarova@mutabor.cz)
       - component: cards
         class: cards my-5
-        children:
+        cards:
           - title: Tisková zpráva
             content: |
               stáhnout PDF

@@ -7,7 +7,7 @@ children:
     class: container
     children:
       - component: cards
-        children:
+        cards:
           - title: Odbor kultury a cestovního ruchu
             funkce: Pořadatel
             content: |
@@ -38,3 +38,21 @@ children:
             content: |
               tel.:  +420 381 486 301, 
               e-mail: milena.soukupova@mutabor.cz
+  - component: composition
+    class: bg-yellow py-5 mt-5>container
+    children:
+      - component: contactform
+        controls:
+          - name: email
+            label: emailová adresa
+            component: input
+            type: email
+          - name: subject
+            label: předmět
+            component: input
+          - name: body
+            label: zpráva
+            component: textarea
+            rows: 4
+            placeholder: sem napište zprávu
+        submitUrl: https://seznam.cz
