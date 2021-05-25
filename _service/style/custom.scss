@@ -1,5 +1,5 @@
 // 1. Import the initial variables
-@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/initial-variables";
 
 // 2. Set your own initial variables
 // $tablet: 640px;
@@ -53,14 +53,14 @@ $content-heading-color: inherit;
 }
 
 // // 4. Import the rest of Bulma
-@import "node_modules/bulma/sass/utilities/_all";
-@import "node_modules/bulma/sass/base/_all";
-@import "node_modules/bulma/sass/elements/_all";
-@import "node_modules/bulma/sass/form/_all";
-@import "node_modules/bulma/sass/components/_all";
-@import "node_modules/bulma/sass/grid/_all";
-@import "node_modules/bulma/sass/helpers/_all";
-@import "node_modules/bulma/sass/layout/_all";
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/base/_all";
+@import "bulma/sass/elements/_all";
+@import "bulma/sass/form/_all";
+@import "bulma/sass/components/_all";
+@import "bulma/sass/grid/_all";
+@import "bulma/sass/helpers/_all";
+@import "bulma/sass/layout/_all";
 
 @import "components/back2top";
 @import "components/header";
