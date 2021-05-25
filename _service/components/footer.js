@@ -10,7 +10,7 @@ export default {
     <div class="columns m-4">
 
       <div class="column">
-        Táborská Setkání © 2021
+        Táborská setkání © 2021
       </div>
     
       <div class="column">

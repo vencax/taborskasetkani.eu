@@ -56,3 +56,5 @@ children:
             rows: 4
             placeholder: sem napište zprávu
         submitUrl: https://seznam.cz
+        otazka: čtvrtý měsíc v roce je
+        odpoved: duben

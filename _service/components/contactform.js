@@ -24,15 +24,29 @@ export default {
       formdata: _.reduce(this.$props.data.controls, (acc, i) => {
         acc[i.name] = ''
         return acc
-      }, {})
+      }, { otazka: '' })
+    }
+  },
+  computed: {
+    formcontrols: function () {
+      return _.union(this.$props.data.controls, [{
+        name: 'otazka',
+        label: 'kontrolní otázka: ' + this.$props.data.otazka,
+        component: 'input'
+      }])
     }
   },
   methods: {
     handleSubmit: async function () {
       this.$data.submitting = true
       try {
-        const url = this.$props.data.submitUrl
-        const res = await axios.post(url, this.$data.formdata)
+        if (this.$data.formdata.otazka === this.$props.data.odpoved) {
+          const url = this.$props.data.submitUrl
+          const data = _.without(this.$data.formdata, 'otazka')
+          const res = await axios.post(url, data)
+        } else {
+          throw new Error('nesouhlasí odpověď na kontrolní otázku')
+        }
       } catch (err) {
         const message = err.response.data
         this.$store.dispatch('toast', { message, type: 'error' })
@@ -46,7 +60,7 @@ export default {
   template: `
 <form @submit.prevent="handleSubmit">
 
-  <div class="field" v-for="i, idx in data.controls">
+  <div class="field" v-for="i, idx in formcontrols">
     <label class="label">{{ i.label }}</label>
     <div class="control">
       <component :is="'f' + i.component" 
@@ -60,9 +74,6 @@ export default {
       <button type="submit" class="button is-link" 
         :disabled="submitting"
       >Odeslat</button>
-    </div>
-    <div class="control">
-      <button class="button is-link is-light">Captcha</button>
     </div>
   </div>
 
