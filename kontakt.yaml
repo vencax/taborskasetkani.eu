@@ -46,10 +46,12 @@ children:
           - name: email
             label: emailová adresa
             component: input
+            placeholder: sem prosím Vaši emailovou adresu pro případný zpětný kontakt
             type: email
           - name: subject
             label: předmět
             component: input
+            placeholder: sem patří předmět zprávy
           - name: body
             label: zpráva
             component: textarea

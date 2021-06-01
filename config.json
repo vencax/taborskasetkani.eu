@@ -35,12 +35,12 @@
             {
                "label": "Výběrová řízení",
                "link": "/info/vyberka"
-            },
-            {
-               "label": "Partneři",
-               "link": "/info/partneri"
             }
          ]
+      },
+      {
+         "label": "Partneři",
+         "link": "/partneri"
       },
       {
          "label": "Galerie",

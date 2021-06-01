@@ -123,7 +123,7 @@ export default {
         </figure>
       </div>
 
-      <div class="card-content">
+      <div v-if="false" class="card-content">
         <h3 class="title">{{ data.title }}</h3>
         <div class="content">
           <markdown :text="data.content" />

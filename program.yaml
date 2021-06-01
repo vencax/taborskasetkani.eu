@@ -5,4 +5,5 @@ updated_at: '2021-01-18T12:47:37.254Z'
 layout: page
 children:
   - component: program
+    unpublished: true
     url: http://tsprod.vxk.cz/uniapi/events/

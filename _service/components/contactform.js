@@ -32,7 +32,8 @@ export default {
       return _.union(this.$props.data.controls, [{
         name: 'otazka',
         label: 'kontrolní otázka: ' + this.$props.data.otazka,
-        component: 'input'
+        component: 'input',
+        placeholder: 'správnou odpovědí ověříme, že nejste robot :)'
       }])
     }
   },

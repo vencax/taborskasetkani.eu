@@ -120,7 +120,10 @@ export default {
   props: ['data', 'path'],
   components: { daypicker: daypicker, tagpicker: tagpicker, misto },
   template: `
-<div class="container">
+<div v-if="data.unpublished" class="container">
+  Program se teprve tvoří. Strpení prosím.
+</div>
+<div v-else class="container">
   <div class="columns">
     
     <div class="column is-half">
