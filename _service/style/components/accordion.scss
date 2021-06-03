@@ -1,10 +1,31 @@
-.accordion {
-  background-color: #FCF8EC; 
-  
-}
 
 .accordion .card-header i {
   
   font-size: 0.8em;
   padding-top: 0.5em;
+}
+
+ .card-content H2, .accordion .card-content p   {
+ text-align: left; 
+}
+
+.accordion .card {
+  margin-bottom: 1.1em;
+}
+
+.accordion .card-content {
+  background-color: transparent;
+  padding: 3rem;
+}
+
+.fa, .fas, .far {
+  padding-right: 0em !important; 
+}
+.accordion .card-header i {
+  font-size: 0.8em;
+  padding-top: 0em !important;
+}
+
+.accordion li {
+  font-size: 1em !important;
 }

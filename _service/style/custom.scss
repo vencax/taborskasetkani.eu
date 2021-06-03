@@ -10,6 +10,8 @@ $red: #E30A15;
 $black: #1C0808;
 $brown: #510000;
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
@@ -69,6 +71,8 @@ $content-heading-color: inherit;
 @import "components/triangleWrapper";
 @import "components/accordion";
 @import "components/program";
+@import "components/cards";
+@import "components/footer";
 
 /*--------------------------------------------------------------
 # text Color classes
@@ -87,16 +91,21 @@ $content-heading-color: inherit;
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+body {
+  font-size: 18px;
+  line-height: 1.3em;
+  color: #1C0808
+}
+
 
 h1 {
   font-family: 'Alegreya', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 45px;
+  font-size: 2.1em;
  
   align-items: center;
   text-align: center;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
   }
 h2 {
@@ -127,6 +136,10 @@ h4{
 p{
   font-size: 18px;
 }
+
+.text-center {
+  text-align: center;
+}
 /*--------------------------------------------------------------
 # nav links
 
@@ -134,7 +147,14 @@ p{
 a {
     color: #E30A15;}
 a:hover {
-    color: #510000;}
+    color:#7f0202;
+    text-decoration: underline;
+   }
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link
 {
@@ -183,6 +203,10 @@ a:hover {
 .pb-7 {
   padding-bottom: 7em;
 }
+.pt-7 {
+  padding-top: 7em;
+}
+
 /*--------------------------------------------------------------
 # Header nav
 --------------------------------------------------------------*/
@@ -262,7 +286,7 @@ a {
 }
 .line {
   border-top: 2px solid #1C0808;
-  width: 3em;
+  width: 2em;
 }
 /*--------------------------------------------------------------
 # COMPONENTS
@@ -295,10 +319,10 @@ font-family: Alegreya Sans;
 font-style: normal;
 font-weight: 600;
 font-size: 16px;
-line-height: 25px;
+line-height: 1.2em;
 text-align: center;
-letter-spacing: 0.8px;
 padding: 1em 0 0 0;
+color: #510000;
 }
 
 p.card-text{
@@ -378,3 +402,8 @@ text-align: left;
 .sitemaplist li {
  list-style: square;
 }
+
+
+
+
+a:hover .button.is-link {  text-decoration: none !important;}
