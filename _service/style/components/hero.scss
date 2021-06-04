@@ -4,7 +4,7 @@
   background-size: contain;
   background-position-x: center;
   background-repeat: no-repeat;
-  background-image: url("https://s3-alpha-sig.figma.com/img/ae08/d9df/5723c005735f9eb9a07f9e1d68784c8a?Expires=1622419200&Signature=Ihf4kbjo3S9iLGLrvwXmK4gt~seV7DrEELDzibnci5MvG39jeegI1XcUFYaZ4S64-kCptYsa2mxbJJRtx1idNUeKdehiZ706TjsB2z8HmBMKvESKHGB7ZNjpdHrITO34J5cu2dMh2h~iMiqYKwoZnRXj7KTHi-htu5dEcehsv~JMBhw9Wo7sSyOpupulNj8BoFSL5kt6~B0oBsr0SP0V~uFmIay0dwSk6HyJwpiPiTSiDdMJ4FP4mCfOSNBq2lZgebiH-6tKW0Jy9-csr54aZqePH-jyp3~GkMFg5pdxd--hxEJ8~xwl0brwkuRXaUc7Qm1JB63sEtTijAS2rnRdoA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-image: url("/cdn/242/ts-hero-bg-mobile.jpg");
   background-color: $black;
 }
 
@@ -43,7 +43,7 @@
 @media screen and (min-width: $tablet) {
   #hero {
     height: calc(100vh - 70px);
-    background-image: url("https://s3-alpha-sig.figma.com/img/08d3/9270/e573f96476cab1ebe38abbb406d6a02f?Expires=1622419200&Signature=WfuK8LkZmNdwDQNryyohlcMlHPO59ijRAF2Jj1~oGZUGywYa30guocJxGmr-D0N5Yzfg04CAWFvS-MCKJnTAqMTdvrnfMgz6GqpgFCDt3ovk9wql4vm~ALs3kzz7bGBmGhtKNoKmhCsUO7WNG-ONxWBxG7mGM8HO7Onr3pCWVzin-nVdxq2SgYVZ~MO2aMVGg5gnKstRanS4bn7Yp30tToh8ymn7j2CoozdVBlxShbRL12VevrqeICTUIS8O~PbDraGIMvXRJ-24AuhsSVe0Xib31Uydp8FjnVKnqAMS~t8UuE9HW9G-Mw52P6fKItuonYk0KciBWEU8IE77uKkZWg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+    background-image: url("/cdn/243/ts-hero-bg-desktop.jpg");
   }
 }
 
