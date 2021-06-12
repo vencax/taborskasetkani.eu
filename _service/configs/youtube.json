@@ -1,7 +1,0 @@
-[
-  {
-    "name": "url",
-    "label": "Url videa",
-    "component": "dyn-input"
-  }
-]

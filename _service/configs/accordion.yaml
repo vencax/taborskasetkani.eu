@@ -1,0 +1,11 @@
+- name: sections
+  label: Seznam sekcí
+  component: dyn-listeditor
+  form:
+  - name: title
+    component: dyn-input
+    label: Titulek
+    rules: required
+  - name: content
+    component: dyn-textarea
+    label: Obsah
