@@ -6,14 +6,28 @@ children:
   - component: composition
     class: bg-yellow py-7>container
     children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        class: my-2
+        content: Hlavní partneři
       - component: imageGrid
         class: row imageGrid
         list:
-        - url: http://jindrich.design/loga-sponzoru/Vevak.svg
-          name: logo Cevak
-        - url: http://jindrich.design/loga-sponzoru/Rumpold.svg
+        - url: 248/logo_rumpold.svg
           name: logo Rumpold
-        - url: http://jindrich.design/loga-sponzoru/Schreder.svg
-          name: logo Cevak
-        - url: http://jindrich.design/loga-sponzoru/Slavia.svg
-          name: logo Slavia
+  - component: composition
+    class: py-7>container
+    children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        class: text-orange my-2
+        content: Další partneři
+      - component: imageGrid
+        class: row imageGrid
+        list:
+        - url: 249/19PamatkyLOGO-261x300.jpg
+          name: logo Pamatky Tabor
+      - component: MDText
+        content: COGEBI a. s.

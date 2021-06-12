@@ -5,7 +5,7 @@ export default {
 
     <div class="is-flex is-justify-content-center">
       <img class="py-5" alt="logo"
-        :src="$store.getters.mediaUrl('http://data.vxk.cz/ts/LOGO.svg', 'w=300')" />
+        :src="$store.getters.mediaUrl('LOGO.svg', 'w=300')" />
     </div>
 
     <div class="columns m-4">

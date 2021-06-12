@@ -1,4 +1,4 @@
-// 1. Import the initial variables
+// 1. Import the initial variabless
 @import "bulma/sass/utilities/initial-variables";
 
 // 2. Set your own initial variables
@@ -9,8 +9,6 @@ $orange: #FCB409;
 $red: #E30A15;
 $black: #1C0808;
 $brown: #510000;
-
-
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
@@ -63,16 +61,6 @@ $content-heading-color: inherit;
 @import "bulma/sass/grid/_all";
 @import "bulma/sass/helpers/_all";
 @import "bulma/sass/layout/_all";
-
-@import "components/back2top";
-@import "components/header";
-@import "components/hero";
-@import "components/masonry";
-@import "components/triangleWrapper";
-@import "components/accordion";
-@import "components/program";
-@import "components/cards";
-@import "components/footer";
 
 /*--------------------------------------------------------------
 # text Color classes
@@ -402,7 +390,15 @@ text-align: left;
  list-style: square;
 }
 
-
-
-
 a:hover .button.is-link {  text-decoration: none !important;}
+
+// COMPONENT IMPORTS
+@import "components/back2top";
+@import "components/header";
+@import "components/hero";
+@import "components/masonry";
+@import "components/triangleWrapper";
+@import "components/accordion";
+@import "components/program";
+@import "components/cards";
+@import "components/footer";

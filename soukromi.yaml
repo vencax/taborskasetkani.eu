@@ -1,5 +1,5 @@
 title: Prohlašení o ochraně soukromí
-desc: stranka pro TS
+desc: Informace o ochraně osobních údajů účastníků festivalu
 updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
@@ -7,4 +7,12 @@ children:
     class: container
     children:
       - component: MDText
-        content: Texty se ladí
+        content: |
+          V souladu s Obecním nařízením Evropského parlamentu a rady 2016/679 o ochraně
+          osobních údajů (GDPR) upozorňujeme návštěvníky, 
+          že v prostorech konání festivalu Táborská setkání® mohou být pořízeny obrazové 
+          nebo audiovizuální nahrávky či snímky. 
+
+          Tyto nahrávky a snímky budou sloužit k propagaci festivalu. 
+          Informace o zpracování osobních údajů naleznete na oficiálních [webových stránkách města](http://taborcz.eu/gdpr/ds-3081/p1=75246) 
+          nebo v písemné podobě na podatelnách Městského úřadu (Žižkovo náměstí 2, Husovo náměstí 2938).

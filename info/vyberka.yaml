@@ -1,4 +1,5 @@
 title: Výběrová řízení
+subtitle: Zde naleznete všechny důležité informace týkající se organizace festivalu. Informace o výběrovém řízení pro historická tržiště a  občerstvení na Žižkově náměstí, o umístění toalet, stanovišti záchranné služby, zátarasech a podobně.
 desc: Výzvy výběrových řízení na zajištění dodávek a služeb pro realizaci festivalu, stánkový prodej a prodej občerstvení 
 updated_at: '2021-01-18T12:47:37.254Z'
 layout: page
@@ -8,6 +9,17 @@ children:
   children:
   - component: accordion
     sections:
+    - title: VÝBĚROVÉ ŘÍZENÍ na zajištění občerstvení
+      content: |
+        Výběrové řízení na zajištění občerstvení při akci Táborská setkání 2021 na Žižkově náměstí, 
+        náměstí Mikuláše z Husi a Tržním náměstí ve dnech 10.–12. září 2021.
+
+        Vyhlašovatel výběrového řízení nedisponuje formulářovým předtiskem přihlášky. 
+        Každý uchazeč si sestavuje přihlášku sám dle jednotlivých bodů výběrového řízení. 
+        __Přihlášky přijímá do 30. 6. 2021 MěÚ Tábor, odbor financí__ – oddělení vymáhání a místních poplatků, Žižkovo náměstí 2, 390 01 Tábor. 
+        Pověřeným pracovníkem je pan Roman Kraus (tel. 381486271, email: roman.kraus@mutabor.cz).
+
+        Výzva [ke stažení zde](/cdn/251/vr_obcerstveni.pdf).
     - title: INFORMACE PRO ZÁJEMCE O STÁNKOVÝ PRODEJ
       content: |
         ## Prodejní místa

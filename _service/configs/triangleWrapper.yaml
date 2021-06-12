@@ -1,0 +1,6 @@
+- name: left
+  label: class pro levy trojuhelnik
+  component: dyn-input
+- name: right
+  component: dyn-input
+  label: class pro pravy trojuhelnik

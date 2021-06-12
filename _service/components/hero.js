@@ -3,7 +3,7 @@ export default {
   template: `
   <div id="hero">
    
-        
+    <div id="herotext"></div>
     
   </div>
   `
