@@ -31,7 +31,7 @@ export default {
     <div class="navbar-brand">
 
       <router-link class="navbar-item" to="/">
-        <img :src="$store.getters.mediaUrl('LOGO.svg', 'w=400')" 
+        <img :src="$store.getters.mediaUrl({id: '263', filename: 'LOGO.svg'})" 
           :alt="$store.state.site.title" />
       </router-link>
 

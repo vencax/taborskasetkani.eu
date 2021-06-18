@@ -1,18 +1,68 @@
 title: Galerie Táborských setkání
 desc: Fotografie a videa z předchozích ročníků festivalu
-updated_at: '2021-01-18T12:47:37.254Z'
+updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
-- component: composition
-  class:  container>columns is-flex-wrap-wrap
-  children:
-  - component: eventgallery
-    title: Ročník 2020
-    content: Obsirny popis rocniku 2020
-    primaryMedia: https://www.youtube.com/embed/UWLE1R6M3ZA
-    imagesTag: ts2020
-  - component: eventgallery
-    title: Ročník 2019
-    content: Obsirny popis rocniku 2019
-    primaryMedia: https://www.youtube.com/embed/Zrc8GBXJDvo
-    imagesTag: ts2019
+  - component: composition
+    class: container>columns is-flex-wrap-wrap
+    children:
+      - component: eventgallery
+        title: Ročník 2020
+        content: Obsirny popis rocniku 2020
+        primaryMedia: https://www.youtube.com/embed/UWLE1R6M3ZA
+        imagesTag: ts2020
+      - component: eventgallery
+        title: Ročník 2019
+        content: Obsirny popis rocniku 2019
+        primaryMedia: https://www.youtube.com/embed/Zrc8GBXJDvo
+        imagesTag: ts2019
+      - component: eventgallery
+        title: Ročník 2018
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 185/53.jpg
+        imagesTag: ts2018
+      - component: eventgallery
+        title: Ročník 2017
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 162/Prchlik_2017-92.jpg
+        imagesTag: ts2017
+      - component: eventgallery
+        title: Ročník 2016
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 144/2016-097.jpg
+        imagesTag: ts2016
+      - component: eventgallery
+        title: Ročník 2015
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 122/2015-194.jpg
+        imagesTag: ts2015
+      - component: eventgallery
+        title: Ročník 2014
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 110/2014-049.jpg
+        imagesTag: ts2014
+      - component: eventgallery
+        title: Ročník 2013
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 79/2012-007.jpg
+        imagesTag: ts2013
+      - component: eventgallery
+        title: Ročník 2012
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 62/2012-048.jpg
+        imagesTag: ts2012
+      - component: eventgallery
+        title: Ročník 2011
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 61/2011-005.jpg
+        imagesTag: ts2011
+      - component: eventgallery
+        title: Ročník 2010
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 25/2010-045.jpg
+        imagesTag: ts2010
+      - component: eventgallery
+        title: Ročník 2009
+        content: Obsirny popis rocniku 2019
+        primaryMedia: 5/2009-020.jpg
+        imagesTag: ts2009

@@ -1,0 +1,7 @@
+- name: url
+  label: Zdroj událostí
+  component: dyn-input
+- name: unpublished
+  label: Zdroj událostí
+  component: dyn-input
+    

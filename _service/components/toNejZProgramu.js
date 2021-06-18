@@ -47,9 +47,8 @@ export default {
   template: `
   <div class="tonejzprogramu">
 
-    <div class="columns">
-      <div class="column text-center">      
-
+    <div class="is-flex is-justify-content-center my-4">
+      
         <div class="tabs is-toggle is-toggle-rounded">
           <ul>
             <li v-for="(opt, idx) in $data.typeOpts" :key="idx"
@@ -58,18 +57,17 @@ export default {
             </li>
           </ul>
         </div>
-        
-      </div>
+
     </div>
 
     <div class="columns is-flex-wrap-wrap">
 
-      <div v-for="(i, idx) in events" :key="idx" class="column">
+      <div v-for="(i, idx) in events" :key="idx" class="column is-4">
       
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img :src="i.obrazek" :alt="i.title">
+              <img :src="i.obrazek ? $store.getters.mediaUrl(i.obrazek, 'w=640') : 'https://www.clipartkey.com/mpngs/m/40-401136_smiley-face-big-smile-clipart-png-download-excited.png'" :alt="i.title">
             </figure>
           </div>
 

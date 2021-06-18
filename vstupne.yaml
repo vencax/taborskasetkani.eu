@@ -1,10 +1,12 @@
 title: Vstupné
-desc: Informace o výši vstupného, předprodeji vstupenek a prodeji vstupenek v místě konání festivalu
+desc: Informace o výši vstupného, předprodeji vstupenek a prodeji vstupenek v
+  místě konání festivalu
 updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
     class: pb-7 container
+    disabled: true
     children:
       - component: composition
         class: columns>column is-8 is-offset-2 is-justify-content-center
@@ -29,11 +31,23 @@ children:
             content: 100,- Kč v předprodeji / 160,- Kč na místě
           - title: děti do 12 let, ZTP/P
             content: zdarma
+  - component: composition
+    class: pb-7 container
+    children:
+      - component: composition
+        class: columns>column is-8 is-offset-2 is-justify-content-center
+        children:
+          - component: MDText
+            class: content
+            content: |
+              __V roce 2021 se vstupné na festival NEPLATÍ.__
   - component: triangleWrapper
+    disabled: true
     left: red
     right: black
   - component: composition
     class: container>columns>column py-7
+    disabled: true
     children:
       - component: accordion
         sections:

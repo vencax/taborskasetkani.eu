@@ -10,7 +10,8 @@ export default {
   created: async function () {
     try {
       const count = this.$props.data.count
-      let url = `${URL}?sort=published:asc`
+      const filter = { published: { lte: moment() }}
+      let url = `${URL}?sort=published:desc&filter=${JSON.stringify(filter)}`
       if (count) url = `${url}&currentPage=1&perPage=${count}`
       const dataReq = await axios.get(url)
       this.$data.posts = count ? dataReq.data.data : dataReq.data

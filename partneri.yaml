@@ -1,6 +1,6 @@
 title: Partneři
 desc: Prezentace partnerů festivalu
-updated_at: '2021-01-18T12:47:37.254Z'
+updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
@@ -14,11 +14,19 @@ children:
       - component: imageGrid
         class: row imageGrid
         list:
-        - url: 248/logo_rumpold.svg
-          name: logo Rumpold
+          - url: 248/logo_rumpold.svg
+            name: logo Rumpold
   - component: composition
     class: py-7>container
     children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        class: text-orange my-2
+        content: Generální partner
+      - component: imageGrid
+        class: row imageGrid
+        list:
       - component: decoratedTitle
         tag: h2
         color: red
@@ -27,7 +35,18 @@ children:
       - component: imageGrid
         class: row imageGrid
         list:
-        - url: 249/19PamatkyLOGO-261x300.jpg
-          name: logo Pamatky Tabor
+          - url: 249/19PamatkyLOGO-261x300.jpg
+            name: logo Pamatky Tabor
+            web: https://pamatkytabor.cz/
+          - url: http://www.taborskasetkani.eu/wp-content/uploads/2020/09/HMT-logo-red-prapor.png
+            name: logo Husitského muzea
+            web: http://www.husitskemuzeum.cz/
       - component: MDText
-        content: COGEBI a. s.
+        content: |-
+          - COGEBI a. s.
+          - Artechnic – Schréder a.s.
+          - DHI a.s.
+          - Česká spořitelna, a. s.
+          - AUTOSLUŽBY KROC, spol. s r.o.
+          - EUROVIA CS a.s.
+          - ACG-Real s.r.o.

@@ -98,7 +98,7 @@ export default {
   },
   computed: {
     isVideo: function () {
-      return this.$props.data.primaryMedia
+      return this.$props.data.primaryMedia.match(/youtube/g)
     }
   },
   props: ['data'],
@@ -116,10 +116,10 @@ export default {
     <div class="card">
 
       <div class="card-image">
-        <figure class="image is-4by3">
+        <figure class="image is-16by9">
           <iframe v-if="isVideo" class="has-ratio" 
               :src="data.primaryMedia" allowfullscreen></iframe>
-          <img v-else :src="data.primaryMedia" :alt="data.title">
+          <img v-else :src="$store.getters.mediaUrl(data.primaryMedia, 'w=500')" :alt="data.title">
         </figure>
       </div>
 

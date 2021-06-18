@@ -1,0 +1,12 @@
+- name: title
+  component: dyn-input
+  label: Titulek
+  rules: required
+- name: primaryMedia
+  component: dyn-input
+  label: Hlavní fotka / YT video
+- name: imagesTag
+  component: dyn-input
+  label: Tag obrazku
+  rules: required
+    

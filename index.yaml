@@ -30,19 +30,17 @@ children:
       to: /posts
 - component: triangleWrapper
 - component: composition
-  disabled: true
   class: bg-cream py-7>container
   children:
     - component: decoratedTitle
-      class: section
       tag: h2
       color: red
       content: To nejlepší z Programu
     - component: toNejZProgramu
       url: /uniapi/events/
-      cfgUrl: /uniapi/_events/config.json
+      cfgUrl: /uniapi/events/config.json
     - component: MDText
-      class: section-link text-center
+      class: section-link text-center py-4
       content: "[Celý program](/program)"
 - component: triangleWrapper
   disabled: true

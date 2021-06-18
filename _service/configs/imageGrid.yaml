@@ -9,3 +9,6 @@
   - name: name
     component: dyn-input
     label: Název
+  - name: web
+    component: dyn-input
+    label: Webove stranky

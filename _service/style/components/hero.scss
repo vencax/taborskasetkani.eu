@@ -1,21 +1,14 @@
 #hero {
   width: 100%;
   height: 90vh;
-  background-size: contain;
+  background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;
-  background-image: url("/cdn/242/ts-hero-bg-mobile.jpg");
+  background-image: url("/cdn/257/ts-hero-bg-desktop-4.png");
   background-color: $black;
   padding-top: 4em;
 }
 
-#herotext {
-  background-image: url("/cdn/252/heroTextAllMobile.svg");
-  background-size: contain;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  height: 50vh;
-}
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -52,10 +45,32 @@
 @media screen and (min-width: $tablet) {
   #hero {
     height: calc(100vh - 70px);
-    background-image: url("/cdn/243/ts-hero-bg-desktop.jpg");
+    background-image: url("/cdn/257/ts-hero-bg-desktop-4.png");
   }
 }
+@media (max-width: 768px) {
+   #hero {
+      background-image: url("/cdn/259/ts-hero-bg-mobile-2.png");
+     	background-size: cover;
+	}
+	.py-7 {
+    padding: 2em 0;
+	}
 
+}
+@media (max-width: 365px) {
+   #hero {
+    	background-image: url("/cdn/259/ts-hero-bg-mobile-2.png");
+      background-size: cover;
+	}
+		.py-7 {
+    padding: 2em 0;
+	}
+	}
+
+#navPadder {
+    padding-top: 1em;
+}
 // @media (max-width: 768px) {
 //   #hero h1 {
 //     font-size: 30px;

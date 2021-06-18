@@ -41,21 +41,36 @@ const misto = {
         
 
 const daypicker = {
-  props: ['data'],
+  data: function () {
+    return {
+      selected: null
+    }
+  },
+  props: ['data', 'onSelect'],
+  methods: {
+    doClick: function (val) {
+      if (this.$data.selected === val) return
+      this.$data.selected = val
+      this.$props.onSelect(val)
+    }
+  },
   template: `
   <div class="tabs is-toggle is-toggle-rounded">
     <ul>
-      <li class="is-active">
-        <a href="#">Všechny dny</a>
+      <li :class="selected === null ? 'is-active' : ''">
+        <a href="javascript:void(0);" @click="doClick(null)">Všechny dny</a>
       </li>
-      <li>
-        <a href="#">Pátek</a>
+			<li :class="selected === 2 ? 'is-active' : ''">
+        <a href="javascript:void(0);" @click="doClick(2)">Úterý</a>
       </li>
-      <li>
-        <a href="#">Sobota</a>
+      <li :class="selected === 5 ? 'is-active' : ''">
+        <a href="javascript:void(0);" @click="doClick(5)">Pátek</a>
       </li>
-      <li>
-        <a href="#">Neděle</a>
+      <li :class="selected === 6 ? 'is-active' : ''">
+        <a href="javascript:void(0);" @click="doClick(6)">Sobota</a>
+      </li>
+      <li :class="selected === 7 ? 'is-active' : ''">
+        <a href="javascript:void(0);" @click="doClick(7)">Neděle</a>
       </li>
     </ul>
   </div>
@@ -69,16 +84,19 @@ export default {
       events: null,
       mista: null,
       selected: null,
+      selectedDay: null,
+      theWeekBegin: null,
       loading: false
     }
   },
   created: async function () {
-    const cfgUrl = 'http://tsprod.vxk.cz/uniapi/_events/config.json'
+    const cfgUrl = this.$props.data.url + 'config.json'
     const req = await axios.get(cfgUrl)
     const opts = _.findWhere(req.data.attrs, { name: 'tags' }).options
     this.$data.typeOpts = _.filter(opts, i => i.value !== 'index')
     this.$data.selected = _.map(this.$data.typeOpts, i => i.value)
     this.load()
+    this.$data.theWeekBegin = moment('2021-09-05')
   },
   methods: {
     select: async function (opt) {
@@ -89,11 +107,20 @@ export default {
       }
       this.load()
     },
+    selectDay: function (idx) {
+      this.$data.selectedDay = idx
+      this.load()
+    },
     load: async function () {
       this.$data.loading = true
       const filter = {
         status: "y",
         or: _.map(this.$data.selected, i => ({ tags: { like: "%" + i + "%" } }))
+      }
+      if (this.$data.selectedDay) {
+        const b = this.$data.theWeekBegin.add(this.$data.selectedDay, 'days')
+        const e = moment(b).add(1, 'days')
+        filter.cas = { between: [b, e] }
       }
       const filterStr = JSON.stringify(filter)
       const dataReq = await axios.get(this.$props.data.url, {
@@ -107,7 +134,7 @@ export default {
         acc[i.misto] = null
         return acc
       }, {}))
-      const mistaReq = await axios.get('http://tsprod.vxk.cz/uniapi/ts_places/', {
+      const mistaReq = await axios.get(this.$props.data.mistaurl, {
         params: {
           filter: JSON.stringify({ id: { in: mistaIDs } })
         }
@@ -127,7 +154,7 @@ export default {
   <div class="columns">
     
     <div class="column is-half">
-      <daypicker data="ff" />
+      <daypicker data="selectedDay" :onSelect="selectDay" />
     </div>
 
     <div class="column is-half">
@@ -139,8 +166,7 @@ export default {
   <div class="columns is-flex-wrap-wrap">
     <i v-if="$data.loading" class="fas fa-spinner"></i>
 
-    <div v-else v-for="(i, idx) in $data.events" :key="idx" 
-    class="column is-one-third card-program">
+    <div v-else v-for="(i, idx) in $data.events" :key="idx" class="column is-one-third card-program">
 
       <div class="card">
         <header class="card-header">

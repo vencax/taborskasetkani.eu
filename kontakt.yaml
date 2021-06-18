@@ -7,6 +7,7 @@ children:
     class: container
     children:
       - component: cards
+        class: kontakty
         cards:
           - title: Odbor kultury a cestovního ruchu
             funkce: Pořadatel
@@ -20,26 +21,30 @@ children:
               tel.:&nbsp;[+420 381 486 230-4](tel:+420381486230)
           - title: Ing. Radka Šimková
             funkce: Vedoucí oddělení kultury a cestovního ruchu
-            content: |
+            content: >
               tel.:&nbsp;[+420 381 486 300](tel:+420381486300)<br/>
+
               e-mail:&nbsp;[radka.simkova@mutabor.cz](mailto:radka.simkova@mutabor.cz) 
           - title: Mgr. Luboš Dvořák
             funkce: Koordinátor pro komunikaci s veřejností a médii
-            content: |
+            content: >
               tel.:&nbsp;[+420 381 486 157](tel:+420381486157)<br/>
+
               e-mail:&nbsp;[lubos.dvorak@mutabor.cz](mailto:lubos.dvorak@mutabor.cz)
           - title: Roman Kraus
             funkce: Koordinátor pro stánkový prodej občerstvení na Žižkově náměstí
-            content: |
+            content: >
               tel.:&nbsp;[381 486 271](tel:+420381486271)<br/>
+
               e-mail:&nbsp;[roman.kraus@mutabor.cz](mailto:roman.kraus@mutabor.cz)     
           - title: Milena Soukupová
-            funkce: Koordinátor pro Staročeský jarmark a Středověký řemeslný trh
-            content: |
+            funkce: Koordinátor pro Táborské tržiště
+            content: >
               tel.:&nbsp;[+420 381 486 301](tel:+420381486301)<br/>
+
               e-mail:&nbsp;[milena.soukupova@mutabor.cz](mailto:milena.soukupova@mutabor.cz)
   - component: composition
-    class: bg-yellow py-5 mt-5>container
+    class: bg-yellow py-5 mt-5>container>columns>column is-8 is-offset-2
     children:
       - component: contactform
         controls:
@@ -57,6 +62,6 @@ children:
             component: textarea
             rows: 4
             placeholder: sem napište zprávu
-        submitUrl: https://seznam.cz
+        submitUrl: /forms/?mail=milena.soukupova@mutabor.cz
         otazka: čtvrtý měsíc v roce je
         odpoved: duben
