@@ -4,7 +4,7 @@
   background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;
-  background-image: url("/cdn/257/ts-hero-bg-desktop-4.png");
+  background-image: url("/cdn/281/ts-hero-bg-desktop-5.png");
   background-color: $black;
   padding-top: 4em;
 }
@@ -45,12 +45,12 @@
 @media screen and (min-width: $tablet) {
   #hero {
     height: calc(100vh - 70px);
-    background-image: url("/cdn/257/ts-hero-bg-desktop-4.png");
+    background-image: url("/cdn/281/ts-hero-bg-desktop-5.png");
   }
 }
 @media (max-width: 768px) {
    #hero {
-      background-image: url("/cdn/259/ts-hero-bg-mobile-2.png");
+      background-image: url("/cdn/282/ts-hero-bg-mobile-3.png");
      	background-size: cover;
 	}
 	.py-7 {
@@ -60,7 +60,7 @@
 }
 @media (max-width: 365px) {
    #hero {
-    	background-image: url("/cdn/259/ts-hero-bg-mobile-2.png");
+    	background-image: url("/cdn/282/ts-hero-bg-mobile-3.png");
       background-size: cover;
 	}
 		.py-7 {

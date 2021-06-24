@@ -15,7 +15,7 @@ children:
               Žižkovo náměstí 11, 390 01 Tábor<br/>
               tel.:&nbsp;[+420 381 486 300](tel:+420381486300)
           - title: Infocentrum Město Tábor
-            funkce: Prodej vstupenek
+            funkce: ""
             content: |
               Žižkovo náměstí 2, 390 01 Tábor<br/>
               tel.:&nbsp;[+420 381 486 230-4](tel:+420381486230)
@@ -32,7 +32,7 @@ children:
 
               e-mail:&nbsp;[lubos.dvorak@mutabor.cz](mailto:lubos.dvorak@mutabor.cz)
           - title: Roman Kraus
-            funkce: Koordinátor pro stánkový prodej občerstvení na Žižkově náměstí
+            funkce: Koordinátor pro stánkový prodej občerstvení
             content: >
               tel.:&nbsp;[381 486 271](tel:+420381486271)<br/>
 
@@ -48,7 +48,7 @@ children:
     children:
       - component: contactform
         controls:
-          - name: email
+          - name: from
             label: emailová adresa
             component: input
             placeholder: sem prosím Vaši emailovou adresu pro případný zpětný kontakt
@@ -57,11 +57,10 @@ children:
             label: předmět
             component: input
             placeholder: sem patří předmět zprávy
-          - name: body
+          - name: text
             label: zpráva
             component: textarea
             rows: 4
             placeholder: sem napište zprávu
-        submitUrl: /forms/?mail=milena.soukupova@mutabor.cz
-        otazka: čtvrtý měsíc v roce je
-        odpoved: duben
+        url: /api/contactforms/
+        to: milena.soukupova@mutabor.cz

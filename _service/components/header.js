@@ -31,7 +31,7 @@ export default {
     <div class="navbar-brand">
 
       <router-link class="navbar-item" to="/">
-        <img :src="$store.getters.mediaUrl({id: '263', filename: 'LOGO.svg'})" 
+        <img :src="$store.getters.mediaUrl({id: 263, filename: 'LOGO.svg'})" 
           :alt="$store.state.site.title" />
       </router-link>
 
@@ -49,13 +49,10 @@ export default {
 
       <div class="navbar-end">
         <bbbmenuitem v-for="i, idx in $store.state.site.menu" :key="idx" :data="i" />
-        <div class="navbar-item">
-          <a href="#">english</a>/<a href="#">deutsch</a>
-        </div>
         <div class="navbar-item social-links">
-          <a v-if="$store.state.site.twitter" :href="$store.state.site.twitter"><i class="fab fa-twitter"></i></a>
-          <a v-if="$store.state.site.facebook" :href="$store.state.site.facebook"><i class="fab fa-facebook"></i></a>
-          <a v-if="$store.state.site.instagram" :href="$store.state.site.instagram"><i class="fab fa-instagram"></i></a>
+          <a v-if="$store.state.site.twitter" :href="$store.state.site.twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a v-if="$store.state.site.facebook" :href="$store.state.site.facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a v-if="$store.state.site.instagram" :href="$store.state.site.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
@@ -64,4 +61,7 @@ export default {
   </div>
 </header>
 `
+//<div class="navbar-item">
+//          <a href="#">english</a>/<a href="#">deutsch</a>
+//        </div>
 }

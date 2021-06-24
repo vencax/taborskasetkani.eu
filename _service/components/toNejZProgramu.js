@@ -1,7 +1,7 @@
 Vue.filter('eventDate', function (value) {
   if (value) {
     value = _.isString(value) ? moment(value) : value
-    return value.format('dddd hh:mm')
+    return value.format('dddd HH:mm')
   }
 })
 
@@ -53,7 +53,7 @@ export default {
           <ul>
             <li v-for="(opt, idx) in $data.typeOpts" :key="idx"
                 :class="selected===opt.value ? 'is-active' : ''">
-              <a @click="select(opt)">{{opt.text}}</a>
+              <a @click="select(opt)" tabindex = "1">{{opt.text}}</a>
             </li>
           </ul>
         </div>

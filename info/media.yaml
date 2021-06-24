@@ -23,8 +23,7 @@ children:
             class: text-red my-2
             content: Tisková konference
           - component: MDText
-            content: v úterý 29. června v 12:30 hod v budově Matriky, na Žižkově nám.,
-              Tábor‍
+            content: v úterý 31. srpna v 9 hodin v budově Matriky, na Žižkově nám., Tábor‍
           - component: decoratedTitle
             tag: h2
             color: red

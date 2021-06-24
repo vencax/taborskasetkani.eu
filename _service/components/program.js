@@ -1,7 +1,7 @@
 Vue.filter('eventDate', function (value) {
   if (value) {
     value = _.isString(value) ? moment(value) : value
-    return value.format('dddd hh:mm')
+    return value.format('dddd HH:mm')
   }
 })
 
@@ -148,7 +148,7 @@ export default {
   components: { daypicker: daypicker, tagpicker: tagpicker, misto },
   template: `
 <div v-if="data.unpublished" class="container">
-  Program se teprve tvoří. Strpení prosím.
+  Podrobný program je v přípravě. Děkujeme za strpení.
 </div>
 <div v-else class="container">
   <div class="columns">

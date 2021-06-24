@@ -1,0 +1,10 @@
+- name: content
+  component: dyn-input
+  label: Titulek
+  rules: required
+- name: color
+  component: dyn-input
+  label: Barva
+- name: icon
+  component: dyn-input
+  label: Ikona

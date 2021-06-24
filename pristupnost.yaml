@@ -12,6 +12,7 @@ children:
     class: container
     children:
       - component: MDText
+        class: content
         content: >-
           Město Tábor – webové stránky festivalu Táborská setkání, se zavazuje k
           zpřístupnění své webové stránky v souladu se zákonem č. 99/2019 Sb., o
@@ -22,32 +23,47 @@ children:
           26. října 2016 o přístupnosti webových stránek a mobilních aplikací.
 
 
+
           Toto prohlášení o přístupnosti se vztahuje na tyto webové stránky https://www.taborskasetkani.eu.
 
 
-          ### Stav souladu
+
+
+          ## Stav souladu
+
 
           Tato webová stránka je v souladu s EN 301 549 V2 1.2 a standardem WCAG 2.1.
 
 
-          ### Další formáty
+
+
+          ## Další formáty
+
 
           Na internetových stránkách mohou být informace nabízeny i v podobě dokumentů formátu DOC, DOCX, XLS, XLSX a PDF, a to zejména z důvodů, že obsahují typografické prvky a formátování, které webový formát HTML nepodporuje, nebo jsou příliš velké, proto pak doporučujeme jejich stažení. Formáty DOC a PDF jsou také vhodnější pro tisk. K prohlížení těchto dokumentů je možné zdarma stáhnout Word Viewer a Acrobat Reader. V některých webových prohlížečích je integrována aplikace, jež slouží k prohlížení výše uvedených formátů dokumentů.
 
 
-          ### Vypracování tohoto prohlášení o přístupnosti
 
-          Toto prohlášení bylo vypracováno dne 2.6.2020. 
+
+          ## Vypracování tohoto prohlášení o přístupnosti
+
+
+          Toto prohlášení bylo vypracováno dne 18. 6. 2021. 
 
           Toto prohlášení bylo vypracováno dle metodického pokynu MVČR k tomuto zákonu.
 
 
-          ### Zpětná vazba a kontaktní údaje
+
+          ## Zpětná vazba a kontaktní údaje
+
 
           Zpětnou vazbu ohledně přístupnosti webových stránek a informací na nich uvedených směrujte na níže uvedené kontakty.
 
 
-          ### Kontakt na správce obsahu
+
+
+          ## Kontakt na správce obsahu
+
 
           Město Tábor – Odbor kultury a cestovního ruchu,
 
@@ -55,21 +71,21 @@ children:
 
           390 01 Tábor,
 
-          381 486 300
+          381 486 300,
 
           radka.simkova@mutabor.cz
 
 
-          ### Kontakt na technického provozovatele
-
-          Město Tábor – Oddělení IT, Žižkovo náměstí 2, 390 02 Tábor,
-
-          +420 777 060914,
-
-          vaclav.klecanda@mutabor.cz
 
 
-          ### Postupy pro prosazování práva
+          ## Kontakt na technického provozovatele
+
+          Město Tábor – Oddělení IT, Žižkovo náměstí 2, 390 01 Tábor,
+
+
+
+          ## Postupy pro prosazování práva
+
 
           V případě neuspokojivé odpovědi na oznámení nebo žádost zaslanou v souladu se směrnicí Evropského parlamentu a Rady (EU) 2016/2102 kontaktujte:
 

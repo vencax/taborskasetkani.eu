@@ -4,6 +4,17 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
+    class: py-7>container
+    children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        class: text-orange my-2
+        content: Generální partner
+      - component: imageGrid
+        class: row imageGrid
+        list: null
+  - component: composition
     class: bg-yellow py-7>container
     children:
       - component: decoratedTitle
@@ -19,14 +30,6 @@ children:
   - component: composition
     class: py-7>container
     children:
-      - component: decoratedTitle
-        tag: h2
-        color: red
-        class: text-orange my-2
-        content: Generální partner
-      - component: imageGrid
-        class: row imageGrid
-        list:
       - component: decoratedTitle
         tag: h2
         color: red
