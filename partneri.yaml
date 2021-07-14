@@ -4,18 +4,21 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: composition
-    class: py-7>container
+    class: container
     children:
       - component: decoratedTitle
         tag: h2
         color: red
-        class: text-orange my-2
+        class: text-orange my-4
         content: Generální partner
       - component: imageGrid
         class: row imageGrid
-        list: null
+        list:
+          - url: https://www.c-energy.cz/view/source/img/logo.svg
+            name: C-Energy logo
+            web: https://www.c-energy.cz/
   - component: composition
-    class: bg-yellow py-7>container
+    class: container
     children:
       - component: decoratedTitle
         tag: h2
@@ -23,12 +26,19 @@ children:
         class: my-2
         content: Hlavní partneři
       - component: imageGrid
-        class: row imageGrid
+        class: imageGrid
         list:
-          - url: 248/logo_rumpold.svg
+          - url: 293/Logo_Rumpold.jpg
             name: logo Rumpold
+            web: https://www.rumpold.cz/cs/home/
+          - url: 286/2.EAGB_logo_claim_CMYK_CZ.jpg
+            name: Energie AG
+            web: https://www.energieag.cz/
+          - url: 287/4.CEVAK.jpg
+            name: Čevak
+            web: https://www.cevak.cz/
   - component: composition
-    class: py-7>container
+    class: container
     children:
       - component: decoratedTitle
         tag: h2
@@ -36,20 +46,51 @@ children:
         class: text-orange my-2
         content: Další partneři
       - component: imageGrid
-        class: row imageGrid
+        class: imageGrid
         list:
           - url: 249/19PamatkyLOGO-261x300.jpg
             name: logo Pamatky Tabor
             web: https://pamatkytabor.cz/
-          - url: http://www.taborskasetkani.eu/wp-content/uploads/2020/09/HMT-logo-red-prapor.png
+            width: "200"
+          - url: 289/6.cb_auto_logo_2019_horizontal_r.png
+            name: CB Auto
+          - url: 290/5.Slavia.jpg
+            name: Slavia
+          - url: 288/8.HMT_logo_red_prapor.png
             name: logo Husitského muzea
             web: http://www.husitskemuzeum.cz/
+            width: "400"
       - component: MDText
         content: |-
-          - COGEBI a. s.
-          - Artechnic – Schréder a.s.
-          - DHI a.s.
-          - Česká spořitelna, a. s.
-          - AUTOSLUŽBY KROC, spol. s r.o.
-          - EUROVIA CS a.s.
-          - ACG-Real s.r.o.
+          - **DAICH spol. s r. o.**
+          - **COGEBI a. s.**
+          - **Artechnic – Schréder a.s.**
+          - **Němec & partners, a.s.**
+          - **EUROVIA CS a.s.**
+          - **DHI a.s.**
+          - **ACG-Real s.r.o.**
+          - **EFAFLEX – CZ s.r.o.**
+          - **Pohřební služba Ondřej Melich s.r.o.**
+          - **HANKER Bohemia s.r.o.**
+          - **DBD CONTROL SYSTEMS spol. s r.o.**
+          - **ŠTIČÍ LÍHEŇ – ESOX, spol. s r.o.**
+          - **Česká spořitelna, a. s.**
+          - **AUTOSLUŽBY KROC, spol. s.r.o.**
+  - component: composition
+    class: container
+    children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        class: text-orange my-2
+        content: Mediální partneři
+      - component: imageGrid
+        class: imageGrid
+        list:
+          - url: 291/CBrozhlas.png
+            name: Český rozhlas České Budějovice
+            web: ""
+            width: "600"
+          - url: https://www.kulturne.com/img/header-logo-big.png
+            name: Kulturně
+            web: https://www.kulturne.com/

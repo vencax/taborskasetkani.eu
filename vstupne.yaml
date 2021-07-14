@@ -40,7 +40,7 @@ children:
           - component: MDText
             class: content
             content: |
-              __V roce 2021 se vstupné na festival NEPLATÍ.__
+              ## V roce 2021 se vstupné na festival NEPLATÍ.
   - component: triangleWrapper
     disabled: true
     left: red

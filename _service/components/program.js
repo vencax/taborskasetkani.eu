@@ -98,6 +98,12 @@ export default {
     this.load()
     this.$data.theWeekBegin = moment('2021-09-05')
   },
+  computed: {
+    unpublished: function () {
+      return this.$props.data.unpublished && 
+        !this.$router.currentRoute.query.debug
+    }
+  },
   methods: {
     select: async function (opt) {
       if (_.contains(this.$data.selected, opt.value)) {
@@ -147,7 +153,7 @@ export default {
   props: ['data', 'path'],
   components: { daypicker: daypicker, tagpicker: tagpicker, misto },
   template: `
-<div v-if="data.unpublished" class="container">
+<div v-if="unpublished" class="container">
   Podrobný program je v přípravě. Děkujeme za strpení.
 </div>
 <div v-else class="container">

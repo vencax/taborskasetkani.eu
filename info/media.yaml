@@ -16,14 +16,15 @@ children:
             class: text-orange my-2
             content: Termín konání festivalu
           - component: MDText
-            content: 10.–12. 9. 2021
+            content: "**10.–12. 9. 2021**"
           - component: decoratedTitle
             tag: h2
             color: black
             class: text-red my-2
             content: Tisková konference
           - component: MDText
-            content: v úterý 31. srpna v 9 hodin v budově Matriky, na Žižkově nám., Tábor‍
+            content: "**čtvrtek 2. září 2021 v 10 hodin** v budově matriky na Žižkově nám.
+              6, Tábor‍"
           - component: decoratedTitle
             tag: h2
             color: red
@@ -38,12 +39,6 @@ children:
       - component: cards
         class: cards my-5
         cards:
-          - title: Tisková zpráva
+          - title: Plakát a logo festivalu pro tisk
             content: |
-              stáhnout PDF
-          - title: Fotografie pro tisk
-            content: |
-              stáhnout ZIP balíček 10 mb
-          - title: Logo a plakát
-            content: |
-              táhnout logo a plakát 10 mb
+              [stáhnout ZIP balíček](/cdn/284/tsGrafika.zip) 10 mb

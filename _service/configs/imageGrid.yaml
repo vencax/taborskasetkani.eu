@@ -12,3 +12,6 @@
   - name: web
     component: dyn-input
     label: Webove stranky
+  - name: width
+    component: dyn-input
+    label: Šířka obrázku v pixelech
