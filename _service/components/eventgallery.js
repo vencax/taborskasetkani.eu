@@ -46,6 +46,7 @@ const myCarousel = {
     <div class="modal-content">
       <i v-if="loading" class="fas fa-spinner fa-spin"></i>
       <div v-else>
+      
         <div class="field has-addons">
           <p class="control">
             <button class="button" @click="toRight">
@@ -76,72 +77,36 @@ const myCarousel = {
 export default {
   data: function () {
     return {
-      carouselOpened: false,
-      images: []
+      // curr: null,
+      images: [],
+      loading: true
     }
   },
   created: async function () {
     try {
       const filter = {
         ctype: { like: 'image%' },
-        and: [{ tags: { like: `%${this.$props.data.imagesTag}%` } }]
+        and: [{ tags: { like: `%${this.$props.data.item.images_tag}%` } }]
       }
       const dataReq = await axios.get(URL, {params: {
-        currentPage: 1,
-        perPage: 4,
         filter: JSON.stringify(filter)
       }})
-      this.$data.images = dataReq.data.data
+      this.$data.images = dataReq.data
+      this.$data.loading = false
     } catch (_) {
-      this.$data.images = [{ title: 'newsPreview: asi spatne url v datech' }]
-    }
-  },
-  computed: {
-    isVideo: function () {
-      return this.$props.data.primaryMedia.match(/youtube/g)
+      // do nothing, let the spinner spin ;)
     }
   },
   props: ['data'],
   methods: {
-    openCarousel: function () {
-      this.$data.carouselOpened = true
-    },
-    closeCarousel: function () {
-      this.$data.carouselOpened = false
+    imgURL: function (i) {
+      return `${CDN}${i.id}/${i.filename}`
     }
   },
-  components: { myCarousel },
   template: `
-  <div class="column is-6">
-    <div class="card">
-
-      <div class="card-image">
-        <figure class="image is-16by9">
-          <iframe v-if="isVideo" class="has-ratio" 
-              :src="data.primaryMedia" allowfullscreen></iframe>
-          <img v-else :src="$store.getters.mediaUrl(data.primaryMedia, 'w=500')" :alt="data.title">
-        </figure>
-      </div>
-
-      <div v-if="false" class="card-content">
-        <h3 class="title">{{ data.title }}</h3>
-        <div class="content">
-          <markdown :text="data.content" />
-        </div>
-      </div>
-
-      <div class="columns is-gapless is-mobile" @click="openCarousel">
-        <div v-for="i,idx in images" :key="idx" class="column">
-          <img :src="$store.getters.mediaUrl(i, 'w=200')" />
-        </div>
-      </div>
-
-      <div v-if="carouselOpened">
-        <myCarousel :onClose="closeCarousel" :data="data" />
-      </div>
-
-    </div>
+  <div class="eventmasonry">
+      <img v-for="i,idx in images" :key="idx" 
+        :src="$store.getters.mediaUrl(i, 'w=300')" />
   </div>
   `
 }
-

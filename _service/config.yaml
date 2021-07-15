@@ -1,0 +1,43 @@
+title: Táborská setkání
+nextEvent: '2021-09-10T12:47:37.254Z'
+lang: cs
+twitter:
+facebook: https://www.facebook.com/taborskasetkani
+instagram:
+cdn: /cdn
+globalComponents:
+  - triangleWrapper
+menu:
+  - label: Program
+    link: "/program"
+  - label: Vstupné
+    link: "/vstupne"
+  - label: Info
+    link: "/info"
+    children:
+      - label: Návštěvníci
+        link: "/info/navstevnici"
+      - label: Obyvatelé
+        link: "/info/obyvatele"
+      - label: Média
+        link: "/info/media"
+      - label: Výběrová řízení
+        link: "/info/vyberka"
+  - label: Partneři
+    link: "/partneri"
+  - label: Galerie
+    link: "/galerie"
+  - label: Kontakt
+    link: "/kontakt"
+detailpages:
+  - path: /posts/
+    url: /uniapi/posts/?filter={"id":"{{ID}}"}
+    layout: postDetail
+    titleattr: title
+  - path: /galerie/
+    url: /uniapi/rocniky/?filter={"title":"{{ID}}"}
+    layout: rocnikDetail
+    titleattr: title
+    children:
+    - component: eventgallery
+      url: /uniapi/files/

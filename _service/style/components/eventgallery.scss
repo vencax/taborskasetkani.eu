@@ -1,0 +1,29 @@
+
+
+.eventmasonry { 
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+  height: 100vw;
+  max-height: 800px;
+  font-size: 0;  
+}
+.eventmasonry img {  
+  width: 33.3%;
+  transition: .8s opacity;
+} 
+
+.eventmasonry:hover img { opacity: 0.3; }
+.eventmasonry:hover img:hover { opacity: 1; } 
+
+// /* fallback for earlier versions of Firefox */
+
+// @supports not (flex-wrap: wrap) {
+//   div#masonry { display: block; }
+//   div#masonry img {  
+//   display: inline-block;
+//   vertical-align: top;
+//   }
+// }
+
+ 

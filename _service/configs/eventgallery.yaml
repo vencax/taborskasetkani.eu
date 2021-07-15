@@ -1,12 +1,18 @@
-- name: title
-  component: dyn-input
-  label: Titulek
-  rules: required
-- name: primaryMedia
-  component: dyn-input
-  label: Hlavní fotka / YT video
-- name: imagesTag
-  component: dyn-input
-  label: Tag obrazku
-  rules: required
-    
+- name: list
+  label: Seznam obrázků
+  component: dyn-listeditor
+  form:
+    - name: title
+      component: dyn-input
+      label: Titulek
+      rules: required
+    - name: primaryMedia
+      component: dyn-input
+      label: Hlavní fotka
+    - name: imagesTag
+      component: dyn-input
+      label: Tag obrazku
+      rules: required
+    - name: video
+      component: dyn-input
+      label: Ročníkové video

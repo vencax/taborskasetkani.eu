@@ -1,0 +1,45 @@
+<div>
+
+  <pageHeader />
+  <div id="navPadder" class="bg-black"></div>
+
+  <triangleWrapper />
+
+  <i v-if="loading" class="fas fa-spinner fa-spin"></i>
+  <div v-else class="container">
+
+    <section class="section">
+    
+      <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+        <ul>
+          <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
+          <li><router-link to="/galerie">Galerie</router-link></li>
+        </ul>
+      </nav>
+
+      <div class="h1-wrapper">
+        <div class="line"></div>
+        <h1>Ročník {{item.title}}</h1>
+        <div class="line"></div>
+      </div>
+
+      <h2 v-if="item.content" class="subtitle">{{item.subtitle}}</h2>
+
+      <figure v-if="item.video" class="image is-16by9">
+        <iframe class="has-ratio" :src="item.video" allowfullscreen></iframe>
+      </figure>
+
+    </section>
+
+    <section v-for="(i, idx) in config.children" :key="idx" class="section">
+
+      <component :is="i.component" :data="Object.assign({item}, i)" />
+
+    </section>
+
+  </div>
+
+  <triangleWrapper class="lastsection" />
+  <pageFooter />
+
+</div>
