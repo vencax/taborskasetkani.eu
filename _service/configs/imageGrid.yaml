@@ -3,8 +3,12 @@
   component: dyn-listeditor
   form:
   - name: url
-    component: dyn-input
-    label: Odkaz
+    component: FileUploadingSelect
+    label: Obrazek
+    default_tags: partneri
+    fileindex_url: /uniapi/files
+    tag_url: /uniapi/filetags
+    storage_url: /cdn/
     rules: required
   - name: name
     component: dyn-input

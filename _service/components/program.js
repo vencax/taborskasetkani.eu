@@ -21,62 +21,6 @@ const tagpicker = {
   `
 }
 
-const misto = {
-  props: ['id', 'mista'],
-  computed: {
-    misto: function () {
-      return _.find(this.$props.mista, i => i.id === this.$props.id)
-    },
-    // see https://developers.google.com/maps/documentation/urls/get-started
-    dirURL: function () {
-      return 'https://www.google.com/maps/dir/?api=1&travelmode=walking&destination=' + this.misto.gps
-    }
-  },
-  template: `
-  <a :href="dirURL" target="_blank" class="card-link">
-    <i class="fas fa-map-marked-alt"></i> {{ misto.title }}
-  </a>
-  `
-}
-        
-
-const daypicker = {
-  data: function () {
-    return {
-      selected: null
-    }
-  },
-  props: ['data', 'onSelect'],
-  methods: {
-    doClick: function (val) {
-      if (this.$data.selected === val) return
-      this.$data.selected = val
-      this.$props.onSelect(val)
-    }
-  },
-  template: `
-  <div class="tabs is-toggle is-toggle-rounded">
-    <ul>
-      <li :class="selected === null ? 'is-active' : ''">
-        <a href="javascript:void(0);" @click="doClick(null)">Všechny dny</a>
-      </li>
-			<li :class="selected === 2 ? 'is-active' : ''">
-        <a href="javascript:void(0);" @click="doClick(2)">Úterý</a>
-      </li>
-      <li :class="selected === 5 ? 'is-active' : ''">
-        <a href="javascript:void(0);" @click="doClick(5)">Pátek</a>
-      </li>
-      <li :class="selected === 6 ? 'is-active' : ''">
-        <a href="javascript:void(0);" @click="doClick(6)">Sobota</a>
-      </li>
-      <li :class="selected === 7 ? 'is-active' : ''">
-        <a href="javascript:void(0);" @click="doClick(7)">Neděle</a>
-      </li>
-    </ul>
-  </div>
-  `
-}
-
 export default {
   data: function () {
     return {
@@ -86,7 +30,13 @@ export default {
       selected: null,
       selectedDay: null,
       theWeekBegin: null,
-      loading: false
+      loading: false,
+      favorites: JSON.parse(localStorage.getItem('TS_FAVORITE_EVENTS') || '[]')
+    }
+  },
+  watch: {
+    favorites (val, oldVal) {
+      localStorage.setItem('TS_FAVORITE_EVENTS', JSON.stringify(val))
     }
   },
   created: async function () {
@@ -150,8 +100,13 @@ export default {
       this.$data.loading = false
     }
   },
-  props: ['data', 'path'],
-  components: { daypicker: daypicker, tagpicker: tagpicker, misto },
+  props: ['data'],
+  components: { 
+    DayPicker: () => import('./program/daypicker.js'),
+    tagpicker: tagpicker,
+    Misto: () => import('./program/misto.js'),
+    FavoriteIcon: () => import('./program/favoriteIcon.js')
+  },
   template: `
 <div v-if="unpublished" class="container">
   Podrobný program je v přípravě. Děkujeme za strpení.
@@ -160,7 +115,7 @@ export default {
   <div class="columns">
     
     <div class="column is-half">
-      <daypicker data="selectedDay" :onSelect="selectDay" />
+      <DayPicker data="selectedDay" :onSelect="selectDay" />
     </div>
 
     <div class="column is-half">
@@ -175,24 +130,23 @@ export default {
     <div v-else v-for="(i, idx) in $data.events" :key="idx" class="column is-one-third card-program">
 
       <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">{{ i.title }}</p>
-          <div class="card-header-icon">
-            <i class="fa-heart float-right" :class="false ? 'fas' : 'far'"></i>
-          </div>
-        </header>
 
-        <div class="card-content">        
+        <div class="card-content">
+
+          <i class="far fa-clock"></i> {{ i.cas | eventDate }}
+          <p class="title">{{ i.title }}</p>      
 
           <div class="content">
             <markdown :text="i.content" />
           
             <h6 class="card-subtitle mb-2 text-muted">{{ i.tags }}</h6>
 
-            <a href="#" class="card-link">
-              <i class="far fa-clock"></i> {{ i.cas | eventDate }}
-            </a>
-            <p><misto :id="i.misto" :mista="mista" /></p>
+      
+            <Misto :id="i.misto" :mista="mista" />
+
+            <div class="card-header-icon">
+            <FavoriteIcon :event="i" :favorites="favorites" />
+          </div>    
           </div>
 
         </div>
