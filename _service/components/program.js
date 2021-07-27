@@ -130,23 +130,28 @@ export default {
     <div v-else v-for="(i, idx) in $data.events" :key="idx" class="column is-one-third card-program">
 
       <div class="card">
+        <div v-if="i.obrazek" class="card-image">
+          <figure class="image is-4by3">
+            <img :src="$store.getters.mediaUrl(i.obrazek)" alt="Obrázek">
+          </figure>
+        </div>
 
         <div class="card-content">
 
-          <i class="far fa-clock"></i> {{ i.cas | eventDate }}
-          <p class="title">{{ i.title }}</p>      
+          <FavoriteIcon class="is-pulled-right" :event="i" :favorites="favorites" />
+          <p class="title">{{ i.title }}</p>
 
           <div class="content">
+            <p>
+              <i class="far fa-clock"></i>
+              <a href="#" class="card-link">{{ i.cas | eventDate }}</a><br/>
+
+              <i class="fas fa-map-marked-alt"></i>
+              <Misto :id="i.misto" :mista="mista" />
+            </p>            
+
             <markdown :text="i.content" />
-          
-            <h6 class="card-subtitle mb-2 text-muted">{{ i.tags }}</h6>
-
-      
-            <Misto :id="i.misto" :mista="mista" />
-
-            <div class="card-header-icon">
-            <FavoriteIcon :event="i" :favorites="favorites" />
-          </div>    
+              
           </div>
 
         </div>

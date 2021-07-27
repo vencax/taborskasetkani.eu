@@ -14,8 +14,8 @@ export default {
     }
   },
   template: `
-  <i class="fa-heart float-right" 
-    :class="isLiked ? 'fas' : 'far'"
-    @click="onClick"></i>
+  <a href="JavaScript:void(0);" @click="onClick" class="card-link">
+    <i class="fa-heart float-right" :class="isLiked ? 'fas' : 'far'"></i>
+  </a>
   `
 }

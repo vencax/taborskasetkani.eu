@@ -11,7 +11,7 @@ export default {
   },
   template: `
   <a :href="dirURL" target="_blank" class="card-link">
-    <i class="fas fa-map-marked-alt"></i> {{ misto.title }}
+    {{ misto.title }}
   </a>
   `
 }
