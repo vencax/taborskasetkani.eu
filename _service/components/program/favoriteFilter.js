@@ -7,7 +7,9 @@ export default {
   methods: {
     toggle: function () {
       const query = Object.assign({}, this.$router.currentRoute.query)
-      query.favorites = !query.favorites
+      query.favorites
+        ? delete query.favorites
+        : Object.assign(query, { favorites: true })
       this.$router.push({ query })
     }
   },

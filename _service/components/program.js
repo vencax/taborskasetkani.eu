@@ -22,7 +22,7 @@ export default {
       const tags = this.$router.currentRoute.query.tags.split(',')
       filter.or = _.map(tags, i => ({ tags: { like: "%" + i + "%" } }))
     }
-    if (this.$router.currentRoute.query.tags) {
+    if (this.$router.currentRoute.query.favorites) {
       filter.id = { in: this.$data.favorites }
     }
     // if (this.$data.selectedDay) {
@@ -80,7 +80,7 @@ export default {
 </div>
 <div v-else class="container">
   <div class="columns">
-    <DayPicker class="column is-4" :data="data" />
+    <div class="column is-4"><DayPicker :data="data" /></div>
     <div class="column is-4"><TagPicker :data="data" /></div>
     <FavoriteFilter class="column is-4" />
   </div>

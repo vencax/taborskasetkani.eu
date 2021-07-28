@@ -33,7 +33,7 @@ export default {
   },
   props: ['data'],
   template: `
-<div class="dropdown" :class="open ? 'is-active' : ''">
+<div class="dropdown is-fullwidth" :class="open ? 'is-active' : ''">
   <div class="dropdown-trigger" @click="open = !open">
     <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
       <span>Filter žánrů</span>
@@ -44,8 +44,8 @@ export default {
   </div>
   <div v-if="typeOpts" class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
-      <div v-for="(opt, idx) in typeOpts" :key="idx">
-        <label class="dropdown-item checkbox">
+      <div v-for="(opt, idx) in typeOpts" :key="idx" class="dropdown-item">
+        <label class="checkbox">
           <input @click="select(opt)" type="checkbox" :checked="isSelected(opt)"> {{opt.text}}
         </label>
       </div>

@@ -5,22 +5,37 @@ export default {
       open: false
     }
   },
-  props: ['data', 'onSelect'],
+  props: ['data'],
+  computed: {
+    days: function () {
+      return ['úterý', 'středa', 'čtvrtek', 'pátek', 'sobota', 'neděle']
+    }
+  },
   methods: {
-    doClick: function (val) {
-      if (this.$data.selected === val) return
-      this.$data.selected = val
-      this.$props.onSelect(val)
+    select: function (idx) {
+      idx = idx + 2
+      let selected = this.$router.currentRoute.query.days
+        ? this.$router.currentRoute.query.days.split(',')
+        : [2, 3, 4, 5, 6, 7]
+      if (_.contains(selected, idx)) {
+        selected = _.without(selected, idx)
+      } else {
+        selected.push(idx)
+      }
+      const query = Object.assign({}, this.$router.currentRoute.query)
+      query.days = selected.join(',')
+      this.$router.push({ query })
     },
-    selectDay: function (idx) {
-      this.$data.selectedDay = idx
-      this.load()
+    isSelected: function (idx) {
+      return this.$router.currentRoute.query.days
+        ? this.$router.currentRoute.query.days.indexOf(idx) >= 0
+        : true
     }
   },
   template: `
-<div class="dropdown" :class="open ? 'is-active' : ''">
+<div class="dropdown is-fullwidth" :class="open ? 'is-active' : ''">
   <div class="dropdown-trigger" @click="open = !open">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+    <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
       <span>Filter dnů</span>
       <span class="icon is-small">
         <i class="fas" :class="open ? 'fa-angle-up' : 'fa-angle-down'" aria-hidden="true"></i>
@@ -29,12 +44,11 @@ export default {
   </div>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
-      <label class="dropdown-item checkbox" @click="doClick(2)">
-        <input type="checkbox"> Úterý
-      </label>
-      <label class="dropdown-item checkbox" @click="doClick(2)">
-        <input type="checkbox"> Středa
-      </label>
+      <div v-for="(day, idx) in days" :key="idx" class="dropdown-item">
+        <label class="checkbox">
+          <input @click="select(idx)" type="checkbox" :checked="isSelected(idx)"> {{ day }}
+        </label>
+      </div>
     </div>
   </div>
 </div>
