@@ -3,7 +3,6 @@ export default {
     return {
       events: null,
       mista: null,
-      theWeekBegin: null,
       loading: false,
       favorites: JSON.parse(localStorage.getItem('TS_FAVORITE_EVENTS') || '[]')
     }
@@ -18,18 +17,22 @@ export default {
     const filter = {
       status: "y"
     }
-    if (this.$router.currentRoute.query.tags) {
-      const tags = this.$router.currentRoute.query.tags.split(',')
+    if (this.$router.currentRoute.query.tagy) {
+      const tags = this.$router.currentRoute.query.tagy.split(',')
       filter.or = _.map(tags, i => ({ tags: { like: "%" + i + "%" } }))
     }
     if (this.$router.currentRoute.query.favorites) {
       filter.id = { in: this.$data.favorites }
     }
-    // if (this.$data.selectedDay) {
-    //   const b = this.$data.theWeekBegin.add(this.$data.selectedDay, 'days')
-    //   const e = moment(b).add(1, 'days')
-    //   filter.cas = { between: [b, e] }
-    // }
+    if (this.$router.currentRoute.query.dny) {
+      const theWeekBegin = '2021-09-05'
+      const and = this.$router.currentRoute.query.dny.split(',').map(i => {
+        const b = moment(theWeekBegin).add(Number(i), 'days')
+        const e = moment(b).add(1, 'days')
+        return { cas: { between: [b, e] } }
+      })
+      filter.or = filter.or ? _.union(filter.or, and) : and
+    }
     const filterStr = JSON.stringify(filter)
     const dataReq = await axios.get(this.$props.data.url, {
       params: {
@@ -48,9 +51,7 @@ export default {
       }
     })
     this.$data.mista = mistaReq.data
-
     this.$data.loading = false
-    this.$data.theWeekBegin = moment('2021-09-05')
   },
   computed: {
     unpublished: function () {
