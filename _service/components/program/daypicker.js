@@ -5,6 +5,11 @@ export default {
       open: false
     }
   },
+  created: async function () {
+    this.$data.selected = this.$router.currentRoute.query.dny
+      ? this.$router.currentRoute.query.dny.split(',').map(i => (Number(i)))
+      : [2, 3, 4, 5, 6, 7]
+  },
   props: ['data'],
   computed: {
     days: function () {
@@ -14,22 +19,19 @@ export default {
   methods: {
     select: function (idx) {
       idx = idx + 2
-      let selected = this.$router.currentRoute.query.days
-        ? this.$router.currentRoute.query.days.split(',')
-        : [2, 3, 4, 5, 6, 7]
-      if (_.contains(selected, idx)) {
-        selected = _.without(selected, idx)
+      if (_.contains(this.$data.selected, idx)) {
+        this.$data.selected = _.without(this.$data.selected, idx)
       } else {
-        selected.push(idx)
+        this.$data.selected.push(idx)
       }
-      const query = Object.assign({}, this.$router.currentRoute.query)
-      query.days = selected.join(',')
-      this.$router.push({ query })
     },
     isSelected: function (idx) {
-      return this.$router.currentRoute.query.days
-        ? this.$router.currentRoute.query.days.indexOf(idx) >= 0
-        : true
+      return _.contains(this.$data.selected, idx + 2)
+    },
+    apply: function () {
+      const query = Object.assign({}, this.$router.currentRoute.query)
+      query.dny = this.$data.selected.join(',')
+      this.$router.push({ query })
     }
   },
   template: `
@@ -48,6 +50,9 @@ export default {
         <label class="checkbox">
           <input @click="select(idx)" type="checkbox" :checked="isSelected(idx)"> {{ day }}
         </label>
+      </div>
+      <div class="dropdown-item">
+        <button @click="apply" class="button is-success is-fullwidth">filtrovat</button>
       </div>
     </div>
   </div>

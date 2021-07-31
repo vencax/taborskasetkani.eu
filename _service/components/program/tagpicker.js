@@ -1,6 +1,7 @@
 export default {
   data: function () {
     return {
+      selected: null,
       open: false,
       typeOpts: null
     }
@@ -9,26 +10,30 @@ export default {
     const cfgUrl = this.$props.data.url + 'config.json'
     const req = await axios.get(cfgUrl)
     const opts = _.findWhere(req.data.attrs, { name: 'tags' }).options
-    this.$data.typeOpts = _.filter(opts, i => !_.contains(['index', 'dopro'], i.value))
+    this.$data.typeOpts = _.filter(opts, i => !_.contains(['index'], i.value))
+    this.$data.selected = this.$router.currentRoute.query.tagy
+      ? this.$router.currentRoute.query.tagy.split(',')
+      : _.reduce(this.$data.typeOpts, (acc, i) => { acc.push(i.value); return acc }, [])
   },
   methods: {
     select: function (opt) {
-      let tags = this.$router.currentRoute.query.tags
-        ? this.$router.currentRoute.query.tags.split(',')
-        : _.reduce(this.$data.typeOpts, (acc, i) => { acc.push(i.value); return acc }, [])
-      if (_.contains(tags, opt.value)) {
-        tags = _.without(tags, opt.value)
+      if (_.contains(this.$data.selected, opt.value)) {
+        this.$data.selected = _.without(this.$data.selected, opt.value)
       } else {
-        tags.push(opt.value)
+        this.$data.selected.push(opt.value)
       }
-      const query = Object.assign({}, this.$router.currentRoute.query)
-      query.tags = tags.join(',')
-      this.$router.push({ query })
     },
     isSelected: function (opt) {
-      return this.$router.currentRoute.query.tags
-        ? this.$router.currentRoute.query.tags.indexOf(opt.value) >= 0
-        : true
+      return _.contains(this.$data.selected, opt.value)
+
+      // return this.$router.currentRoute.query.tags
+      //   ? this.$router.currentRoute.query.tags.indexOf(opt.value) >= 0
+      //   : true
+    },
+    apply: function () {
+      const query = Object.assign({}, this.$router.currentRoute.query)
+      query.tagy = this.$data.selected.join(',')
+      this.$router.push({ query })
     }
   },
   props: ['data'],
@@ -48,6 +53,9 @@ export default {
         <label class="checkbox">
           <input @click="select(opt)" type="checkbox" :checked="isSelected(opt)"> {{opt.text}}
         </label>
+      </div>
+      <div class="dropdown-item">
+        <button @click="apply" class="button is-success is-fullwidth">filtrovat</button>
       </div>
     </div>
   </div>
