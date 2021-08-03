@@ -6,7 +6,7 @@ export default {
     }
   },
   template: `
-    <div :class="data.class" class="columns is-flex-wrap-wrap">
+    <div :class="data.class" class="columns is-flex-wrap-wrap imageGrid">
       <div v-for="i, idx in data.list" :key="idx" class="column"
         :class="data.list.length > 1 ? 'is-flex is-align-items-center' : 'is-6 is-offset-one-quarter'">
 				<a v-if="i.web" :href="i.web" target="_blank">
