@@ -5,6 +5,6 @@ updated_at: '2021-01-18T12:47:37.254Z'
 layout: page
 children:
   - component: program
-    unpublished: true
+    #unpublished: true
     url: /uniapi/events/
     mistaurl: /uniapi/ts_places/

@@ -17,6 +17,7 @@ children:
           - url: https://www.c-energy.cz/view/source/img/logo.svg
             name: C-Energy logo
             web: https://www.c-energy.cz/
+            width: "100"
   - component: composition
     class: container
     children:
@@ -28,12 +29,12 @@ children:
       - component: imageGrid
         class: imageGrid
         list:
-          - url: 293/Logo_Rumpold.jpg
-            name: logo Rumpold
-            web: https://www.rumpold.cz/cs/home/
-          - url: 286/2.EAGB_logo_claim_CMYK_CZ.jpg
+          - url: 286/EAGB_logo_claim_CMYK_CZ.svg
             name: Energie AG
             web: https://www.energieag.cz/
+          - url: 306/Rumpold.svg
+            name: logo Rumpold
+            web: https://www.rumpold.cz/cs/home/
           - url: 287/4.CEVAK.jpg
             name: Čevak
             web: https://www.cevak.cz/
@@ -48,15 +49,15 @@ children:
       - component: imageGrid
         class: imageGrid
         list:
-          - url: 249/19PamatkyLOGO-261x300.jpg
+          - url: 305/PamatkyTABOR.svg
             name: logo Pamatky Tabor
             web: https://pamatkytabor.cz/
             width: "200"
-          - url: 289/6.cb_auto_logo_2019_horizontal_r.png
+          - url: 289/cbAuto.png
             name: CB Auto
-          - url: 290/5.Slavia.jpg
+          - url: 290/Slavia.svg
             name: Slavia
-          - url: 288/8.HMT_logo_red_prapor.png
+          - url: 288/HusitskeMuzeum.svg
             name: logo Husitského muzea
             web: http://www.husitskemuzeum.cz/
             width: "400"
@@ -88,10 +89,10 @@ children:
       - component: imageGrid
         class: imageGrid
         list:
-          - url: 291/CBrozhlas.png
+          - url: 291/CRBudejovice.svg
             name: Český rozhlas České Budějovice
             web: ""
-            width: "600"
-          - url: https://www.kulturne.com/img/header-logo-big.png
+            width: "400"
+          - url: 307/kulturne-logo-black.svg
             name: Kulturně
             web: https://www.kulturne.com/
