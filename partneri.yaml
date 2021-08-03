@@ -61,6 +61,7 @@ children:
             web: http://www.husitskemuzeum.cz/
             width: "400"
       - component: MDText
+        class: has-text-centered
         content: |-
           - **DAICH spol. s r. o.**
           - **COGEBI a. s.**
