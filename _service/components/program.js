@@ -13,25 +13,29 @@ export default {
     }
   },
   created: async function () {
+    const q = this.$router.currentRoute.query
     this.$data.loading = true
-    const filter = {
-      status: "y"
+    const filter = { status: "y" }
+    q.favorites && Object.assign(filter, { id: { in: this.$data.favorites } })
+    function _getTagCond () {
+      const tags = q.tagy.split(',')
+      return _.map(tags, i => ({ tags: { like: "%" + i + "%" } }))
     }
-    if (this.$router.currentRoute.query.tagy) {
-      const tags = this.$router.currentRoute.query.tagy.split(',')
-      filter.or = _.map(tags, i => ({ tags: { like: "%" + i + "%" } }))
-    }
-    if (this.$router.currentRoute.query.favorites) {
-      filter.id = { in: this.$data.favorites }
-    }
-    if (this.$router.currentRoute.query.dny) {
+    function _getDayCond () {
       const theWeekBegin = '2021-09-05'
-      const and = this.$router.currentRoute.query.dny.split(',').map(i => {
+      return q.dny.split(',').map(i => {
         const b = moment(theWeekBegin).add(Number(i), 'days')
         const e = moment(b).add(1, 'days')
         return { cas: { between: [b, e] } }
       })
-      filter.or = filter.or ? _.union(filter.or, and) : and
+    }
+
+    if (q.tagy && q.dny) {
+      filter.and = [ { or: _getTagCond() }, { or: _getDayCond() } ]
+    } else if (q.tagy) {
+      filter.or = _getTagCond()
+    } else if (q.dny) {
+      filter.or = _getDayCond()
     }
     const filterStr = JSON.stringify(filter)
     const dataReq = await axios.get(this.$props.data.url, {

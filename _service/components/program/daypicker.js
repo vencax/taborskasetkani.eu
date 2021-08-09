@@ -38,7 +38,7 @@ export default {
 <div class="dropdown is-fullwidth" :class="open ? 'is-active' : ''">
   <div class="dropdown-trigger" @click="open = !open">
     <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
-      <span>Filter dnů</span>
+      <span>Filtr dnů</span>
       <span class="icon is-small">
         <i class="fas" :class="open ? 'fa-angle-up' : 'fa-angle-down'" aria-hidden="true"></i>
       </span>
