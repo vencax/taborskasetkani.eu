@@ -98,7 +98,7 @@ export default {
       <div class="card">
         <div v-if="i.obrazek" class="card-image is-hidden-mobile">
           <figure class="image is-4by3">
-            <img :src="$store.getters.mediaUrl(i.obrazek)" alt="Obrázek">
+            <img :src="$store.getters.mediaUrl(i.obrazek, 'w=640')" :alt="i.title">
           </figure>
         </div>
 
