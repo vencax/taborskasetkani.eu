@@ -1,96 +1,117 @@
 title: Táborská setkání
 desc: Úvodní stránka s obecnými informacemi o festivalu
-updated_at: '2021-01-18T12:47:37.254Z'
+updated_at: 2021-01-18T12:47:37.254Z
 layout: default
 children:
-- component: hero
-  title: Táborská setkání
-  subtitle: s podtitulem 600 let na hoře Tábore
-  content: Máte rádi atmosféru středověku? Láká vás tradiční hudba, zpěv a veselení
-    pod širým nebem? Pak si nenechte ujít další 28. ročník festivalu Táborská setkání,
-    který se bude konat ve dnech 13.-15. 9. 2020
-  button: VSTUPNÉ
-  link: /vstupne
-- component: triangleWrapper
-  left: red
-  rigth: yellow
-- component: composition
-  class:  py-7>container
-  children:
-    - component: decoratedTitle
-      tag: h2
-      color: red
-      class: col-12 text-orange
-      content: Aktuality
-    - component: newsPreview
-      count: 3
-      url: /uniapi/posts/
-    - component: odkazSeSipkou
-      content: Všechny Aktuality
-      to: /posts
-- component: triangleWrapper
-- component: composition
-  class: bg-cream py-7>container
-  children:
-    - component: decoratedTitle
-      tag: h2
-      color: red
-      content: To nejlepší z Programu
-    - component: toNejZProgramu
-      url: /uniapi/events/
-      cfgUrl: /uniapi/events/config.json
-    - component: MDText
-      class: section-link text-center py-4
-      content: "[Celý program](/program)"
-- component: triangleWrapper
-  disabled: true
-- component: composition
-  class: bg-black text-white py-7>container>columns>text-center column is-8 is-offset-2
-  children:
-  - component: decoratedTitle
-    class: section text-orange
-    tag: h2
-    color: red
-    content: Táborská setkání
-  - component: MDText
-    class: content text-cream
-    content: |    
-      Historické centrum Tábora s několika náměstími, 
-      křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny
-      dávnou historií první poloviny 15. století.
-      Časem, kdy se vlády nad městem ujal husitský vojevůdce Jan Žižka z Trocnova.
-      Také nyní, po téměř šesti stovkách let každoročně symbolicky přebírá slavný hejtman 
-      vládu nad Táborem.
-      Za rachotu bubnů a světel pochodní ho přitom doprovází zástup jeho husitských bojovníků.
-      
-      Po slavnostním zahájení si už stačí vybrat, zda zavítáte ke stánku s medovinou
-      a chlebem se škvarky, nebo dáte přednost vybraným středověkým lahůdkám v některé
-      z útulných taveren. 
-      Programový "jídelníček" je také nepřeberný – ohňostroj;
-      průvody v historických kostýmech; středověký jarmark; žebrácká ulička; koncerty
-      duchovní, středověké, ale i současné hudby; vystoupení skupin historického šermu;
-      rytířský turnaj na koních; divadla pod širým nebem; výstavy; hry a soutěže pro
-      děti. 
-      
-      #### To a mnohem víc vám nabízí Táborská setkání …
-  - component: youtube
-    class: section
-    url: https://www.youtube.com/embed/UWLE1R6M3ZA
-- component: composition
-  class: bg-yellow py-7>container
-  disabled: true
-  children:
-  - component: decoratedTitle
-    tag: h2
-    color: red
-    content: Partneři
-  - component: imageGrid
-    list:
-    - url: http://jindrich.design/loga-sponzoru/Vevak.svg
-      name: logo Cevak
-    - url: http://jindrich.design/loga-sponzoru/Rumpold.svg
-      name: logo Rumpold
-    - url: http://jindrich.design/loga-sponzoru/Schreder.svg
-      name: logo Cevak
-    - url: http://jindrich.design/loga-sponzoru/Slavia.svg
-      name: logo Slavia
+  - component: hero
+    title: Táborská setkání
+    subtitle: s podtitulem 600 let na hoře Tábore
+    content: Máte rádi atmosféru středověku? Láká vás tradiční hudba, zpěv a
+      veselení pod širým nebem? Pak si nenechte ujít další 28. ročník festivalu
+      Táborská setkání, který se bude konat ve dnech 13.-15. 9. 2020
+    button: VSTUPNÉ
+    link: /vstupne
+  - component: triangleWrapper
+    left: red
+    rigth: yellow
+  - component: composition
+    class: py-7>container
+    children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        class: col-12 text-orange
+        content: Aktuality
+      - component: newsPreview
+        count: 3
+        url: /uniapi/posts/
+      - component: odkazSeSipkou
+        content: Všechny Aktuality
+        to: /posts
+  - component: triangleWrapper
+  - component: composition
+    class: bg-cream py-7>container
+    children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        content: To nejlepší z Programu
+      - component: toNejZProgramu
+        url: /uniapi/events/
+        cfgUrl: /uniapi/events/config.json
+      - component: MDText
+        class: section-link text-center py-4
+        content: >-
+          [Celý program](/program)
+
+
+
+          Pořadatelé festivalu ručí pouze za uskutečnění programů pořádaných městem Tábor. Změna programu vyhrazena.
+  - component: triangleWrapper
+    disabled: true
+  - component: composition
+    class: bg-black text-white py-7>container>columns>text-center column is-8
+      is-offset-2
+    children:
+      - component: decoratedTitle
+        class: section text-orange
+        tag: h2
+        color: red
+        content: Táborská setkání
+      - component: MDText
+        class: content text-cream
+        content: >
+          Historické centrum Tábora s několika náměstími, 
+
+          křivolakými uličkami i bohatou zelení za městskými hradbami ožívá na tři dny
+
+          dávnou historií první poloviny 15. století.
+
+          Časem, kdy se vlády nad městem ujal husitský vojevůdce Jan Žižka z Trocnova.
+
+          Také nyní, po téměř šesti stovkách let každoročně symbolicky přebírá slavný hejtman 
+
+          vládu nad Táborem.
+
+          Za rachotu bubnů a světel pochodní ho přitom doprovází zástup jeho husitských bojovníků.
+
+
+          Po slavnostním zahájení si už stačí vybrat, zda zavítáte ke stánku s medovinou
+
+          a chlebem se škvarky, nebo dáte přednost vybraným středověkým lahůdkám v některé
+
+          z útulných taveren. 
+
+          Programový "jídelníček" je také nepřeberný – ohňostroj;
+
+          průvody v historických kostýmech; středověký jarmark; žebrácká ulička; koncerty
+
+          duchovní, středověké, ale i současné hudby; vystoupení skupin historického šermu;
+
+          rytířský turnaj na koních; divadla pod širým nebem; výstavy; hry a soutěže pro
+
+          děti. 
+
+
+          #### To a mnohem víc vám nabízí Táborská setkání …
+      - component: youtube
+        class: section
+        url: https://www.youtube.com/embed/UWLE1R6M3ZA
+  - component: composition
+    class: bg-yellow py-7>container
+    disabled: true
+    children:
+      - component: decoratedTitle
+        tag: h2
+        color: red
+        content: Partneři
+      - component: imageGrid
+        list:
+          - url: http://jindrich.design/loga-sponzoru/Vevak.svg
+            name: logo Cevak
+          - url: http://jindrich.design/loga-sponzoru/Rumpold.svg
+            name: logo Rumpold
+          - url: http://jindrich.design/loga-sponzoru/Schreder.svg
+            name: logo Cevak
+          - url: http://jindrich.design/loga-sponzoru/Slavia.svg
+            name: logo Slavia
