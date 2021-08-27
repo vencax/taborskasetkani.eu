@@ -13,18 +13,18 @@ children:
             content: >
               #### Veřejné WC
 
-              #### Žižkovo náměstí čp. 11 (vchod z Barvířské ulice)
+              #### Žižkovo náměstí čp. 11 (vchod z Barvířské ulice) – zdarma
 
               provozní doba: 
 
 
-              pá 10. 9.  8.00–24.00 hod.
+              pá 10. 9. od 8.00 do 01.00 hod.
 
 
-              so 11. 9.  8.00–24.00 hod.
+              so 11. 9.  od 8.00 do 01.00 hod.
 
 
-              ne 12. 9.  8.00–22.00 hod. 
+              ne 12. 9.  od 8.00 do 22.00 hod. 
 
 
               #### Křižíkovo náměstí (samoobslužné WC)
@@ -32,7 +32,7 @@ children:
               provozní doba: 
 
 
-              denně 7.00–22.00 hod.
+              denně od 7.00 do 22.00 hod.
 
               ‍
 
@@ -42,51 +42,202 @@ children:
 
               2) Tržní náměstí – pod budovou DDM a u podzemních kontejnerů na odpad
 
-              3) Nám. Mikuláše z Husi – u vjezdu do dvora Husitského muzea
+              3) nám. Mikuláše z Husi – u vjezdu do dvora Husitského muzea
 
               4) Tismenické údolí – u Ctiborova mlýna
 
               5) Parkoviště Pod Ptákem – parkoviště u Tismenického (Košínského) potoka
 
+              6) nám. T. G. Masaryka – u podzemních kontejnerů na odpad
+
 
               __Mobilní WC jsou přístupná nepřetržitě.__
-          - title: Zdravotnická služba
-            content: >
-              Žižkovo náměstí
-
-              pátek 10. 9. až neděle 12. 9. – prostory Městské policie – budova čp. 11 na Žižkově náměstí – stálá zdravotnická služba ČČK 
-
-
-              Dopravní hřiště u sladovny
-
-              sobota 11. 9. v době ohňostroje od 21.00 do 22.00 – vozidlo zdravotnické záchranné služby 
+          - title: Zdravotnická služba ČČK
+            content: |-
+              **Žižkovo náměstí – prostory Městské policie – budova čp. 11**  
+              pátek 10. 9. od 19 do 23 hodin  
+              sobota 11. 9. od 11 do 23 hodin
           - title: Evakuační plán festivalu
             content: >
               Evakuační plán byl vytvořen pro konkretizaci zajištění bezpečného
               úniku osob z vybraných míst konání festivalu Táborská setkání
-              2021, 
+              2021, tzn. z venkovních shromažďovacích prostor a veřejných
+              prostranství dle Nařízení Jihočeského kraje č. 3/2002, kterým se
+              stanoví podmínky k zabezpečení požární ochrany při akcích, kterých
+              se zúčastňuje větší počet osob.
 
-              tzn. z venkovních shromažďovacích prostor a veřejných prostranství dle Nařízení Jihočeského kraje č. 3/2002, kterým se stanoví podmínky k zabezpečení požární ochrany při akcích, kterých se zúčastňuje větší počet osob.
 
-
-              [Evakuační plán Táborská setkání 2021 ke stažení pod tímto odkazem]
+              [Evakuační plán Táborská setkání 2021 ke stažení].
           - title: Ohňostroj
             content: >
               Ohňostroj bude odpálen z Jordánské pláže (Sokolské plovárny).
+              Sledovat ohňostroj bude možné z dětského dopravního hřiště u
+              sladovny a z hráze Jordánu od hřiště až ke Střelnici.
 
 
-              Sledovat ohňostroj bude možné z dětského dopravního hřiště u sladovny a z hráze Jordánu od hřiště až ke Střelnici.
-
-              Z důvodů přípravy a odpálení ohňostroje bude v sobotu 11. 9. 2021 v době od 6.00 do 24.00 hod. zcela uzavřena Jordánská pláž. 
-
-              Z důvodu bezpečnosti diváků při sledování ohňostroje bude v době od 21.00 do 22.00 hod. v obou směrech uzavřena Jordánská hráz 
-
-              v úseku od nám. F. Křižíka ke světelné křižovatce ulic Čsl. armády a Kpt. Jaroše.
+              Z důvodů přípravy a odpálení ohňostroje **bude v sobotu 11. 9. 2021 v době od 6.00 do 24.00 hod. zcela uzavřena Jordánská pláž (Sokolská plovárna)**. Z důvodu bezpečnosti diváků při sledování ohňostroje **bude v době od 21.00 do 23.00 hod. v obou směrech uzavřena Jordánská hráz** v úseku od nám. Fr. Křižíka ke světelné křižovatce ulic Čsl. armády a Kpt. Jaroše.
 
 
-              __V době přípravy a odstřelu ohňostroje, prosím,
+              __V době přípravy a odstřelu ohňostroje, prosím, nevstupujte do zakázaných zón a věnujte pozornost pokynům pořadatelů.__
+          - title: Hygienická opatření - COVID 19
+            content: >-
+              **Pořadatelé a účastníci festivalu jsou povinni dodržovat
+              hygienická opatření platná dle aktuální epidemiologické situace v
+              den konání akce.**
 
-              nevstupujte do zakázaných zón a věnujte pozornost pokynům pořadatelů.__
+
+              Pro účastníky festivalu, kteří v den konání akce nebudou splňovat podmínky dle aktuálního nařízení, **bude k dispozici testovací místo na nám. Fr. Křižíka (u Brány času)**, a to v době:  
+
+              10. 9. od 18.00 do 23.00 hod.  
+
+              11. 9. od 10.00 do 23.00 hod.  
+
+              12. 9. od 10.00 do 17.00 hod.
+
+
+              V tomto místě budou mít návštěvníci festivalu možnost se v případě zájmu otestovat prostřednictvím antigenního testu. **Cena testu: 100 Kč**
+          - title: Parkování
+            content: >-
+              **Pro zaparkování svého automobilu využijte záchytná parkoviště.**
+              Centrum města a festivalové dění je v dosahu pěší chůze (cca 10–15
+              minut) nebo lze využít linek MHD.
+
+
+              Záchytná parkoviště pro návštěvníky:  
+
+              **P1 Plavecký stadion – Kvapilova ulice**, zdarma, MHD  
+
+              **P2 Nádraží – Valdenská ulice**, MHD, doba placeného parkování: pondělí–pátek (8–18 hod.), sobota (8–12 hod.) – 10 Kč/hod., 40 Kč/den  
+
+              **P3 Nádraží – Vodňanského ulice**, zdarma, MHD  
+
+              **P4 Tabačka, Purkyňova ulice – povrchové parkoviště**, MHD, doba placeného parkování: pondělí–pátek (7–18 hod.), sobota (7–12 hod.) – 10 Kč/hod.  
+
+              **P5 Zimní stadion**, zdarma, MHD  
+
+              **P6 Petrohradská ulice**, zdarma, MHD
+          - title: Dopravní omezení
+            content: >-
+              V souvislosti s přípravou a průběhem festivalu Táborská setkání
+              2021 **budou ve dnech 7. až 12. 9. provedena nutná dopravní
+              opatření**, především omezení možnosti parkování a dopravní
+              uzavírky. Žádáme proto všechny řidiče, aby v těchto dnech věnovali
+              zvýšenou pozornost dopravnímu značení v celé oblasti Starého Města
+              Tábor.
+
+
+              Řidiči, kteří dopravního značení neuposlechnou, najdou své vozy na odstavném parkovišti *(odtahová plocha: Tábor-Měšice, ulice Průhon, firma OPAVA assistance)*. **Informace o odtažených vozech poskytne Městská policie Tábor na tel.: 381 253 008 nebo 381 486 256.**
+          - content: >-
+              Z důvodu technické přípravy a následného průběhu programů
+              festivalu bude třeba provést tyto dopravní uzavírky:
+
+
+              **Žižkovo náměstí**  
+
+              úplná uzavírka: celé náměstí – 7. 9. od 16.00 do 20.00 hod.  
+
+              úplná uzavírka: jižní část – 8. 9. od 12.00 – 12. 9. do 6.00 hod. nepřetržitě  
+
+              úplná uzavírka: celé náměstí – 10. 9. od 17.00 do 1.00 hod.  
+
+              úplná uzavírka: celé náměstí – 11. 9. od 8.00 do 1.00 hod.  
+
+
+              **Tržní náměstí** – úplná uzavírka: celé náměstí  
+
+              7. 9. od 16.00 do 20.00 hod.    
+
+              10. 9. od 13.00 hod. – 12. 9. do 20.00 hod. – nepřetržitě
+
+
+              **nám. Mikuláše z Husi** – úplná uzavírka: celé náměstí   
+
+              7. 9. od 16.00 do 20.00 hod.  
+
+              11. 9. od 8.00 do 20.00 hod.    
+
+              12. 9. od 8.00 do 20.00 hod.
+
+
+              **Klokotská ulice** – úplná uzavírka  
+
+              7. 9. od 16.00 do 20.00 hod.  
+
+              10. 9. od 17.00 do 1.00 hod.  
+
+              11. 9. od 8.00 do 1.00 hod.
+
+
+              **Svatošova ulice** – úplná uzavírka  
+
+              7. 9. od 16.00 do 20.00 hod.  
+
+              11. 9. od 9.00 do 20.00 hod.
+
+
+              **Ulice: Křížová, Filipovská, Křížkova, Střelnická, Žižkova** – úplná uzavírka  
+
+              7. 9. od 16.00 do 20.00 hod.  
+
+
+              **Špitálské náměstí** – úplná uzavírka: celé náměstí  
+
+              11. 9. od 6.00 do 20.00 hod.  
+
+
+              **Děkanská ulice** – úplná uzavírka  
+
+              11. 9. od 6.00 do 20.00 hod.
+
+
+              **Jordánská hráz (ul. Čsl. armády)** – úplná uzavírka  
+
+              11. 9. od 21.00 do 23.00 hod.
+
+
+              **Příjezdová komunikace k Jordánské pláži(Sokolské plovárně)** – úplná uzavírka  
+
+              11. 9. od 6.00 do 24.00 hod.
+
+
+              *U všech uzavírek bude průjezd umožněn vozidlům zdravotnické záchranné služby, policie a hasičů.*
+            title: Dopravní uzavírky
+          - content: >-
+              Omezení se týká **provozu vnitrolinek MHD č. 60 a 61, zastávek U
+              Střelnice, Tržní náměstí a Žižkovo náměstí**. Provoz bude
+              přizpůsoben podle omezení dopravy při uzavírce Budějovické ulice
+              **v době: úterý 7. 9. od 15.00 hod. do 20.00 hod. (Běh Starým
+              Městem). Od pátku 10. 9. od 17.00 hod. do soboty 11. 9. do 24.00
+              hod. (Táborská setkání®)** následovně:
+
+
+              **Linka 60 ve směru do Čelkovic** jede z důvodu uzavírky přes zastávku Na Parkánech a dotčené zastávky U Střelnice, Tržní náměstí a Žižkovo náměstí neobsluhuje. 
+
+
+              **Linka 61 je vedena okolo řeky Lužnice a bude pro ni a pro linku 60 ve směru na Autobusové nádraží** platit následující úprava provozu: Od zastávky Kotnov pojednou autobusy ulicí Na Parkánech a odbočí do ulice Palackého, kde bude **ve dnech 10. až 12. 9. umístěna náhradní zastávka v prostoru naproti Divadlu Oskara Nedbala** před křižovatkou s ulicí Žižkova. Autobusy následně odbočí do ulice Divadelní a dále ulicí Na Parkánech zpět na trasu do zastávky Kotnov.
+            title: Omezení MHD
+          - title: Vratné kelímky
+            content: >-
+              Všechny nealkoholické a alkoholické nápoje o objemech 0,3 l, 0,4 l
+              a 0,5 l budou rozlévány pouze do vratných obalů. **Kelímek bude
+              zálohovaný 50 Kč.** Záloha se vybírá pouze za první nápoj, při
+              koupi dalšího nápoje vám bude kelímek vyměněn. Tento kelímek je k
+              dostání na všech stáncích s občerstvením na Žižkově nám., Tržním
+              nám. a nám. Mikuláše z Husi a na vybraných předzahrádkách na
+              Žižkově náměstí.
+
+
+              Návštěvníci mohou vrátit kelímky na všech stáncích s občerstvením na Žižkově nám., Tržním nám. a nám. Mikuláše z Husi. Kelímek mohou vrátit i na stanovišti **VÝKUP KELÍMKŮ v Křížkově ulici v pátek 10. 9. (20–24 hod.), v sobotu 11. 9. (14–24 hod.) a v neděli 12. 9. (15–17 hod.).** Vykoupeny budou pouze nepoškozené kelímky (nesmí být prasklé či jinak poškozené, nesmí mít ulomené poutko). **Vykupujeme pouze kelímky města Tábor (ne kelímky z jiných festivalů).**
+          - title: Ochrana osobních údajů
+            content: V souladu s Obecním nařízením Evropského parlamentu a rady 2016/679 o
+              ochraně osobních údajů (GDPR) upozorňujeme návštěvníky, že v
+              prostorech konání festivalu Táborská setkání mohou být pořízeny
+              obrazové nebo audiovizuální nahrávky či snímky. Tyto nahrávky a
+              snímky budou sloužit k propagaci festivalu. [Informace o
+              zpracování osobních údajů naleznete na oficiálních webových
+              stránkách města](http://taborcz.eu/gdpr/ds-3081/p1=75246) nebo v
+              písemné podobě na podatelnách Městského úřadu Tábor (Žižkovo nám.
+              2 nebo Husovo náměstí 2938).
 sidebar:
   - component: newsPreview
     count: 2

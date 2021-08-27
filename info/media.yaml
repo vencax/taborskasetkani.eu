@@ -35,10 +35,12 @@ children:
               je možná v den konání tiskové konference podle principu: 1 redakce
               max. 2 press karty.
 
-              Případně lze akreditaci domluvit na [milena.kolarova@mutabor.cz](mailto:milena.kolarova@mutabor.cz)
+              Případně lze akreditaci domluvit na [milena.soukupova@mutabor.cz](mailto:milena.soukupova@mutabor.cz).
       - component: cards
         class: cards my-5
         cards:
           - title: Plakát a logo festivalu pro tisk
             content: |
               [stáhnout ZIP balíček](/cdn/284/tsGrafika.zip) 10 mb
+          - title: Pozvánka na tiskovou konferenci
+            content: "[stáhnout JPG pozvánku](/cdn/309/PozvankaTK.jpg) 962 kB"

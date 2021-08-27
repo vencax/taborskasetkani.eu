@@ -8,5 +8,29 @@ children:
     class: container>row>col-12
     children:
       - component: MDText
-        content: |
-          Informace pro obyvatele Starého Města připravujeme. 
+        content: >
+          **Vstup do všech lokalit Starého Města bude v době konání festivalu
+          bez omezení a ZDARMA (s výjimkou doprovodných akcí organizovaných
+          jiným pořadatelem).**
+
+
+
+          **OMEZENÍ PARKOVÁNÍ**  
+
+          **Festivalem bude od úterý 7. 9. 2021 do neděle 12. 9. 2021 nejvíce omezeno parkování v oblasti Starého Města**. Omezení parkování se týká především veřejných parkovišť a komunikací, nikoliv soukromých pozemků. Věnujte, prosím, pozornost dopravnímu značení. V případě, že jste majitelem rezidentní parkovací karty (pouze pro osobní automobil) v oblasti Starého Města, je možné po jejím předložení získat po dobu festivalu **parkovací kartu do parkovacího domu (Parking centrum)**.
+
+
+
+          *UPOZORNĚNÍ*  
+
+          **Karty do parkovacího domu budou vydávány na základě vratné kauce ve výši 250 Kč.** Vzhledem k tomu, že počet parkovacích míst v parkovacím domě (Parking centrum) je omezen, mohou majitelé rezidentních karet z oblasti Starého Města zaparkovat v uvedeném termínu na rezidentních místech oblasti Nového Města, samozřejmě v souladu s dopravním značením.
+
+
+
+          *VÝDEJ KARET*  
+
+          Parkovací karty do parkovacího domu (Parking centrum) **budou vydávány v Infocentru města Tábor (Žižkovo náměstí 2) od soboty 28. 8. do pondělí 6. 9. 2021 ve všedních dnech od 8.30 do 18.00 hod., v sobotu a v neděli od 10.00 do 18.00 hod. nebo do vyčerpání vyhrazené kapacity**. Vracení karet bude probíhat po ukončení festivalu opět v Infocentru města Tábor **nejpozději do 24. 9. 2021**.
+
+
+
+          __Podrobné informace o dopravních omezeních, uzavírkách a omezení MHD naleznete **[zde](https://taborskasetkani.eu/info/navstevnici)**.__

@@ -32,6 +32,7 @@ children:
           - url: 286/EAGB_logo_claim_CMYK_CZ.svg
             name: Energie AG
             web: https://www.energieag.cz/
+            width: "600"
           - url: 306/Rumpold.svg
             name: logo Rumpold
             web: https://www.rumpold.cz/cs/home/
@@ -52,9 +53,10 @@ children:
           - url: 305/PamatkyTABOR.svg
             name: logo Pamatky Tabor
             web: https://pamatkytabor.cz/
-            width: "200"
-          - url: 289/cbAuto.png
+            width: "100"
+          - url: 289/og-image.jpg
             name: CB Auto
+            width: ""
           - url: 290/Slavia.svg
             name: Slavia
           - url: 288/HusitskeMuzeum.svg
@@ -93,7 +95,8 @@ children:
           - url: 291/CRBudejovice.svg
             name: Český rozhlas České Budějovice
             web: ""
-            width: "400"
+            width: "300"
           - url: 307/kulturne-logo-black.svg
             name: Kulturně
             web: https://www.kulturne.com/
+            width: "300"
