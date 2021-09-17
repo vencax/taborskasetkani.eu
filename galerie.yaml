@@ -8,4 +8,4 @@ children:
     class: container
     children:
       - component: eventarchive
-        url: /uniapi/rocniky/
+        url: /api/uni/rocniky/

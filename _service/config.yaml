@@ -31,13 +31,13 @@ menu:
     link: "/kontakt"
 detailpages:
   - path: /posts/
-    url: /uniapi/posts/?filter={"id":"{{ID}}"}
+    url: /api/uni/posts/?filter={"id":"{{ID}}"}
     layout: postDetail
     titleattr: title
   - path: /galerie/
-    url: /uniapi/rocniky/?filter={"title":"{{ID}}"}
+    url: /api/uni/rocniky/?filter={"title":"{{ID}}"}
     layout: rocnikDetail
     titleattr: title
     children:
     - component: eventgallery
-      url: /uniapi/files/
+      url: /api/uni/files/

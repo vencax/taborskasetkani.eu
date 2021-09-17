@@ -24,7 +24,7 @@ children:
         content: Aktuality
       - component: newsPreview
         count: 3
-        url: /uniapi/posts/
+        url: /api/uni/posts/
       - component: odkazSeSipkou
         content: Všechny Aktuality
         to: /posts
@@ -37,8 +37,8 @@ children:
         color: red
         content: To nejlepší z Programu
       - component: toNejZProgramu
-        url: /uniapi/events/
-        cfgUrl: /uniapi/events/config.json
+        url: /api/uni/events/
+        cfgUrl: /api/uni/events/config.json
       - component: MDText
         class: section-link text-center py-4
         content: |+

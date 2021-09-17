@@ -1,5 +1,5 @@
 
-const URL = '/uniapi/posts/'
+const URL = '/api/uni/posts/'
 
 export default {
   data: function () {

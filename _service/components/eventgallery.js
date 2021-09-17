@@ -1,4 +1,4 @@
-const URL = '/uniapi/files/'
+const URL = '/api/uni/files/'
 
 const myCarousel = {
   data: function () {

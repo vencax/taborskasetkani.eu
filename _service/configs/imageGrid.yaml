@@ -6,8 +6,8 @@
     component: FileUploadingSelect
     label: Obrazek
     default_tags: partneri
-    fileindex_url: /uniapi/files
-    tag_url: /uniapi/filetags
+    fileindex_url: /api/uni/files
+    tag_url: /api/uni/filetags
     storage_url: /cdn/
     rules: required
   - name: name
