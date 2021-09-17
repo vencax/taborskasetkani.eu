@@ -41,12 +41,10 @@ children:
         cfgUrl: /uniapi/events/config.json
       - component: MDText
         class: section-link text-center py-4
-        content: >-
+        content: |+
           [Celý program](/program)
 
 
-
-          Pořadatelé festivalu ručí pouze za uskutečnění programů pořádaných městem Tábor. Změna programu vyhrazena.
   - component: triangleWrapper
     disabled: true
   - component: composition
@@ -90,7 +88,14 @@ children:
 
           rytířský turnaj na koních; divadla pod širým nebem; výstavy; hry a soutěže pro
 
-          děti. 
+          děti.
+
+
+          #### Ktož jsú boží bojovníci – verze 2020
+
+          Nová hudební aranž středověkého husitského chorálu vznikla jako pocta městu Tábor. Producent Mirek Váňa, rodák z Tábora, oslovil ze svého nynějšího působiště na významné hudební škole Berklee College v americkém Bostonu nejrůznější hudebníky z celého světa. Projektu se zúčastnilo 125 muzikantů ze 45 zemí a 6 kontinentů. Hlavním produktem projektu je orchestrální a zpívaná moderní symfonie 21. století s prvky filmové hudby i progresivního rocku. Konečnou nahrávku míchali světoznámí zvukoví mistři, držitelé cen Grammy. Nahrávka obsahuje přes 1 000 zvukových stop. [Na YouTube kanále](https://www.youtube.com/playlist?list=PLtoGRm8yP0Xx24qhzb-PPKPZ_6OjIANFc) je ke zhlédnutí jak konečná nahrávka, tak film o nahrávce Chorál Ktož jsú boží bojovníci – verze 2020: "Za scénou" – Jak aranž vznikala a proč. Navíc jsou na tomto kanále umístěny jednotlivé práce na chorálu, kterých je celkem 49 a vytvářejí "Videotéku inspirace”. Slavnostně byla nová aranž chorálu představena veřejnosti na Táborských setkáních 2020.   
+
+          [Tiskové zprávy k projektu](https://www.taborcz.eu/vismo/zobraz_dok.asp?id_org=16470&p1=66845&id_ktg=3867)
 
 
           #### To a mnohem víc vám nabízí Táborská setkání …

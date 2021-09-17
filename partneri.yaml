@@ -32,13 +32,15 @@ children:
           - url: 286/EAGB_logo_claim_CMYK_CZ.svg
             name: Energie AG
             web: https://www.energieag.cz/
-            width: "600"
+            width: "300"
           - url: 306/Rumpold.svg
             name: logo Rumpold
             web: https://www.rumpold.cz/cs/home/
+            width: "300"
           - url: 287/4.CEVAK.jpg
             name: Čevak
             web: https://www.cevak.cz/
+            width: ""
   - component: composition
     class: container
     children:
@@ -50,10 +52,10 @@ children:
       - component: imageGrid
         class: imageGrid
         list:
-          - url: 305/PamatkyTABOR.svg
+          - url: 305/PamatkyTABOR.png
             name: logo Pamatky Tabor
             web: https://pamatkytabor.cz/
-            width: "100"
+            width: ""
           - url: 289/og-image.jpg
             name: CB Auto
             width: ""
