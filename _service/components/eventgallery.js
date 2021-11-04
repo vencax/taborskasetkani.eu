@@ -1,4 +1,4 @@
-const URL = '/api/uni/files/'
+const URL = '/api/mediaman/'
 
 const myCarousel = {
   data: function () {
@@ -26,9 +26,6 @@ const myCarousel = {
   },
   props: ['data', 'onClose'],
   methods: {
-    imgURL: function (i) {
-      return `${CDN}${i.id}/${i.filename}`
-    },
     toLeft: function () {
       const ctx = _.indexOf(this.$data.images, this.$data.curr)
       const newCtx = ctx === 0 ? (this.$data.images.length - 1) : (ctx - 1)
@@ -98,11 +95,6 @@ export default {
     }
   },
   props: ['data'],
-  methods: {
-    imgURL: function (i) {
-      return `${CDN}${i.id}/${i.filename}`
-    }
-  },
   template: `
   <div class="eventmasonry">
       <img v-for="i,idx in images" :key="idx" 
