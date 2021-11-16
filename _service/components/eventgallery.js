@@ -1,4 +1,4 @@
-const URL = '/api/mediaman/'
+const URL = 'https://modurad.otevrenamesta.cz/mediaman/taborskasetkani.eu'
 
 const myCarousel = {
   data: function () {
@@ -98,7 +98,7 @@ export default {
   template: `
   <div class="eventmasonry">
       <img v-for="i,idx in images" :key="idx" 
-        :src="$store.getters.mediaUrl(i, 'w=300')" />
+        :src="$store.getters.mediaUrl(i.filename, 'w=300')" />
   </div>
   `
 }

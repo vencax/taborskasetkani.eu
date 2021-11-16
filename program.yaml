@@ -21,5 +21,6 @@ children:
 
       posílejte na [jana.lorencova@mutabor.cz](mailto:jana.lorencova@mutabor.cz).
   - component: program
+    disabled: true
     url: /api/uni/events/
     mistaurl: /api/uni/ts_places/

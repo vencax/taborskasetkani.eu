@@ -1,6 +1,4 @@
 
-const URL = '/api/uni/posts/'
-
 export default {
   data: function () {
     return {
@@ -11,6 +9,7 @@ export default {
     try {
       const count = this.$props.data.count
       const filter = { published: { lte: moment() }}
+      const URL = this.data.url
       let url = `${URL}?sort=published:desc&filter=${JSON.stringify(filter)}`
       if (count) url = `${url}&currentPage=1&perPage=${count}`
       const dataReq = await axios.get(url)

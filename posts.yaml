@@ -8,4 +8,4 @@ children:
     class: container pb-6
     children:
       - component: newsPreview
-        url: /api/uni/posts/
+        url: /api/uni/ts_posts/

@@ -24,12 +24,13 @@ children:
         content: Aktuality
       - component: newsPreview
         count: 3
-        url: /api/uni/posts/
+        url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_posts/
       - component: odkazSeSipkou
         content: Všechny Aktuality
         to: /posts
-  - component: triangleWrapper
+#  - component: triangleWrapper
   - component: composition
+    disabled: true
     class: bg-cream py-7>container
     children:
       - component: decoratedTitle
@@ -37,7 +38,7 @@ children:
         color: red
         content: To nejlepší z Programu
       - component: toNejZProgramu
-        url: /api/uni/events/
+        url: /api/uni/ts_events/
         cfgUrl: /api/uni/events/config.json
       - component: MDText
         class: section-link text-center py-4
@@ -46,7 +47,6 @@ children:
 
 
   - component: triangleWrapper
-    disabled: true
   - component: composition
     class: bg-black text-white py-7>container>columns>text-center column is-8
       is-offset-2
@@ -101,7 +101,7 @@ children:
           #### To a mnohem víc vám nabízí Táborská setkání …
       - component: youtube
         class: section
-        url: https://www.youtube.com/embed/UWLE1R6M3ZA
+        url: https://www.youtube.com/embed/TJG3zsg4cIU
   - component: composition
     class: bg-yellow py-7>container
     disabled: true

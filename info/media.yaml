@@ -41,10 +41,16 @@ children:
         cards:
           - title: Plakát a logo festivalu pro tisk
             content: |
-              [stáhnout ZIP balíček](/cdn/284/tsGrafika.zip) 10 mb
+              [stáhnout ZIP balíček](/cdn/284_tsGrafika.zip) 10 mb
           - title: Pozvánka na tiskovou konferenci
-            content: "[stáhnout JPG pozvánku](/cdn/309/PozvankaTK.jpg) 962 kB"
+            content: "[stáhnout JPG pozvánku](/cdn/309_PozvankaTK.jpg) 962 kB"
           - title: "Almanach k 30. výročí "
-            content: "[stáhnout PDF almanach](/cdn/314/Almanach_final.pdf) 4,52 MB"
+            content: "[stáhnout PDF almanach](/cdn/314_Almanach_final.pdf) 4,52 MB"
           - title: Tisková zpráva
-            content: "[stáhnout PDF zprávu](/cdn/315/TZ_festival.pdf) 978 kB"
+            content: "[stáhnout PDF zprávu](/cdn/315_TZ_festival.pdf) 978 kB"
+          - title: Poděkování partnerům festivalu
+            content: >-
+              Poděkování partnerům festivalu otištěné v Novinách táborské
+              radnice - říjen 2021  
+
+              [stáhnout PDF poděkování](/cdn/372_NTR_partner.pdf) 372 kB

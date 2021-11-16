@@ -4,7 +4,8 @@ lang: cs
 twitter:
 facebook: https://www.facebook.com/taborskasetkani
 instagram:
-cdn: /cdn
+cdn: https://modurad.otevrenamesta.cz/media/taborskasetkani.eu
+cdnapi: https://modurad.otevrenamesta.cz/cdn
 globalComponents:
   - triangleWrapper
 menu:
@@ -31,13 +32,13 @@ menu:
     link: "/kontakt"
 detailpages:
   - path: /posts/
-    url: /api/uni/posts/?filter={"id":"{{ID}}"}
+    url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_posts/?filter={"id":"{{ID}}"}
     layout: postDetail
     titleattr: title
   - path: /galerie/
-    url: /api/uni/rocniky/?filter={"title":"{{ID}}"}
+    url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_rocniky/?filter={"title":"{{ID}}"}
     layout: rocnikDetail
     titleattr: title
     children:
     - component: eventgallery
-      url: /api/uni/files/
+      url: https://modurad.otevrenamesta.cz/mediaman/taborskasetkani.eu
