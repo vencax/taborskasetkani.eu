@@ -24,7 +24,7 @@ children:
         content: Aktuality
       - component: newsPreview
         count: 3
-        url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_posts/
+        url: https://modurad.otevrenamesta.cz/mutabor/uni/ts_posts/
       - component: odkazSeSipkou
         content: Všechny Aktuality
         to: /posts

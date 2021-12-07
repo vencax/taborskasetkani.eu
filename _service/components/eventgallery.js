@@ -1,4 +1,4 @@
-const URL = 'https://modurad.otevrenamesta.cz/mediaman/taborskasetkani.eu'
+const URL = 'https://modurad.otevrenamesta.cz/mutabor/mediaman'
 
 const myCarousel = {
   data: function () {

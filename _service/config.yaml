@@ -32,13 +32,13 @@ menu:
     link: "/kontakt"
 detailpages:
   - path: /posts/
-    url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_posts/?filter={"id":"{{ID}}"}
+    url: https://modurad.otevrenamesta.cz/mutabor/uni/ts_posts/?filter={"id":"{{ID}}"}
     layout: postDetail
     titleattr: title
   - path: /galerie/
-    url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_rocniky/?filter={"title":"{{ID}}"}
+    url: https://modurad.otevrenamesta.cz/mutabor/uni/ts_rocniky/?filter={"title":"{{ID}}"}
     layout: rocnikDetail
     titleattr: title
     children:
     - component: eventgallery
-      url: https://modurad.otevrenamesta.cz/mediaman/taborskasetkani.eu
+      url: https://modurad.otevrenamesta.cz/mutabor/mediaman

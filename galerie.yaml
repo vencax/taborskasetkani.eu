@@ -8,4 +8,4 @@ children:
     class: container
     children:
       - component: eventarchive
-        url: https://modurad.otevrenamesta.cz/uni/taborskasetkani.eu/ts_rocniky/
+        url: https://modurad.otevrenamesta.cz/mutabor/uni/ts_rocniky/
