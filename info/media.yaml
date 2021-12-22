@@ -16,7 +16,7 @@ children:
             class: text-orange my-2
             content: Termín konání festivalu
           - component: MDText
-            content: "**10.–12. 9. 2021**"
+            content: "**16. - 18. 9. 2022**"
           - component: decoratedTitle
             tag: h2
             color: black
