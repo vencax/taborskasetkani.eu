@@ -4,10 +4,12 @@ lang: cs
 twitter:
 facebook: https://www.facebook.com/taborskasetkani
 instagram:
+translate: https://static-taborskasetkani-eu.translate.goog/?_x_tr_sl=cs&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp
 cdn: https://modurad.otevrenamesta.cz/media/mutabor
 cdnapi: https://modurad.otevrenamesta.cz/cdn
 globalComponents:
-  - triangleWrapper
+  triangleWrapper: triangleWrapper.js
+#  DynamicForm: dynamicForm.js
 menu:
   - label: Program
     link: "/program"

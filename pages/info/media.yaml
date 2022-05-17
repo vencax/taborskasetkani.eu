@@ -23,8 +23,7 @@ children:
             class: text-red my-2
             content: Tisková konference
           - component: MDText
-            content: "**čtvrtek 2. září 2021 v 10 hodin** v budově matriky na Žižkově nám.
-              6, Tábor‍"
+            content: termín bude upřesněn
           - component: decoratedTitle
             tag: h2
             color: red
@@ -39,18 +38,20 @@ children:
       - component: cards
         class: cards my-5
         cards:
-          - title: Plakát a logo festivalu pro tisk
-            content: |
-              [stáhnout ZIP balíček](/media/284_tsGrafika.zip) 10 mb
-          - title: Pozvánka na tiskovou konferenci
-            content: "[stáhnout JPG pozvánku](/media/309_PozvankaTK.jpg) 962 kB"
+          - title: Táborská setkání 2022 - image plakát
+            content: "[Stáhnout PNG plakát](TS-plakat-2022.png) 1 MB"
           - title: "Almanach k 30. výročí "
-            content: "[stáhnout PDF almanach](/media/314_Almanach_final.pdf) 4,52 MB"
-          - title: Tisková zpráva
-            content: "[stáhnout PDF zprávu](/media/315_TZ_festival.pdf) 978 kB"
+            content: "[stáhnout PDF almanach](314_Almanach_final.pdf) 4,52 MB"
+          - title: Plakát a logo festivalu 2021 pro tisk
+            content: |
+              [stáhnout ZIP balíček](284_tsGrafika.zip) 10 mb
+          - title: Pozvánka na tiskovou konferenci 2021
+            content: "[stáhnout JPG pozvánku](309_PozvankaTK.jpg) 962 kB"
+          - title: Tisková zpráva 2021
+            content: "[stáhnout PDF zprávu](315_TZ_festival.pdf) 978 kB"
           - title: Poděkování partnerům festivalu
             content: >-
               Poděkování partnerům festivalu otištěné v Novinách táborské
               radnice - říjen 2021  
 
-              [stáhnout PDF poděkování](/media/372_NTR_partner.pdf) 372 kB
+              [stáhnout PDF poděkování](372_NTR_partner.pdf) 372 kB

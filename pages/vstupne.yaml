@@ -1,7 +1,7 @@
 title: Vstupné
 desc: Informace o výši vstupného, předprodeji vstupenek a prodeji vstupenek v
   místě konání festivalu
-updated_at: 2021-01-18T12:47:37.254Z
+updated_at: 2022-05-12T06:18:36.941Z
 layout: page
 children:
   - component: composition
@@ -39,8 +39,30 @@ children:
         children:
           - component: MDText
             class: content
-            content: |
-              ## V roce 2021 se vstupné na festival NEPLATÍ.
+            content: >+
+              __VSTUPENKA JE NUTNÁ POUZE NA ŽIŽKOVO NÁMĚSTÍ V PÁTEK A SOBOTU. V
+              NEDĚLI JE VSTUPNÉ ZDARMA.__
+
+
+              **On-line předprodej bude zahájen v průběhu června 2022.**
+
+
+              |                   | předprodej                | prodej na místě            |
+
+              |-------------|------------------------|--------------------------|
+
+              |základní vstupné (13–64 let)| 250 Kč| 350 Kč|
+
+              |zlevněné vstupné (7–12 let, nad 65 let, držitelé průkazu ZTP)|	150 Kč| 250 Kč|
+
+              |děti do 6 let, ZTP/P| zdarma| zdarma|
+
+              |**prodej pouze online**|	               |                     |
+
+              |rodinné vstupné (1 dospělý + max. 3 děti 7–12 let)|	  250 Kč|	  x|
+
+              |rodinné vstupné (2 dospělí + max. 3 děti 7–12 let)|	  500 Kč|	  x|
+
   - component: triangleWrapper
     disabled: true
     left: red

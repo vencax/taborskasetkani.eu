@@ -1,18 +1,18 @@
 const formComponents = {
-  finput: {
-    props: [ 'data', 'cfg' ],
+  input: {
+    props: [ 'value', 'cfg' ],
     template: `
-    <input class="input" :type="cfg.type" 
-      :value="data[cfg.name]"
-      @input="evt => data[cfg.name] = evt.target.value" />
+    <input class="input" :type="cfg.type" :value="value"
+      @input="$emit('input', cfg.name, $event.target.value)"
+      :placeholder="cfg.placeholder" />
     `
   },
-  ftextarea: {
-    props: [ 'data', 'cfg' ],
+  textarea: {
+    props: [ 'value', 'cfg' ],
     template: `
-    <textarea class="textarea" :rows="cfg.rows"
-      :value="data[cfg.name]"
-      @input="evt => data[cfg.name] = evt.target.value" />
+    <textarea class="textarea" :rows="cfg.rows" :value="value"
+      @input="$emit('input', cfg.name, $event.target.value)" 
+      :placeholder="cfg.placeholder"/>
     `
   }
 }
@@ -35,12 +35,13 @@ export default {
   },
   computed: {
     formcontrols: function () {
-      return _.union(this.$props.data.controls, [{
+      const fc = _.union(this.$props.data.controls, [{
         name: 'a',
         label: 'kontrolní otázka: ' + this.$data.question,
         component: 'input',
         placeholder: 'správnou odpovědí ověříme, že nejste robot :)'
       }])
+      return fc
     }
   },
   methods: {
@@ -55,19 +56,28 @@ export default {
       } finally {
         this.$data.submitting = false
       }      
+    },
+    getComponent: function (name) {
+      if (name in formComponents) {
+        return formComponents[name]
+      }
+      return name
+    },
+    setValue: function (name, value) {
+      this.$data.formdata[name] = value
     }
   },
   props: ['data'],
-  components: formComponents,
   template: `
-<form @submit.prevent="handleSubmit">
+<form @submit.prevent="handleSubmit" v-if="question !== null">
 
-  <div v-if="question" class="field" v-for="i, idx in formcontrols">
+  <div  class="field" v-for="i in formcontrols" :key="i.name">
     <label class="label">{{ i.label }}</label>
     <div class="control">
-      <component :is="'f' + i.component" 
-        :data="formdata" :cfg="i"
-        :placeholder="i.placeholder" />
+      <component :is="getComponent(i.component)"
+        :value="$data.formdata[i.name]"
+        :cfg="i"
+        @input="setValue" />
     </div>
   </div>
 
@@ -79,6 +89,6 @@ export default {
     </div>
   </div>
 
-<form>
+</form>
   `
 }

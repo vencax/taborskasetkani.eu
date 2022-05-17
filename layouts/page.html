@@ -1,5 +1,4 @@
 <div>
-  <pageHeader />
   <div id="navPadder" class="bg-black"></div>
 
   <triangleWrapper />
@@ -17,9 +16,8 @@
   </section>
 
   <component :is="i.component" :data="i" class="pagesection"
-        v-for="(i, idx) in components" :key="idx" />
+        v-for="(i, idx) in data.children" :key="idx" />
 
   <triangleWrapper class="lastsection" />
-  <pageFooter />
 
 </div>

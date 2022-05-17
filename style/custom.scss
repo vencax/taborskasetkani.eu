@@ -226,21 +226,21 @@ a:-webkit-any-link {
 
 .deco-kalich-red {
   padding-top: 1.8em;
-  background-image: url('/media/mutabor/246_kalich-red.svg');
+  background-image: url('https://modurad.otevrenamesta.cz/media/mutabor/246_kalich-red.svg');
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: 1em;
 }
 .deco-kalich-black {
   padding-top: 1.8em;
-  background-image: url('/media/mutabor/245_kalich-black.svg');
+  background-image: url('https://modurad.otevrenamesta.cz/media/mutabor/245_kalich-black.svg');
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: 1em;
 }
 .deco-kalich-white {
   padding-top: 1.8em;
-  background-image: url('/media/mutabor/247_kalich-white.svg');
+  background-image: url('https://modurad.otevrenamesta.cz/media/mutabor/247_kalich-white.svg');
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: 1em;
@@ -248,7 +248,7 @@ a:-webkit-any-link {
 
 a.section-link {
   display: inline-block;
-  background-image: url('/media/mutabor/244_arrow-link.svg');
+  background-image: url('https://modurad.otevrenamesta.cz/media/mutabor/mutabor/244_arrow-link.svg');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: 4em;
@@ -387,7 +387,7 @@ a:hover .button.is-link {  text-decoration: none !important;}
   }
 }
 
-// COMPONENT IMPORTS
+// COMPONENT IMPORTS --
 @import "components/back2top";
 @import "components/header";
 @import "components/hero";

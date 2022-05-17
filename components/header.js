@@ -52,13 +52,14 @@ export default {
           <a v-if="$store.state.site.twitter" :href="$store.state.site.twitter" target="_blank"><i class="fab fa-twitter"></i></a>
           <a v-if="$store.state.site.facebook" :href="$store.state.site.facebook" target="_blank"><i class="fab fa-facebook"></i></a>
           <a v-if="$store.state.site.instagram" :href="$store.state.site.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a v-if="$store.state.site.translate" :href="$store.state.site.translate">&nbsp;| <i class="fas fa-language"></i></a>
         </div>
       </div>
 
     </div>
 
   </div>
-</header>
+</nav>
 `
 //<div class="navbar-item">
 //          <a href="#">english</a>/<a href="#">deutsch</a>

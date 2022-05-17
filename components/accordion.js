@@ -6,7 +6,7 @@ export default {
   },
   methods: {
     isCollapsed(idx) {
-      return this.$data.visible === idx
+      return this.$store.getters.isSSR || this.$data.visible === idx
     },
     select: function (idx) {
       this.$data.visible = this.$data.visible === idx ? null : idx

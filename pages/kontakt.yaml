@@ -1,6 +1,6 @@
 title: Kontaktní informace
 desc: Kontakty na pořadatele, formulář pro přímé zasílání dotazů
-updated_at: 2021-01-18T12:47:37.254Z
+updated_at: 2022-05-04T07:39:51.990Z
 layout: page
 children:
   - component: composition
@@ -38,7 +38,7 @@ children:
 
               e-mail:&nbsp;[roman.kraus@mutabor.cz](mailto:roman.kraus@mutabor.cz)     
           - title: Milena Soukupová
-            funkce: Koordinátor pro Táborské tržiště
+            funkce: Koordinátor pro stánkový prodej
             content: >
               tel.:&nbsp;[+420 381 486 301](tel:+420381486301)<br/>
 
@@ -49,7 +49,7 @@ children:
       - component: contactform
         controls:
           - name: from
-            label: emailová adresa
+            label: Vaše emailová adresa
             component: input
             placeholder: sem prosím Vaši emailovou adresu pro případný zpětný kontakt
             type: email
@@ -62,5 +62,5 @@ children:
             component: textarea
             rows: 4
             placeholder: sem napište zprávu
-        url: /api/contactforms/
+        url: https://modurad.otevrenamesta.cz/mutabor/contactforms/
         to: milena.soukupova@mutabor.cz

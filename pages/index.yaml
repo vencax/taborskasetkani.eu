@@ -28,7 +28,6 @@ children:
       - component: odkazSeSipkou
         content: Všechny Aktuality
         to: /posts
-#  - component: triangleWrapper
   - component: composition
     disabled: true
     class: bg-cream py-7>container

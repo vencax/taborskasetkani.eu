@@ -7,9 +7,8 @@ layout: page
 children:
   - component: MDText
     class: content text-center
-    content: >
-      ####  [Programová brožura ke stažení](/media/313_Program2021.pdf) (pdf; 2,95
-      MB)
+    content: >+
+      ####  Program letošního festivalu právě připravujeme.
 
 
       Pořadatelé festivalu ručí pouze za uskutečnění programů pořádaných městem Tábor. 
@@ -17,9 +16,6 @@ children:
       Změna programu vyhrazena.
 
 
-      Komentáře či postřehy k nové on-line verzi festivalového programu 
-
-      posílejte na [jana.lorencova@mutabor.cz](mailto:jana.lorencova@mutabor.cz).
   - component: program
     disabled: true
     url: /api/uni/events/
